@@ -1,0 +1,4 @@
+interface:
+  display_name: "共创式直播成交话术"
+  short_description: "基于产品事实分阶段共创、审核并打磨中文直播成交话术"
+  default_prompt: "使用 $live-selling-script，先和我分阶段共创产品、人群、平台与结构，再生成中文直播成交话术。"
