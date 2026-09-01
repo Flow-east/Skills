@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate that the Feishu doc payload contains meaningful content."""
+"""Validate that a Feishu document payload meets a minimum text length."""
 
 import argparse
 import pathlib

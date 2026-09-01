@@ -1,6 +1,6 @@
 # VPN Git Handoff
 
-[Chinese](README.zh-CN.md)
+**English** | [简体中文](README.zh-CN.md) · [← All Skills](../README.md)
 
 An agent-neutral skill for Git remotes that are reachable only through a full-tunnel VPN that disconnects the coding agent.
 

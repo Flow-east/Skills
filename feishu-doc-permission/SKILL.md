@@ -6,14 +6,14 @@ description: Ensure every Feishu cloud document creation or edit has non-empty c
 # Feishu Document Permission Guard
 
 ## Overview
-- **Goal 1: Content guard.** Every `feishu_doc` creation/update must include meaningful text; empty payloads should be rejected before the request runs.
+- **Goal 1: Content guard.** Every `feishu_doc` creation/update must include non-empty text that meets the configured minimum length; invalid payloads should be rejected before the request runs.
 - **Goal 2: Permission guard.** Once a document is created, the right collaborators (usually the human requester) should instantly receive `edit` access.
 - **Resources:** `scripts/check_content.py`, `scripts/get_tenant_token.py`, `scripts/grant_edit_permission.py`.
 
 ## When to Use This Skill
 Apply this skill when:
 - You are creating or editing any Feishu doc (docx, doc, sheet, slides, mindnote) via automation.
-- You want to ensure the document is meaningful before writing it to Feishu.
+- You want to ensure the document payload is non-empty and meets a minimum length before writing it to Feishu.
 - You need to provision collaborators immediately after creation without manual sharing steps.
 - You are writing scripts or skills that wrap `feishu_doc` calls and want to enforce safe defaults.
 
@@ -24,7 +24,7 @@ Apply this skill when:
      ```bash
      ./scripts/check_content.py --file ./draft.md
      ```
-     The script raises a `SystemExit` if the normalized text is empty, so you can abort before contacting Feishu and prevent placeholder docs.
+     The script raises a `SystemExit` if the stripped text is shorter than `--min-length`, so you can abort before contacting Feishu. It does not judge factual accuracy, usefulness, or semantic quality.
    - Only call `feishu_doc` after `check_content.py` succeeds. Treat the script as a lint step for every doc mutation.
 
 2. **Post-creation permission step**
@@ -33,7 +33,7 @@ Apply this skill when:
      ```bash
      ./scripts/get_tenant_token.py --app-id CLI_APP_ID --app-secret CLI_SECRET
      ```
-     Optionally add `--cache ~/.cache/feishu-tenant.json` to reuse the token during your workflow.
+     Optionally add `--cache ~/.cache/feishu-tenant.json` to write the token and expiry for your surrounding workflow. This helper does not read or refresh that cache automatically.
    - Grant edit rights for the intended collaborator:
      ```bash
      ./scripts/grant_edit_permission.py --doc-token NEW_TOKEN \
@@ -48,7 +48,7 @@ Apply this skill when:
 
 ## Best Practices
 - Always treat `scripts/check_content.py` as part of your document pipeline safeguards (pre-commit for documents).
-- Keep a readable cache for `tenant_access_token` so that permission automation doesn’t hit rate limits (the script supports `--cache`).
+- If the surrounding automation reuses a `tenant_access_token`, use `--cache` to write the token and implement cache reading and expiry handling in that surrounding workflow.
 - Ensure the payload you send to `feishu_doc(action="create")` already contains the textual blocks verified by `check_content.py`. If the API response only contains a title, immediately append the remaining sections before granting permissions.
-- When working with multiple collaborators, call `grant_edit_permission.py` multiple times or use the `--member` flag to pass a JSON array.
+- When working with multiple collaborators, repeat `--member` once per collaborator and pass one JSON object to each occurrence; do not pass a JSON array.
 - Document the flow in your automation’s README so future teammates know to run these helpers.

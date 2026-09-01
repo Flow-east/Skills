@@ -1,6 +1,6 @@
 # VPN 环境下的 Git 交接
 
-[English](README.md)
+[English](README.md) | **简体中文** · [← 返回全部 Skills](../README.zh-CN.md)
 
 这是一个不绑定特定智能体的技能，适用于只能通过全隧道 VPN 访问 Git 远端、且切换 VPN 会导致编程智能体断线的场景。
 
