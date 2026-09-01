@@ -2,7 +2,7 @@
 
 [English](README.md) | **简体中文** · [← 返回全部 Skills](../README.zh-CN.md)
 
-当前版本：[v0.1.0](https://github.com/Flow-east/Skills/blob/feishu-doc-permission-v0.1.0/feishu-doc-permission/README.zh-CN.md) · 发布日期：2026-09-01
+当前版本：[v0.1.0](https://github.com/Flow-east/Skills/blob/feishu-doc-permission-v0.1.0/feishu-doc-permission/README.zh-CN.md) · 首次发布：[2026-03-05](https://github.com/Flow-east/Skills/commit/b21061ffed26c172a58f5a9145a6064bb62a1cdc)
 
 `feishu-doc-permission` 为飞书文档自动化增加两道保护：写入前校验待发送内容，文档创建后为指定协作者授予访问权限。
 
