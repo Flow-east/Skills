@@ -2,6 +2,8 @@
 
 **English** | [简体中文](README.zh-CN.md) · [← All Skills](../README.md)
 
+Current release: [v0.1.0](https://github.com/Flow-east/Skills/blob/vpn-git-handoff-v0.1.0/vpn-git-handoff/README.md) · Released: 2026-09-01
+
 An agent-neutral skill for Git remotes that are reachable only through a full-tunnel VPN that disconnects the coding agent.
 
 The workflow treats the network switch as a hard responsibility boundary:

@@ -2,6 +2,8 @@
 
 [English](README.md) | **简体中文** · [← 返回全部 Skills](../README.zh-CN.md)
 
+当前版本：[v0.1.0](https://github.com/Flow-east/Skills/blob/vpn-git-handoff-v0.1.0/vpn-git-handoff/README.zh-CN.md) · 发布日期：2026-09-01
+
 这是一个不绑定特定智能体的技能，适用于只能通过全隧道 VPN 访问 Git 远端、且切换 VPN 会导致编程智能体断线的场景。
 
 这套流程将网络切换视为明确的责任边界：

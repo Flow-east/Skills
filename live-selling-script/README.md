@@ -2,6 +2,8 @@
 
 **English** | [简体中文](README.zh-CN.md) · [← All Skills](../README.md)
 
+Current release: [v0.1.0](https://github.com/Flow-east/Skills/blob/live-selling-script-v0.1.0/live-selling-script/README.md) · Released: 2026-09-01
+
 `live-selling-script` is an Agent Skill for co-creating, drafting, reviewing, and rewriting Chinese livestream sales scripts. It grounds the script in product facts, audience context, visible evidence, the host's natural voice, and a realistic next action instead of forcing every product into one sales template.
 
 ## When to use it

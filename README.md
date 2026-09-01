@@ -6,13 +6,13 @@ Reusable skills for Codex and other coding agents that support the Agent Skills 
 
 ## Skills
 
-| Skill | What it does | Best for | Details |
-| --- | --- | --- | --- |
-| `feishu-doc-permission` | Validates document content before a Feishu write and grants collaborators edit access after creation. | Feishu document automation that must avoid empty documents and missing permissions. | [English guide](feishu-doc-permission/README.md) |
-| `live-selling-script` | Co-creates, reviews, and rewrites evidence-grounded Chinese livestream sales scripts. | Livestream scripts, product demos, objection handling, platform adaptation, and transcript-based rewriting. | [English guide](live-selling-script/README.md) |
-| `vpn-git-handoff` | Coordinates safe Git operations when a required VPN disconnects the coding agent. | Human-operated VPN windows for fetch, sync, push, clone, and failure recovery. | [English guide](vpn-git-handoff/README.md) |
+| Skill | Release | What it does | Best for | Details |
+| --- | --- | --- | --- | --- |
+| `feishu-doc-permission` | [v0.1.0](https://github.com/Flow-east/Skills/blob/feishu-doc-permission-v0.1.0/feishu-doc-permission/README.md) | Validates document content before a Feishu write and grants collaborators edit access after creation. | Feishu document automation that must avoid empty documents and missing permissions. | [English guide](feishu-doc-permission/README.md) |
+| `live-selling-script` | [v0.1.0](https://github.com/Flow-east/Skills/blob/live-selling-script-v0.1.0/live-selling-script/README.md) | Co-creates, reviews, and rewrites evidence-grounded Chinese livestream sales scripts. | Livestream scripts, product demos, objection handling, platform adaptation, and transcript-based rewriting. | [English guide](live-selling-script/README.md) |
+| `vpn-git-handoff` | [v0.1.0](https://github.com/Flow-east/Skills/blob/vpn-git-handoff-v0.1.0/vpn-git-handoff/README.md) | Coordinates safe Git operations when a required VPN disconnects the coding agent. | Human-operated VPN windows for fetch, sync, push, clone, and failure recovery. | [English guide](vpn-git-handoff/README.md) |
 
-Each skill is self-contained. Start with its README for human-facing guidance; the agent loads `SKILL.md` and any relevant resources when the skill applies.
+Each skill is self-contained and versioned independently with Semantic Versioning. Dates are release dates rather than edit dates, and Git tags are the source of truth. Start with its README for human-facing guidance; the agent loads `SKILL.md` and any relevant resources when the skill applies.
 
 ## Install
 

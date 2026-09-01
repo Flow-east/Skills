@@ -2,6 +2,8 @@
 
 [English](README.md) | **简体中文** · [← 返回全部 Skills](../README.zh-CN.md)
 
+当前版本：[v0.1.0](https://github.com/Flow-east/Skills/blob/live-selling-script-v0.1.0/live-selling-script/README.zh-CN.md) · 发布日期：2026-09-01
+
 `live-selling-script` 是一个用于共创、创作、审核和改写中文直播成交话术的 Agent Skill。它从产品事实、观众场景、可见证据、主播自然语言和真实行动路径出发，而不是把所有产品硬套进同一套销售模板。
 
 ## 适用场景

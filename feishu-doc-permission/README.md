@@ -2,6 +2,8 @@
 
 **English** | [简体中文](README.zh-CN.md) · [← All Skills](../README.md)
 
+Current release: [v0.1.0](https://github.com/Flow-east/Skills/blob/feishu-doc-permission-v0.1.0/feishu-doc-permission/README.md) · Released: 2026-09-01
+
 `feishu-doc-permission` adds two safeguards to automated Feishu document workflows: validate the intended content before a write, then grant the intended collaborators access after a document is created.
 
 The skill provides an agent workflow and three lightweight Python helpers. Your Feishu tool, API client, or automation still performs the actual document creation or update.

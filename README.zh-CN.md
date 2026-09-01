@@ -6,13 +6,13 @@
 
 ## Skills
 
-| Skill | 能做什么 | 适合场景 | 详细说明 |
-| --- | --- | --- | --- |
-| `feishu-doc-permission` | 在写入飞书文档前校验内容，并在创建后授予协作者编辑权限。 | 需要避免空文档和权限遗漏的飞书文档自动化。 | [中文说明](feishu-doc-permission/README.zh-CN.md) |
-| `live-selling-script` | 共创、审核和改写有事实与证据边界的中文直播成交话术。 | 直播逐字稿、产品演示、异议处理、平台适配和转写改稿。 | [中文说明](live-selling-script/README.zh-CN.md) |
-| `vpn-git-handoff` | 在切换 VPN 会导致编程智能体断线时，协调安全的 Git 操作。 | 由人切换 VPN 完成 fetch、同步、push、clone 和失败恢复。 | [中文说明](vpn-git-handoff/README.zh-CN.md) |
+| Skill | 版本 | 能做什么 | 适合场景 | 详细说明 |
+| --- | --- | --- | --- | --- |
+| `feishu-doc-permission` | [v0.1.0](https://github.com/Flow-east/Skills/blob/feishu-doc-permission-v0.1.0/feishu-doc-permission/README.zh-CN.md) | 在写入飞书文档前校验内容，并在创建后授予协作者编辑权限。 | 需要避免空文档和权限遗漏的飞书文档自动化。 | [中文说明](feishu-doc-permission/README.zh-CN.md) |
+| `live-selling-script` | [v0.1.0](https://github.com/Flow-east/Skills/blob/live-selling-script-v0.1.0/live-selling-script/README.zh-CN.md) | 共创、审核和改写有事实与证据边界的中文直播成交话术。 | 直播逐字稿、产品演示、异议处理、平台适配和转写改稿。 | [中文说明](live-selling-script/README.zh-CN.md) |
+| `vpn-git-handoff` | [v0.1.0](https://github.com/Flow-east/Skills/blob/vpn-git-handoff-v0.1.0/vpn-git-handoff/README.zh-CN.md) | 在切换 VPN 会导致编程智能体断线时，协调安全的 Git 操作。 | 由人切换 VPN 完成 fetch、同步、push、clone 和失败恢复。 | [中文说明](vpn-git-handoff/README.zh-CN.md) |
 
-每个 Skill 都是独立完整的目录。用户可先阅读对应 README；触发技能后，智能体会加载 `SKILL.md` 以及当前任务需要的相关资源。
+每个 Skill 都是独立完整的目录，并采用独立的语义化版本。日期指发布日期而非每次编辑日期，Git Tag 是事实来源。用户可先阅读对应 README；触发技能后，智能体会加载 `SKILL.md` 以及当前任务需要的相关资源。
 
 ## 安装
 
