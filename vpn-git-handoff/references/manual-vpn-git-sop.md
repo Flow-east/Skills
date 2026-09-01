@@ -4,7 +4,7 @@ Adapt this template using verified repository facts and the user's language. Rep
 
 ## Working agreement
 
-The coding agent prepares and verifies all local work, decides the Git strategy, and writes each handoff card. The human switches networks, runs the listed commands exactly, preserves their complete output, and switches back. The human does not improvise merge, rebase, reset, remote, credential, or force-push decisions while the agent is disconnected.
+The coding agent prepares and verifies all local work, decides the Git strategy, and writes each handoff card. After the card is final, the agent may optionally open an external system terminal for the human; it never types, pastes, preloads, or runs the Git commands. The human switches networks, runs the listed commands exactly, preserves their complete output, and switches back. The human does not improvise merge, rebase, reset, remote, credential, or force-push decisions while the agent is disconnected.
 
 ## Before connecting the VPN
 
@@ -19,6 +19,14 @@ The agent verifies:
 - applicable tests and conditional Git LFS, submodule, or tag requirements;
 - exact commands, expected success output, and stop conditions.
 
+## Optional terminal assistance
+
+Terminal assistance happens only after the handoff card's commands and stop conditions are final, and before the human connects the VPN. The default mode is `ask`, with four choices: open once, always open, not now, or never ask again. Always open enables `auto-open`; never ask again enables `off`. On the first two verified automatic opens, the agent includes a brief reminder that the behavior can be disabled; later confirmations stay terse.
+
+Prefer an external system terminal that remains usable while the coding agent is disconnected. Open it at the verified repository root for push, fetch, or recovery, or at the verified parent directory of a clone destination. The agent opens or focuses the terminal only; the handoff card still includes the exact `cd` and Git commands for the human to run.
+
+Persist the preference only when the host already provides durable preference or memory support. Otherwise it applies only to the current conversation or session. Do not create configuration files or change repository, Git, shell, or global settings for this preference. Do not claim that the correct terminal is already open unless that state can be verified. If opening is unsupported, denied by the platform, or fails, use the exact `cd` fallback in the card and continue manually.
+
 ## Handoff card
 
 ### Goal
@@ -31,13 +39,14 @@ The agent verifies:
 - Branch: `<branch-or-not-applicable>`
 - Remote: `<remote-name-and-sanitized-address>`
 - Commit: `<short-hash-and-subject-or-not-applicable>`
+- Terminal assistance: `<verified terminal and path | human will open | unavailable; use exact cd below | omit this line when mode is off>`
 - Card validity: `<branch, HEAD, worktree, remote, and target conditions that must remain unchanged>`
 
 ### Human steps
 
-1. Connect the required VPN or network.
-2. Open a terminal.
-3. Run only the numbered commands below, in order.
+1. Use the verified system terminal and path reported above, or open a terminal if none is reported.
+2. Connect the required VPN or network.
+3. Run only the numbered commands below, in order. Start with the listed `cd` command even if the terminal appears to be in the correct directory.
 
 ```bash
 <exact-commands>
@@ -89,6 +98,7 @@ git push -u <remote> <local-branch>:<remote-branch>
 Clone:
 
 ```bash
+cd '<absolute-parent-directory>'
 git clone <credential-free-remote-url> '<absolute-destination-path>'
 ```
 

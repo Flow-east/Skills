@@ -30,6 +30,22 @@ The human owns:
 
 During the disconnected network window, do not ask the human to choose a branch strategy, improvise commands, resolve conflicts, edit remotes, change credentials, or decide whether to merge, rebase, reset, or force push.
 
+## Optional system-terminal assistance
+
+When a human-operated network window is required, the agent may help open an external system terminal after the handoff card's commands and stop conditions are finalized and verified, and before the human switches networks. This is a convenience only: opening a terminal grants no authority to run Git commands or perform other mutations. Do not prompt for or open a terminal when no human network step is needed.
+
+Use these preference modes:
+
+- `ask` is the default when no preference is known. Offer four concise choices: open once, always open, not now, or never ask again. Open once and not now leave the mode as `ask`; always open selects `auto-open`; never ask again selects `off`.
+- `auto-open` is entered only by explicit opt-in. Open the terminal for each eligible handoff. On the first two successful automatic opens, briefly explain how to disable the behavior; after that, use only a terse success confirmation. Count only opens the agent can verify.
+- `off` suppresses both the prompt and automatic opening until the user explicitly changes the preference.
+
+Persist a preference only through a durable preference or memory mechanism already supported by the host. If none is available, say that the choice applies only to the current conversation or session. Never create a preference file or edit repository, Git, shell, or other global configuration unless the user explicitly requests it.
+
+Prefer an external system terminal that remains available when the agent disconnects, while respecting an explicit supported terminal choice. Open push, fetch, and recovery handoffs at the verified repository root; open clone handoffs at the verified parent directory of the destination. Open or focus the terminal only. Never type, paste, preload, or execute the card's commands. Keep the exact numbered commands, including `cd`, in the self-contained handoff card even when the terminal opens at the expected path.
+
+Treat an existing terminal as satisfying the assistance only when the agent can verify that the intended system terminal is open at the correct path. Otherwise use the normal open flow, and never claim that a terminal is open or correctly located without verification. If terminal control is unavailable, denied by a platform permission prompt, or fails, treat the platform result as authoritative, give the human the exact `cd` command, and continue with the handoff rather than blocking it.
+
 ## Three-phase protocol
 
 ### 1. Agent-connected preparation
@@ -42,7 +58,7 @@ Determine which network operation is actually required. Never claim that remote 
 
 ### 2. Human-operated network window
 
-Produce one self-contained handoff card. The human switches to the required network, executes the card, records the complete result, disconnects the VPN, and returns to the agent. Keep this phase limited to simple remote data transfer or remote reference updates with clear stopping conditions. If the branch, HEAD commit, working tree, remote, or target changes after the card is generated, the card is invalid and must be regenerated.
+Produce one self-contained handoff card. After its commands and stop conditions are final, apply any enabled system-terminal assistance, then let the human switch to the required network, execute the card, record the complete result, disconnect the VPN, and return to the agent. Keep this phase limited to simple remote data transfer or remote reference updates with clear stopping conditions. If the branch, HEAD commit, working tree, remote, or target changes after the card is generated, the card is invalid and must be regenerated.
 
 Do not control the VPN, modify system routes or proxies, or assume the agent remains connected during this phase.
 
@@ -105,12 +121,13 @@ Every actual handoff card must contain verified values rather than placeholders:
 
 1. Goal of this network window.
 2. Preconditions already checked by the agent.
-3. Absolute repository path or safe clone destination.
-4. Exact local branch or commit, remote, and remote destination branch where applicable.
-5. Exact numbered commands, including `cd` where applicable.
-6. Recognizable success output.
-7. Specific failure branches, allowed fallback command if any, and a clear stop condition.
-8. Instruction to disconnect the VPN and return the complete result to the agent.
+3. When terminal assistance was offered or attempted for this handoff, its status: verified terminal and path, human will open it, or unavailable with the exact `cd` fallback. Omit this field in `off` mode so that opting out remains silent.
+4. Absolute repository path or safe clone destination.
+5. Exact local branch or commit, remote, and remote destination branch where applicable.
+6. Exact numbered commands, including `cd` where applicable.
+7. Recognizable success output.
+8. Specific failure branches, allowed fallback command if any, and a clear stop condition.
+9. Instruction to disconnect the VPN and return the complete result to the agent.
 
 Sanitize remote addresses and quote paths safely for the user's shell. Never expose tokens, passwords, private keys, credential-bearing URLs, or sensitive query parameters. Ask the human to redact any accidentally printed secret before returning output. Make the card usable without access to earlier conversation messages.
 

@@ -2,7 +2,7 @@
 
 **English** | [简体中文](README.zh-CN.md) · [← All Skills](../README.md)
 
-Current release: [v0.1.0](https://github.com/Flow-east/Skills/blob/vpn-git-handoff-v0.1.0/vpn-git-handoff/README.md) · First published: [2026-09-01](https://github.com/Flow-east/Skills/commit/ea20e0c550eadd80f81705be4567ff7a499065f4)
+Current release: [v0.2.0](https://github.com/Flow-east/Skills/blob/vpn-git-handoff-v0.2.0/vpn-git-handoff/README.md) · First published: [2026-09-01](https://github.com/Flow-east/Skills/commit/ea20e0c550eadd80f81705be4567ff7a499065f4)
 
 An agent-neutral skill for Git remotes that are reachable only through a full-tunnel VPN that disconnects the coding agent.
 
@@ -26,6 +26,7 @@ Agent reconnected
 - Clone a VPN-only repository into a verified destination.
 - Recover from non-fast-forward, authentication, network, protected-branch, hook, LFS, or submodule failures.
 - Generate a repository-specific manual handoff document.
+- Optionally open the system terminal in the verified working directory after the handoff card is ready.
 
 Ordinary `git pull` is intentionally excluded from handoff cards because it combines remote transfer with local integration and may create conflicts while the agent is disconnected.
 
@@ -43,6 +44,18 @@ Push cards name the remote and destination branch explicitly instead of relying 
 The human is never expected to improvise branch strategy, conflict resolution, force push, remote configuration, or credential changes during the disconnected window.
 
 Generating a card does not itself authorize edits or commits, and any card becomes invalid if its verified branch, HEAD, worktree, remote, or target changes.
+
+## Optional terminal assistance
+
+After the handoff card is complete, the skill can open an external system terminal at the verified repository root, or at the verified parent directory for a clone. Opening a terminal is only a convenience: the skill never runs, pastes, queues, or preloads the card's commands. The human still switches the VPN and executes the numbered commands.
+
+The terminal preference has three modes:
+
+- `ask` (default): offer open once, always open, not now, or never ask again.
+- `auto-open`: open automatically after an explicit opt-in. If the host can track usage, the first two successful automatic opens include a brief reminder that this mode can be disabled; later opens use only a short confirmation.
+- `off`: do not open a terminal or prompt about it.
+
+A preference persists only when the host provides durable preference or memory support; otherwise it applies only to the current conversation or session. The skill does not create a settings file or alter repository or global configuration for this option. If the host cannot open the terminal, or opening fails, the handoff continues with the exact `cd` command in the card as the fallback.
 
 ## Portable package
 
