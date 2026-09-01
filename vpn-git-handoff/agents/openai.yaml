@@ -1,0 +1,6 @@
+interface:
+  display_name: "VPN Git Handoff"
+  short_description: "Coordinate human-run Git operations across VPN switches"
+  default_prompt: "Use $vpn-git-handoff to prepare the next safe VPN Git handoff for this repository."
+policy:
+  allow_implicit_invocation: true

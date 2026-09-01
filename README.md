@@ -8,6 +8,7 @@
 | --- | --- | --- |
 | `feishu-doc-permission` | 校验飞书文档写入内容，并在创建文档后自动授予协作者编辑权限 | [`feishu-doc-permission/`](feishu-doc-permission/) |
 | `live-selling-script` | 通过阶段式共创，创作、审核和打磨有事实边界的中文直播成交话术 | [`live-selling-script/`](live-selling-script/) |
+| `vpn-git-handoff` | 在切换 VPN 会导致 Agent 断线时，生成人工可执行的 Git 联网操作卡并负责切换前后的本地处理 | [`vpn-git-handoff/`](vpn-git-handoff/) |
 
 ## 安装
 
@@ -27,6 +28,13 @@ https://github.com/Flow-east/Skills/tree/main/live-selling-script
 https://github.com/Flow-east/Skills/tree/main/feishu-doc-permission
 ```
 
+安装 VPN Git 交接 Skill：
+
+```text
+请安装这个 skill：
+https://github.com/Flow-east/Skills/tree/main/vpn-git-handoff
+```
+
 安装完成后，在下一轮 Codex 对话中使用。
 
 ### 使用 Skills CLI
@@ -36,6 +44,7 @@ https://github.com/Flow-east/Skills/tree/main/feishu-doc-permission
 ```bash
 npx skills add Flow-east/Skills --skill live-selling-script
 npx skills add Flow-east/Skills --skill feishu-doc-permission
+npx skills add Flow-east/Skills --skill vpn-git-handoff
 ```
 
 ### 手动安装到 Codex
@@ -47,7 +56,24 @@ cp -R floweast-skills/live-selling-script \
   "${CODEX_HOME:-$HOME/.codex}/skills/live-selling-script"
 ```
 
-将最后一条命令中的目录名替换为 `feishu-doc-permission`，即可安装飞书 Skill。
+将最后一条命令中的目录名替换为 `feishu-doc-permission` 或 `vpn-git-handoff`，即可安装对应 Skill。
+
+## VPN Git Handoff
+
+`vpn-git-handoff` 适用于只能通过公司 VPN 或受限网络访问 Git 远端，而切换网络会导致编程 Agent 断线的场景。
+
+它把网络切换作为明确的人机边界：Agent 负责检查仓库、决定 Git 策略、完成本地修改和测试，并生成自包含操作卡；人负责切换网络、逐条执行卡片中的联网命令、保存输出并切回网络。`fetch`、`push` 和 `clone` 在 VPN 窗口执行，合并、变基和冲突处理留给 Agent 恢复连接后完成。
+
+使用示例：
+
+```text
+使用 $vpn-git-handoff，为当前项目准备下一次 VPN Git 交接。
+```
+
+详细说明：
+
+- [中文 README](vpn-git-handoff/README.zh-CN.md)
+- [English README](vpn-git-handoff/README.md)
 
 ## Live Selling Script
 
@@ -202,11 +228,12 @@ python3 live-selling-script/scripts/lint_script.py path/to/script.md --strict
 python3 -m unittest discover -s tests/live-selling-script -v
 ```
 
-使用 Codex 自带的 Skill Creator 校验目录：
+使用 Codex 自带的 Skill Creator 校验全部 Skill：
 
 ```bash
-python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-creator/scripts/quick_validate.py" \
-  live-selling-script
+for skill in feishu-doc-permission live-selling-script vpn-git-handoff; do
+  python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-creator/scripts/quick_validate.py" "$skill"
+done
 ```
 
 ## 仓库结构
@@ -231,6 +258,14 @@ python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-creator/scripts/quick_
 │   │   └── spoken-style.md
 │   └── scripts/
 │       └── lint_script.py
+├── vpn-git-handoff/
+│   ├── README.md
+│   ├── README.zh-CN.md
+│   ├── SKILL.md
+│   ├── agents/
+│   │   └── openai.yaml
+│   └── references/
+│       └── manual-vpn-git-sop.md
 └── tests/
     └── live-selling-script/
 ```
@@ -250,4 +285,4 @@ python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-creator/scripts/quick_
 
 ## License
 
-[MIT](LICENSE)
+除非个别文件另有说明，本仓库全部内容采用 [MIT License](LICENSE)。
