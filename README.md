@@ -8,6 +8,7 @@ Reusable skills for Codex and other coding agents that support the Agent Skills 
 
 | Skill | Release | What it does | Best for | Details |
 | --- | --- | --- | --- | --- |
+| `prompt-assistant` | [v0.1.0](https://github.com/Flow-east/Skills/blob/prompt-assistant-v0.1.0/prompt-assistant/README.md) | Creates and diagnoses prompts while accumulating scoped preferences, cases, outcome evidence and validated personal methods. | Portable prompts, image/video instructions, iterative refinement, and learning from actual use. | [English guide](prompt-assistant/README.md) · [中文说明](prompt-assistant/README.zh-CN.md) |
 | `feishu-doc-permission` | [v0.1.0](https://github.com/Flow-east/Skills/blob/feishu-doc-permission-v0.1.0/feishu-doc-permission/README.md) | Validates document content before a Feishu write and grants collaborators edit access after creation. | Feishu document automation that must avoid empty documents and missing permissions. | [English guide](feishu-doc-permission/README.md) |
 | `live-selling-script` | [v0.1.0](https://github.com/Flow-east/Skills/blob/live-selling-script-v0.1.0/live-selling-script/README.md) | Co-creates, reviews, and rewrites evidence-grounded Chinese livestream sales scripts. | Livestream scripts, product demos, objection handling, platform adaptation, and transcript-based rewriting. | [English guide](live-selling-script/README.md) |
 | `vpn-git-handoff` | [v0.2.0](https://github.com/Flow-east/Skills/blob/vpn-git-handoff-v0.2.0/vpn-git-handoff/README.md) | Coordinates safe Git handoffs and can optionally open a system terminal when a required VPN disconnects the coding agent. | Human-operated VPN windows for fetch, sync, push, clone, and failure recovery. | [English guide](vpn-git-handoff/README.md) |
@@ -55,7 +56,7 @@ Other agents can use the same skill folder when they support `SKILL.md`; agent-s
 Validate every skill with the Skill Creator bundled with Codex:
 
 ```bash
-for skill in feishu-doc-permission live-selling-script vpn-git-handoff; do
+for skill in feishu-doc-permission live-selling-script vpn-git-handoff prompt-assistant; do
   python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-creator/scripts/quick_validate.py" "$skill"
 done
 ```
@@ -64,6 +65,7 @@ Run the repository's unit tests:
 
 ```bash
 python3 -m unittest discover -s tests/live-selling-script -v
+python3 -m unittest discover -s tests/prompt-assistant -v
 ```
 
 ## License

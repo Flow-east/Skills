@@ -8,6 +8,7 @@
 
 | Skill | 版本 | 能做什么 | 适合场景 | 详细说明 |
 | --- | --- | --- | --- | --- |
+| `prompt-assistant` | [v0.1.0](https://github.com/Flow-east/Skills/blob/prompt-assistant-v0.1.0/prompt-assistant/README.zh-CN.md) | 帮助创作与诊断提示词，积累有范围的偏好、案例、实际反馈和经验证的个人方法。 | 跨工具 Prompt、图像与视频指令、反复优化，以及在使用中学习。 | [中文说明](prompt-assistant/README.zh-CN.md) |
 | `feishu-doc-permission` | [v0.1.0](https://github.com/Flow-east/Skills/blob/feishu-doc-permission-v0.1.0/feishu-doc-permission/README.zh-CN.md) | 在写入飞书文档前校验内容，并在创建后授予协作者编辑权限。 | 需要避免空文档和权限遗漏的飞书文档自动化。 | [中文说明](feishu-doc-permission/README.zh-CN.md) |
 | `live-selling-script` | [v0.1.0](https://github.com/Flow-east/Skills/blob/live-selling-script-v0.1.0/live-selling-script/README.zh-CN.md) | 共创、审核和改写有事实与证据边界的中文直播成交话术。 | 直播逐字稿、产品演示、异议处理、平台适配和转写改稿。 | [中文说明](live-selling-script/README.zh-CN.md) |
 | `vpn-git-handoff` | [v0.2.0](https://github.com/Flow-east/Skills/blob/vpn-git-handoff-v0.2.0/vpn-git-handoff/README.zh-CN.md) | 在切换 VPN 会导致编程智能体断线时，协调安全的 Git 交接，并可选择打开系统终端。 | 由人切换 VPN 完成 fetch、同步、push、clone 和失败恢复。 | [中文说明](vpn-git-handoff/README.zh-CN.md) |
@@ -55,7 +56,7 @@ cp -R floweast-skills/vpn-git-handoff \
 使用 Codex 自带的 Skill Creator 校验全部 Skill：
 
 ```bash
-for skill in feishu-doc-permission live-selling-script vpn-git-handoff; do
+for skill in feishu-doc-permission live-selling-script vpn-git-handoff prompt-assistant; do
   python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-creator/scripts/quick_validate.py" "$skill"
 done
 ```
@@ -64,6 +65,7 @@ done
 
 ```bash
 python3 -m unittest discover -s tests/live-selling-script -v
+python3 -m unittest discover -s tests/prompt-assistant -v
 ```
 
 ## 许可证

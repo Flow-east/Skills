@@ -1,0 +1,4 @@
+interface:
+  display_name: "提示词助手"
+  short_description: "帮你写好提示词，积累个人案例与偏好，并在实际任务中逐渐学会更好的表达方法"
+  default_prompt: "用 $prompt-assistant 帮我把想法整理成可用的提示词，并参考我过去认可的做法。"

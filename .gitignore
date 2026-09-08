@@ -2,3 +2,8 @@
 __pycache__/
 *.py[cod]
 .pytest_cache/
+
+# Prompt Assistant personal data belongs outside this public repository.
+memory.sqlite3*
+prompt-memory*.json
+.prompt-assistant/
