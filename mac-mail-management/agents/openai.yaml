@@ -1,0 +1,4 @@
+interface:
+  display_name: "mac邮件管理"
+  short_description: "通过 Mac 邮件 App 查信、回复、附简历发信，并按授权规则主动处理邮件"
+  default_prompt: "使用 $mac-mail-management 检查本机邮件账户，并按我的要求处理邮件。"
