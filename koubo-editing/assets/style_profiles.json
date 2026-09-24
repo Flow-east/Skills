@@ -1,0 +1,6 @@
+{
+  "contrast": {"accent":"#FFD52F","text":"#FFFFFF","stroke":"#17121C","base_size":52,"keyword_size":66,"english_size":22,"enter":"pop"},
+  "mint": {"accent":"#55DFC3","text":"#FFFFFF","stroke":"#173035","base_size":50,"keyword_size":64,"english_size":21,"enter":"rise"},
+  "premium": {"accent":"#E8C77A","text":"#FFFDF7","stroke":"#332A2A","base_size":46,"keyword_size":58,"english_size":18,"enter":"rise"},
+  "warning": {"accent":"#E84B4B","text":"#FFFFFF","stroke":"#271A20","base_size":50,"keyword_size":68,"english_size":21,"enter":"pop"}
+}

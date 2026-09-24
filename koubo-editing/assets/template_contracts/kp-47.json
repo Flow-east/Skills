@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "target_id": "kp-47",
+  "variant_id": "ref_variety_v1",
+  "display_name": "台式综艺·分层校准版",
+  "reference": {
+    "name": "台式综艺",
+    "sha256": "35cf412566ab8bddb4a4d91c0e416ccd3ed6aa99a83cf5c165f5fa7ce301cc39"
+  },
+  "identity_features": [
+    "圆润不规则字与粉绿黑白多重描边",
+    "斜短句叠加更大关键词，后切回小字幕",
+    "圆润收窄许可字型和按语义开启的粉色小心形粒子"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/ZCOOLKuaiLe-Regular.ttf",
+      "index": 0,
+      "weight": null
+    },
+    "body": {
+      "file": "assets/fonts/ZCOOLQingKeHuangYou-Regular.ttf",
+      "index": 0,
+      "weight": null
+    },
+    "keyword": {
+      "file": "assets/fonts/ZCOOLQingKeHuangYou-Regular.ttf",
+      "index": 0,
+      "weight": null
+    },
+    "sticker": {
+      "file": "assets/fonts/ZCOOLKuaiLe-Regular.ttf",
+      "index": 0,
+      "weight": null
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 2,
+    "recipe": "斜短句叠加更大关键词，后切回小字幕"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "独立缩放入场，重点词标不是每句强贴"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "semantic camera_motion before canvas",
+    "caption": "scale entry",
+    "title": "fade",
+    "tag": "template-specific",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.09,
+        "close": 1.18
+      },
+      "max_zoom": 1.18,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "scale_entry",
+    "heart_ornament"
+  ],
+  "render": {
+    "family": "台式综艺",
+    "display_name": "台式综艺·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_rounded_condensed_substitute_not_official_font",
+    "font": "assets/fonts/ZCOOLKuaiLe-Regular.ttf",
+    "font_weight": null,
+    "scene_system": {
+      "title_size": 59,
+      "body_size": 59,
+      "keyword_size": 86,
+      "title_y": 0.1,
+      "caption_y": 0.8,
+      "tag_size": 33,
+      "tag_y": 0.67,
+      "tag_x": 0.79,
+      "title_duration": 2.6,
+      "allowed_canvas": [],
+      "kind": "variety",
+      "version": 1
+    },
+    "base_size": 59,
+    "keyword_size": 86,
+    "accent": "#FFFFFF",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.09,
+        "close": 1.18
+      },
+      "max_zoom": 1.18,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "Licensed substitutes; exact original font and animation curve not identified.",
+    "Calibration requires encoded-frame and aesthetic review.",
+    "licensed rounded condensed alternative and opt-in bounded heart marks"
+  ]
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "file": "SmileySans-Oblique.ttf",
+    "version": "v2.0.1",
+    "source": "https://github.com/atelier-anchor/smiley-sans/releases/tag/v2.0.1",
+    "license": "SmileySans-OFL.txt",
+    "sha256": "b447d7e781f08bc95c4c9f23ba71ed2b8ebb639aa7184485c71c4ca5afcd25c4"
+  },
+  {
+    "file": "LXGWWenKai-Medium.ttf",
+    "version": "v1.522",
+    "source": "https://github.com/lxgw/LxgwWenKai/releases/tag/v1.522",
+    "license": "LXGWWenKai-OFL.txt",
+    "sha256": "d4bdeb38a39151d74d084cba5090f8cb7d20bf83eedb78c35939ae70b9f4e3f6"
+  },
+  {
+    "file": "ZCOOLKuaiLe-Regular.ttf",
+    "version": "Google Fonts snapshot",
+    "source": "https://github.com/google/fonts/tree/main/ofl/zcoolkuaile",
+    "license": "ZCOOLKuaiLe-OFL.txt",
+    "sha256": "812a6fc1fe54b6d73a419245c32dfeba8aa33104d5be90d1cf6af082007cb71d"
+  },
+  {
+    "file": "NotoSerifSC-VF.ttf",
+    "source": "https://github.com/google/fonts/tree/main/ofl/notoserifsc",
+    "license": "NotoSerifSC-OFL.txt",
+    "sha256": "050080d9255a86808f2945bffac582b31ef32bc36411ce29563b4961670c66f9",
+    "retrieved": "2026-09-17",
+    "font_role_note": "Substitute chosen by visual calibration; no claim of official Kaipai font"
+  },
+  {
+    "file": "NotoSansSC-VF.ttf",
+    "source": "https://github.com/google/fonts/tree/main/ofl/notosanssc",
+    "license": "NotoSansSC-OFL.txt",
+    "sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
+    "retrieved": "2026-09-17",
+    "font_role_note": "Substitute chosen by visual calibration; no claim of official Kaipai font"
+  },
+  {
+    "file": "ZCOOLQingKeHuangYou-Regular.ttf",
+    "source": "https://github.com/google/fonts/tree/main/ofl/zcoolqingkehuangyou",
+    "license": "ZCOOLQingKeHuangYou-OFL.txt",
+    "sha256": "54f0c0df4308cd74cd0f2fd3494ae054dbc4a1fd6fa7d71f4807eb4cdd8b4136",
+    "retrieved": "2026-09-17",
+    "font_role_note": "Calibration candidate, rejected for ref_grid_v1 title as too narrow; not used by these three templates"
+  },
+  {
+    "file": "MaShanZheng-Regular.ttf",
+    "source": "https://github.com/google/fonts/tree/main/ofl/mashanzheng",
+    "license": "MaShanZheng-OFL.txt",
+    "sha256": "6d2546bb189c732a8ca29af9e22457b152387d158aa459e4ac2ce1e51788b7fb",
+    "upstream_git_blob": "11bbfb9867d70612158229d037e7a5f622bd0e38",
+    "retrieval_note": "CDN bytes verified against official GitHub contents API blob SHA1 and size",
+    "font_role_note": "Licensed brush-title substitute; not identified official Kaipai font"
+  }
+]

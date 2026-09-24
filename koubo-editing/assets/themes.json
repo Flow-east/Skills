@@ -1,0 +1,5 @@
+{
+  "list-cards": {"accent": "#FFCF42", "panel": "#211A2C", "secondary": "#FFF4CF", "text": "#FFFFFF", "card_y": 0.71, "subtitle_y": 0.88, "music_gain": 0.035, "sfx_gain": 0.10},
+  "knowledge": {"accent": "#55DFC3", "panel": "#122E35", "secondary": "#CFFFF4", "text": "#FFFFFF", "card_y": 0.71, "subtitle_y": 0.88, "music_gain": 0.025, "sfx_gain": 0.07},
+  "service": {"accent": "#DCC18F", "panel": "#252837", "secondary": "#F5EDD9", "text": "#FFFFFF", "card_y": 0.71, "subtitle_y": 0.88, "music_gain": 0.025, "sfx_gain": 0.06}
+}

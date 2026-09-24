@@ -1,0 +1,1291 @@
+{
+  "version": 1,
+  "targets": [
+    {
+      "id": "kp-01",
+      "name": "高级红·双语",
+      "reference_sha256": "f81f1cce40cc822cbe014ffb6bd4112f639691e314db2be4ac7fd0187cf1f17e",
+      "batch": "B3",
+      "reference_dimensions": [
+        960,
+        1280
+      ],
+      "variant": "ref_bired_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "Oblique serif title is a geometric approximation, not the identified reference font.",
+        "Original keyword insertion timing is not reproduced word by word."
+      ],
+      "feedback": "B3a local reference-led implementation; no user aesthetic acceptance inferred."
+    },
+    {
+      "id": "kp-02",
+      "name": "轻奢白·双语",
+      "reference_sha256": "f7525511630eea1bc7d8fc741ddfe581f3d9e81271396a901997cc2b9c5b6aeb",
+      "batch": "B3",
+      "reference_dimensions": [
+        1080,
+        1440
+      ],
+      "variant": "ref_biluxe_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "Brush font lacks the reference exact silver texture/flying-white strokes.",
+        "Star glints are original static sprite details animated with the highlight, not a reconstructed moving particle field."
+      ],
+      "feedback": "B3a local reference-led implementation; no user aesthetic acceptance inferred."
+    },
+    {
+      "id": "kp-03",
+      "name": "经典蓝·双语",
+      "reference_sha256": "243f5008f62ad955f94e4ced4b429e731816baee659ed5b5310afcfba2c0102c",
+      "batch": "B3",
+      "reference_dimensions": [
+        1080,
+        1440
+      ],
+      "variant": "ref_biblue_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "Swipe is current-frame spatial displacement, not a true two-shot overlapping transition.",
+        "Automatic per-word reveal is not implemented."
+      ],
+      "feedback": "B3a local reference-led implementation; no user aesthetic acceptance inferred."
+    },
+    {
+      "id": "kp-04",
+      "name": "黄色闪亮",
+      "reference_sha256": "7e1f498d7d3534da98a6c591cd61b7c5db9ef21bd9ba6753fc8927c77d2efeaf",
+      "batch": "B4",
+      "reference_dimensions": [
+        810,
+        1080
+      ],
+      "variant": "ref_shine_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "原参考的闪光粒子和持续扫光尚未还原，当前字面为静态渐变。",
+        "手指与灯泡是原创扁平线稿，不是参考的立体素材；逐词逐字进入机制未恢复。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-05",
+      "name": "简洁黄白",
+      "reference_sha256": "5c8e5a8641ff21b2fa39bfccbf20fe7b4829bb72ca66d3cd8d88630ade25a78d",
+      "batch": "B6",
+      "reference_dimensions": [
+        810,
+        1080
+      ],
+      "variant": "ref_cleanwhite_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "参考中的人物圆窗、卷页切换与大幅穿屏文字未复原；真实样片保持原构图。",
+        "授权Smiley Sans替代原斜体，精确字形和逐字飞入尚有差距。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-06",
+      "name": "轻透雅粉",
+      "reference_sha256": "d1bb61c6cc9706ec244594e5d21a6f90c2acd5e1908787d433f72897f3366167",
+      "batch": "B1",
+      "reference_dimensions": [
+        810,
+        1080
+      ],
+      "variant": "ref_pink_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [],
+      "feedback": "用户对三套比较片反馈“还可以”；不视作逐套正式验收"
+    },
+    {
+      "id": "kp-07",
+      "name": "基础白金",
+      "reference_sha256": "8bbed31848789644e3a6e2753f47c0f6aa1d9b46dcc5cdba03bd57b6818c5831",
+      "batch": "B1",
+      "reference_dimensions": [
+        810,
+        1080
+      ],
+      "variant": "ref_gold_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [],
+      "feedback": "用户对三套比较片反馈“还可以”；不视作逐套正式验收"
+    },
+    {
+      "id": "kp-08",
+      "name": "吸睛绿",
+      "reference_sha256": "4808adb16b802c40343c8cf9a7144044b8fab0829e091e5fccca8e205b39fbf6",
+      "batch": "B4",
+      "reference_dimensions": [
+        810,
+        1080
+      ],
+      "variant": "ref_green_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "参考的逐字插入、模糊散出未还原；当前为有界软入场。",
+        "箭头位置是编辑指定的安全锚点，不是随脸自动跟踪；不复制参考的出画文字。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-09",
+      "name": "百搭黄·双语",
+      "reference_sha256": "2cccd79c0e5570a5ba07d4a2d89bcb171a55fba95b9e0b9034fd8efd8cf15e04",
+      "batch": "B3",
+      "reference_dimensions": [
+        1080,
+        1440
+      ],
+      "variant": "ref_biyellow_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "参考的左侧人物身份卡尚未实现；不得把普通关键词标签称为身份卡。",
+        "参考末段镜像翻转转场尚未实现。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "上轮三套获用户可以的正向反馈；不推断本轮或逐套正式验收。七套校准实现，核心差距保留。"
+    },
+    {
+      "id": "kp-10",
+      "name": "顶奢",
+      "reference_sha256": "fa7bcee6c70c1ecb4f77895dc0dd195afcaed4af16ee72d2b943dd8bb80ad519",
+      "batch": "B3",
+      "reference_dimensions": [
+        540,
+        720
+      ],
+      "variant": "ref_luxury_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "双人横访谈模糊填充适配及说话人定位尚未实现；本次保留竖向原构图。",
+        "参考的圆形追光、旋转边框和鼠标图标尚未实现。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "上轮三套获用户可以的正向反馈；不推断本轮或逐套正式验收。七套校准实现，核心差距保留。"
+    },
+    {
+      "id": "kp-11",
+      "name": "明快黄",
+      "reference_sha256": "078d6821c022a7eee21a1ba966dba6b80dcb355d89322bb50fbccb205b6a680f",
+      "batch": "B3",
+      "reference_dimensions": [
+        810,
+        1080
+      ],
+      "variant": "ref_brightyellow_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "参考的黄色到橙色字面渐变尚未实现；目前为平色多描边。",
+        "具备已有圆形遮罩原语，但本轮原构图预览不启用；尚未完成该模板圆窗专项构图验收。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "上轮三套获用户可以的正向反馈；不推断本轮或逐套正式验收。七套校准实现，核心差距保留。"
+    },
+    {
+      "id": "kp-12",
+      "name": "沉稳墨蓝",
+      "reference_sha256": "02eee16f8a31a4804d989f3d904f326d3daf05c17493fa096ca5fa6ce78bd05f",
+      "batch": "B3",
+      "reference_dimensions": [
+        720,
+        960
+      ],
+      "variant": "ref_navy_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "参考右侧竖向姓名/履历卡尚未实现；示例无经用户确认的身份资料，不硬填。",
+        "三层时钟可用；逐词自动进入与真实官方曲线尚未恢复。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "上轮三套获用户可以的正向反馈；不推断本轮或逐套正式验收。七套校准实现，核心差距保留。"
+    },
+    {
+      "id": "kp-13",
+      "name": "商务科技",
+      "reference_sha256": "a4594f903c52b62ce3cd1836a1b7085763ca123aca52fc7d00c8723d5e9c4548",
+      "batch": "B4",
+      "reference_dimensions": [
+        720,
+        960
+      ],
+      "variant": "ref_tech_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "斜体金属字为授权替代字体加原创几何/渐变，不是官方字形。",
+        "科技轨道为原创多层几何，不包含参考工程的动态材质/扫光。",
+        "身份卡有渲染与输入校验，但实际人物资料需用户/可靠来源核验；本轮不编造身份。",
+        "得意黑不覆盖全部繁体字，字形预检失败必须停止，不静默替换。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-14",
+      "name": "醒目科普",
+      "reference_sha256": "c072f8fe0c1a23d1d8dd5083b5a8fc7715d8f775a0ce3491e5b836f102b8be7d",
+      "batch": "B4",
+      "reference_dimensions": [
+        810,
+        1080
+      ],
+      "variant": "ref_science_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "参考的逐字红黄高亮切换仍需显式分段，尚无自动逐字高亮时钟。",
+        "纸边与手指标为原创近似；未复原官方贴纸素材。",
+        "身份卡未绑定本素材的真实人物资料，不以示例姓名当成用户身份。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-15",
+      "name": "新闻蓝",
+      "reference_sha256": "232885a9b8caf3a01d353ef6075e8130a5c69931381ab47ae14cf1080ffffbcb",
+      "batch": "B3",
+      "reference_dimensions": [
+        810,
+        1080
+      ],
+      "variant": "ref_news_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "参考逐字小底片的各字独立入场尚未实现，目前整句淡入。",
+        "球形图标为原创线稿静态图形，不是官方动态地球素材。",
+        "得意黑不覆盖全部繁体字；逐字字形检查失败时停止，不能静默替字或输出方框。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "上轮三套获用户可以的正向反馈；不推断本轮或逐套正式验收。七套校准实现，核心差距保留。"
+    },
+    {
+      "id": "kp-16",
+      "name": "暖线映橙",
+      "reference_sha256": "8a17a920c749e7be492faf91f9f522b442ca3f2fc8b84f79f619f4a9ba977c99",
+      "batch": "B5",
+      "reference_dimensions": [
+        540,
+        720
+      ],
+      "variant": "ref_orangeline_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "原参考逐字显字、字形与橙色纹理未1:1复原；当前为短语时钟、斜下衬和大小字状态。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-17",
+      "name": "利落红",
+      "reference_sha256": "5ddda30d915f05e8bc618879d1edda33dd7d454c8da159e5d8dfe3d92d83cc71",
+      "batch": "B3",
+      "reference_dimensions": [
+        810,
+        1080
+      ],
+      "variant": "ref_crispred_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "参考箭头与百分比增长组合贴纸尚未实现；不得挪用示例+60%。",
+        "细字轮廓仍为思源宋体替代，不是原字体。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "上轮三套获用户可以的正向反馈；不推断本轮或逐套正式验收。七套校准实现，核心差距保留。"
+    },
+    {
+      "id": "kp-18",
+      "name": "简约白",
+      "reference_sha256": "f404ace0fca1fb09d6486ffc2563ba0d9ef2131a7e24185ec7172ed84623fb4e",
+      "batch": "B2",
+      "reference_dimensions": [
+        810,
+        1080
+      ],
+      "variant": "ref_white_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [],
+      "feedback": "",
+      "open_differences": [
+        "Licensed substitutes; exact original font and animation curve not identified.",
+        "Calibration requires encoded-frame and aesthetic review."
+      ]
+    },
+    {
+      "id": "kp-19",
+      "name": "荧光绿",
+      "reference_sha256": "a42e6b5f191e03d62eba58a438f77d8934d884aa10370acced5376376cc95134",
+      "batch": "B4",
+      "reference_dimensions": [
+        810,
+        1080
+      ],
+      "variant": "ref_neon_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "原参考圆窗能力可用，但真实人物样片不为装饰牺牲手势；圆窗需要独立构图理由。",
+        "逐字插入和原版节奏曲线未复原；使用分短语软入场。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-20",
+      "name": "Ultra·紫",
+      "reference_sha256": "0b2da303e6d6c73af457b93e649b2f14cee7c523bd5660e2a24e8fecc59a4a35",
+      "batch": "B4",
+      "reference_dimensions": [
+        1080,
+        1440
+      ],
+      "variant": "ref_purple_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "斜体由授权Noto字形做有界几何变换，不是官方Ultra字形。",
+        "人物身份竖牌尚未实现；长竖列需逐素材安全布局，不强制覆盖人物。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-21",
+      "name": "靓眼蓝",
+      "reference_sha256": "1cc5ceddaa088a55a27fe02855e00758e018b89c9083d414c01024e3b5df4bf0",
+      "batch": "B3",
+      "reference_dimensions": [
+        810,
+        1080
+      ],
+      "variant": "ref_vividblue_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "末段旋转圆角画框尚未实现；不拿普通inset充数。",
+        "参考画边文字已改为安全边界，不复制其可能出画的排版。",
+        "得意黑不覆盖全部繁体字；逐字字形检查失败时停止，不能静默替字或输出方框。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "上轮三套获用户可以的正向反馈；不推断本轮或逐套正式验收。七套校准实现，核心差距保留。"
+    },
+    {
+      "id": "kp-22",
+      "name": "明快彩彩",
+      "reference_sha256": "a8ba9cf63f55a0e047b369ec395118e52a1dc5007880083d716f0600675c48bb",
+      "batch": "B5",
+      "reference_dimensions": [
+        810,
+        1080
+      ],
+      "variant": "ref_colorful_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "原参考逐字闪亮、柔光及结尾柔边窗口未复原；不自动缩小主体套窗。",
+        "细衬线斜字使用授权宋体剪切变换，不声称原商业字体。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-23",
+      "name": "淡雅新中式",
+      "reference_sha256": "2f75570bab1d6ec2d9cb6d1e0eaaa94051e2396980c646e2becf315d9fd9a238",
+      "batch": "B2",
+      "reference_dimensions": [
+        1080,
+        1440
+      ],
+      "variant": "ref_ink_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 2,
+      "evidence": {},
+      "blockers": [],
+      "feedback": "",
+      "open_differences": [
+        "Licensed substitute font; original proprietary font not identified.",
+        "Official motion curves and full-template audiovisual identity not measured.",
+        "User aesthetic comparison and acceptance pending."
+      ]
+    },
+    {
+      "id": "kp-24",
+      "name": "古雅水绿",
+      "reference_sha256": "f3d10e3aab600a8c382ce4017ba2cd9ba537004bfb5bb63d057bd3152a684c4c",
+      "batch": "B5",
+      "reference_dimensions": [
+        1080,
+        1450
+      ],
+      "variant": "ref_mint_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "马善政为授权毛笔替代，并非参考楷书原字形；参考逐字显字和细微描边尚未复原。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-25",
+      "name": "撕纸红",
+      "reference_sha256": "aa208a201b6acd0730543285d4a35c9448e77b490bb7d69924937d23091c32b5",
+      "batch": "B5",
+      "reference_dimensions": [
+        810,
+        1080
+      ],
+      "variant": "ref_tornred_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "撕纸为原创稳定几何，未提取原模板纸纹或照片；原逐字揭纸动效和背景虚化未复原。",
+        "说明图卡已实现；本轮实拍无合适授权业务照片，不把房产/合同参考照片嫁接进管理话题。合成组件单独验证图片卡。",
+        "参考高位纸条若与人脸冲突须重新排版；不可直接挡脸、裁人或缩小主体来省事。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-26",
+      "name": "暖系橙黄",
+      "reference_sha256": "4a461444371073e9d43e30b89cfc56c423f68b04816dac2e8feb4bccb09a0ec7",
+      "batch": "B4",
+      "reference_dimensions": [
+        640,
+        852
+      ],
+      "variant": "ref_warm_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "参考640×852，本实现明确适配3:4和9:16，并非像素级复原。",
+        "原版点赞/定位素材、开场黑幕揭示及发光尾标尚未复原，不使用无关地点贴纸。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-27",
+      "name": "古典深棕",
+      "reference_sha256": "af06d9013cc0eb75565f11180f34aae2c97c6a6cfd24807b83f8baf0f67196c6",
+      "batch": "B5",
+      "reference_dimensions": [
+        1080,
+        1440
+      ],
+      "variant": "ref_deepbrown_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "本地参考约4秒，只能确认开场与短正文；长段状态未获参考证据。",
+        "毛笔字形、参考标题金粉/飞白动效未复原；目前授权毛笔替代和静态原创细纹。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-28",
+      "name": "彩蜡萌趣",
+      "reference_sha256": "0a8c26275d2c5e476dd3f7bcc714e20c8788709ec474d0f3e91adca28ffcb13f",
+      "batch": "B6",
+      "reference_dimensions": [
+        450,
+        600
+      ],
+      "variant": "ref_waxcute_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "参考的玩具、奶瓶、尿不湿等商品贴纸不复用；当前只绘制通用几何词签。",
+        "人物描边、黑色椭圆彩点框和逐帧彩屑动画未实现；不把画面裁成装饰窗口。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-29",
+      "name": "基础黑白",
+      "reference_sha256": "a94523bd961746257dfb9aaa5336d4fd24db39d6762cb7fb68fae208f786743b",
+      "batch": "B4",
+      "reference_dimensions": [
+        810,
+        1080
+      ],
+      "variant": "ref_mono_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "跟随头部的聚光暗场尚未实现，不用圆形裁切冒充非裁切聚光。",
+        "原参考双镜头横向模糊转场未复原，当前保留原剪口。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-30",
+      "name": "秀丽粉",
+      "reference_sha256": "410b416c8de3e76f7b96b84c874861ef55f984ef2dbf6bd87cc505191dd682ea",
+      "batch": "B4",
+      "reference_dimensions": [
+        720,
+        960
+      ],
+      "variant": "ref_elegantpink_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "原参考逐字光标和场景切换曲线未复原；当前为短语独立时钟与有界入场。",
+        "原侧边人物身份牌、旋转取景框与标题英文推广行未实现，不伪造身份或新增关注引导。",
+        "白底圆窗仅用于有独立构图理由的场景，不强行缩小本轮真人。",
+        "得意黑不覆盖全部繁体字，字形预检失败必须停止，不静默替换。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-31",
+      "name": "QQ萌趣",
+      "reference_sha256": "0d05a9a28331d5c9623a641529f5ecee8bf18a3bf9b44c9c6ce511f527420f4c",
+      "batch": "B6",
+      "reference_dimensions": [
+        1080,
+        1440
+      ],
+      "variant": "ref_qqcute_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "原参考服装实物切镜、婴儿车贴纸与人物圆窗未复原；模板不生成商品事实。",
+        "现有Noto Sans粗字为授权替代，原圆胖字形、逐字弹入及闪线仍有差距。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-32",
+      "name": "高智红黄",
+      "reference_sha256": "2670388b9eb6b4a2ad418af8000b556d8a5de3d7eb7943f7cac946b274e0cc5f",
+      "batch": "B2",
+      "reference_dimensions": [
+        810,
+        1080
+      ],
+      "variant": "ref_redyellow_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 2,
+      "evidence": {},
+      "blockers": [],
+      "feedback": "",
+      "open_differences": [
+        "Licensed substitute font; original proprietary font not identified.",
+        "Official motion curves and full-template audiovisual identity not measured.",
+        "User aesthetic comparison and acceptance pending."
+      ]
+    },
+    {
+      "id": "kp-33",
+      "name": "素雅姜红",
+      "reference_sha256": "e9135d5ae1b1763eb76bbd8ca56291bd0b24034bf73be30f0829b237b9dd9e41",
+      "batch": "B5",
+      "reference_dimensions": [
+        450,
+        600
+      ],
+      "variant": "ref_ginger_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "细衬线字体为授权替代；原逐字进场和精确字重/柔光曲线未复原。",
+        "参考小字装饰仅以原创细弧角线近似，不声称原模板线稿。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-34",
+      "name": "爆款促销",
+      "reference_sha256": "26bbef3f05ffb861ace31e198e2cf360660e731bf3b37e2de735a6bf0a3e38b6",
+      "batch": "B4",
+      "reference_dimensions": [
+        450,
+        600
+      ],
+      "variant": "ref_promo_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "喇叭/购物车为原创扁平替代，不是参考中的三维素材。",
+        "参考逐字高亮、爱心粒子与字形细节尚未完整还原；不编造购买/促销事实。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-35",
+      "name": "元气卡通",
+      "reference_sha256": "ecc0f09e731ddc85e1bb7147b87aed7f7757fc9e179e26db270515643973bcc6",
+      "batch": "B6",
+      "reference_dimensions": [
+        450,
+        600
+      ],
+      "variant": "ref_energycartoon_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "原人物聚光、喇叭/点赞等具体贴纸和逐字弧形曲线未完全复原。",
+        "ZCOOL快乐体与Noto Sans为授权替代；当前弧线是稳定字位近似，不是官方动画曲线。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-36",
+      "name": "专业金棕",
+      "reference_sha256": "3002a49fe3574638f56073c3ee0ffb18d582b8f7b0af1aae8adf8a80b9a9c07c",
+      "batch": "B4",
+      "reference_dimensions": [
+        810,
+        1080
+      ],
+      "variant": "ref_browngold_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "参考的人物抠像白边、替换纸背景与大字接管构图未实现，不用矩形框/圆窗冒充人物轮廓。",
+        "原钞票素材未复制；词标以授权书法字替代，不对当前人物捏造头衔。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-37",
+      "name": "黄油拿铁",
+      "reference_sha256": "9f81f43d1cd9db7b92a28b04ccb1e95cce7300dbb37098de524b5eca9c562843",
+      "batch": "B2",
+      "reference_dimensions": [
+        810,
+        1080
+      ],
+      "variant": "ref_latte_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 2,
+      "evidence": {},
+      "blockers": [],
+      "feedback": "",
+      "open_differences": [
+        "Licensed substitute font; original proprietary font not identified.",
+        "Official motion curves and full-template audiovisual identity not measured.",
+        "User aesthetic comparison and acceptance pending."
+      ]
+    },
+    {
+      "id": "kp-38",
+      "name": "黑黄框框（支持繁中）",
+      "reference_sha256": "5a0b6d713ed6f22fc31de7daf4662b020ce04cc4b675cc7f87792d9117facd89",
+      "batch": "B5",
+      "reference_dimensions": [
+        810,
+        1080
+      ],
+      "variant": "ref_blackyellow_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "原参考顶部英文小行尚未实现；不把英文混入中文转写或自动编造翻译。",
+        "参考逐字亮白扫光和局部歪框变换未复原；当前为短语时钟与静态黄光字。",
+        "沿用本地Noto Serif SC字库并验证本轮繁中测试词；不宣称覆盖全部异体字，任何缺字预检失败即停。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-39",
+      "name": "一路繁花2",
+      "reference_sha256": "5f5553bac39cb8097e2f71316dbf437627f85b0dde6cba3c56c8c7996bc919b5",
+      "batch": "B6",
+      "reference_dimensions": [
+        1080,
+        1440
+      ],
+      "variant": "ref_floraltravel_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "参考含大量旅行实拍切镜、黄色侧边和望远镜圆窗；模板只复刻文字/边框身份，不伪造素材事实。",
+        "授权Noto Sans替代综艺字形，精确粉黄描边与逐字弹入仍有差距。"
+      ],
+      "feedback": "用户要求进入下一阶段继续；逐套审美待后续，音效专项暂缓"
+    },
+    {
+      "id": "kp-40",
+      "name": "绿意漾漾",
+      "reference_sha256": "d1151da3f393ef0048c54335e8967a7ae11c2c3789a7427d9b830ffd1d81b217",
+      "batch": "B5",
+      "reference_dimensions": [
+        810,
+        1080
+      ],
+      "variant": "ref_verdant_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "原粗字不规则字形及逐字弹出尚未复原；使用授权黑体标题和重衬线正文。",
+        "可选圆窗实现固定位置/柔边，非自动人脸跟踪；真实样片不为模板便利缩小或裁掉人物。",
+        "未添加原参考极小英文花字；语义词签不伪造店名或商品名。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-41",
+      "name": "极简Ins风",
+      "reference_sha256": "e8fa303157225404ee32344165452d1e84a35480a82629ba4047bc71741c832e",
+      "batch": "B5",
+      "reference_dimensions": [
+        1080,
+        1440
+      ],
+      "variant": "ref_ins_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "本地参考仅约3秒，后续状态证据不足。",
+        "官方不规则粗字、Hi插画与跟踪指物圈未实现；当前原创剪贴字与语义词签。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-42",
+      "name": "时髦玫红",
+      "reference_sha256": "49e56def3c9c60710c2328933b0c36b62efb85b56f394a8f67fe71ccdb65e565",
+      "batch": "B6",
+      "reference_dimensions": [
+        450,
+        600
+      ],
+      "variant": "ref_magenta_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "参考的星光、心形漂浮和逐字书写动画仅做静态几何近似，不推断原粒子曲线。",
+        "Noto Serif与Smiley Sans为授权替代，原细长玫红字形及动态扫光未复原。"
+      ],
+      "feedback": "用户要求进入下一阶段继续；逐套审美待后续，音效专项暂缓"
+    },
+    {
+      "id": "kp-43",
+      "name": "活泼亮粉",
+      "reference_sha256": "5bbb7477e8886352dc88be8fd65770e07ae44590e9036458f04b345e638c39eb",
+      "batch": "B4",
+      "reference_dimensions": [
+        450,
+        600
+      ],
+      "variant": "ref_hotpink_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "参考标题为更圆胖重字形，当前Noto黑体与站酷快乐体是授权替代，不声称原字形。",
+        "人物黄色勾边/分割跟踪、全画面贴边流动粒子与原版转场未实现。",
+        "放射线为显式有界边缘面板以保护人物与标题，非全画面自动避人特效。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-44",
+      "name": "古典怀旧",
+      "reference_sha256": "311de482ff6552a114691e47fff5f9a61120ab0753a8f5e0689e5374f44962d3",
+      "batch": "B5",
+      "reference_dimensions": [
+        1080,
+        1440
+      ],
+      "variant": "ref_nostalgia_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "本地参考仅约4秒，不能据此推断全片状态。",
+        "原细手写字形、打字机逐字揭示及光标未复原；当前授权毛笔替代和短语淡入。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-45",
+      "name": "萌探2024",
+      "reference_sha256": "32a1d269bff6a93abb9c564897027c73854f868296e96eb34799c8ccfd4277ec",
+      "batch": "B6",
+      "reference_dimensions": [
+        1080,
+        1440
+      ],
+      "variant": "ref_lightbulb_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "参考的灯泡发光、金币/西瓜具体图标和细轨道UI动效未逐帧复原。",
+        "Smiley Sans和Noto Sans为授权替代；原极窄斜粗字与顶部切入节奏仍有差距。"
+      ],
+      "feedback": "用户要求进入下一阶段继续；逐套审美待后续，音效专项暂缓"
+    },
+    {
+      "id": "kp-46",
+      "name": "元气红",
+      "reference_sha256": "32220e329041a3c007fce955de10d1eebae7daef96bff1f9e68e2f20f7d45af4",
+      "batch": "B6",
+      "reference_dimensions": [
+        1080,
+        1440
+      ],
+      "variant": "ref_redfestive_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "参考含门店空镜、环境超美标签和具体88元促销，模板不得生成这些未经原话支持的事实。",
+        "马善政/Noto Serif为授权替代；原金属质感描边、生肖贴纸和逐字扫光未复原。"
+      ],
+      "feedback": "用户要求进入下一阶段继续；逐套审美待后续，音效专项暂缓"
+    },
+    {
+      "id": "kp-47",
+      "name": "台式综艺",
+      "reference_sha256": "35cf412566ab8bddb4a4d91c0e416ccd3ed6aa99a83cf5c165f5fa7ce301cc39",
+      "batch": "B2",
+      "reference_dimensions": [
+        450,
+        600
+      ],
+      "variant": "ref_variety_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 2,
+      "evidence": {},
+      "blockers": [],
+      "feedback": "",
+      "open_differences": [
+        "Licensed substitute font; original proprietary font not identified.",
+        "Official motion curves and full-template audiovisual identity not measured.",
+        "User aesthetic comparison and acceptance pending."
+      ]
+    },
+    {
+      "id": "kp-48",
+      "name": "蓝紫方格",
+      "reference_sha256": "cae04878e432a13eec8980309e916f97c1b96e1e04a8203136271b65d87d14d2",
+      "batch": "B1",
+      "reference_dimensions": [
+        1080,
+        1440
+      ],
+      "variant": "ref_grid_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [],
+      "feedback": "用户对三套比较片反馈“还可以”；不视作逐套正式验收"
+    },
+    {
+      "id": "kp-49",
+      "name": "喜人奇妙夜",
+      "reference_sha256": "1eb33b303f3ec53e7a91f563f7bd79ced2930457b2ac02908796ac75496d3d04",
+      "batch": "B6",
+      "reference_dimensions": [
+        450,
+        600
+      ],
+      "variant": "ref_comicred_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "参考含哭泣、乌云、眼睛等强表情贴纸和人物滤镜；当前只实现不遮脸的原创符号。",
+        "原红条角色头像、粒子彩纸和逐帧表情动画未复原。"
+      ],
+      "feedback": "用户要求进入下一阶段继续；逐套审美待后续，音效专项暂缓"
+    },
+    {
+      "id": "kp-50",
+      "name": "恋爱兄妹",
+      "reference_sha256": "ac1314d36b525a1aaae28c8e41ab9797f7fc6b01e4e705b7dbc41873535a030e",
+      "batch": "B6",
+      "reference_dimensions": [
+        1080,
+        1080
+      ],
+      "variant": "ref_romance_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "参考含书页圆角框、暗角聚光和闪光粒子；真实口播不强制改构图或加人物滤镜。",
+        "马善政/Noto Serif/Smiley Sans为授权替代，原粉黄书写动画和纸页转场未复原。"
+      ],
+      "feedback": "用户要求进入下一阶段继续；逐套审美待后续，音效专项暂缓"
+    },
+    {
+      "id": "kp-51",
+      "name": "半透简黄",
+      "reference_sha256": "037fbbd8f7d36038b250f287758bf6a1384ded4c6b94a9f83a95bc870ccf170e",
+      "batch": "B5",
+      "reference_dimensions": [
+        810,
+        1080
+      ],
+      "variant": "ref_transyellow_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "原窄体字形、逐字动效与动态缩窗未完全复原。",
+        "可选圆窗仅固定窗口，不自动跟踪人脸；只有明确构图复核才允许使用。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-52",
+      "name": "极简撕边",
+      "reference_sha256": "1ea15a52df26b8f42542856542692e819b372df9d154eb86fccfcf4cb7cd7ed4",
+      "batch": "B5",
+      "reference_dimensions": [
+        450,
+        600
+      ],
+      "variant": "ref_tornedge_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "低清参考中纸边细节有限，当前原创稳定不规则边缘，不声称官方纹理。",
+        "原逐字出现、上下分屏转场未实现；圆窗不支持主体跟踪。",
+        "待正常速度视听复核和用户逐套审美验收"
+      ],
+      "feedback": "用户要求继续实现，之后单独逐套验证；本批保持待审美验收，核心差距保留。"
+    },
+    {
+      "id": "kp-53",
+      "name": "简约emoji",
+      "reference_sha256": "b648bde020a4947fa48b8e43dbf7f985e7b278930bf3526423965f62274838f4",
+      "batch": "B6",
+      "reference_dimensions": [
+        1080,
+        1440
+      ],
+      "variant": "ref_emojiwhite_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "参考中的具体相机、超级干货胶囊和大号眼前一亮排版只作类型研究，不复制资产。",
+        "Noto Sans为授权替代，原超粗窄字、拆字冲屏和emoji弹跳曲线仍有差距。"
+      ],
+      "feedback": "用户要求进入下一阶段继续；逐套审美待后续，音效专项暂缓"
+    },
+    {
+      "id": "kp-54",
+      "name": "潮流撞色",
+      "reference_sha256": "f8d95711bdde7efb36836888eacebaffc32a5824981cf05f17335c33d71d9ff5",
+      "batch": "B6",
+      "reference_dimensions": [
+        1080,
+        1440
+      ],
+      "variant": "ref_contrastpop_v1",
+      "design": "calibrated",
+      "implementation": "calibration",
+      "technical": "sample_passed",
+      "visual": "pending",
+      "release": "installed_calibration",
+      "revision": 1,
+      "evidence": {},
+      "blockers": [
+        "参考仅约3.5秒，能确认的状态有限；后续动效不能凭空推断。",
+        "原橙黑窄粗字、行业缩写分屏标签和漫画WOW资产未复原。"
+      ],
+      "feedback": "用户要求进入下一阶段继续；逐套审美待后续，音效专项暂缓"
+    }
+  ]
+}

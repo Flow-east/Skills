@@ -1,0 +1,210 @@
+{
+  "version": 1,
+  "target_id": "kp-03",
+  "variant_id": "ref_biblue_v1",
+  "display_name": "经典蓝·双语·分层校准版",
+  "reference": {
+    "name": "经典蓝·双语",
+    "sha256": "243f5008f62ad955f94e4ced4b429e731816baee659ed5b5310afcfba2c0102c"
+  },
+  "identity_features": [
+    "浅色半透左对齐双层标题条",
+    "青绿粗大重点词与细灰白连接词混排",
+    "居中小英文独立时钟、词标不额外堆叠"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "body": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 350
+    },
+    "keyword": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "sticker": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 800
+    },
+    "translation": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 400
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 1,
+    "recipe": "青绿粗大重点词与细灰白连接词混排"
+  },
+  "annotation": {
+    "tags_enabled": false,
+    "reason_required": true,
+    "recipe": "居中小英文独立时钟、词标不额外堆叠"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false,
+    "translation_clock": "independent_output"
+  },
+  "motion": {
+    "video_camera": "semantic camera_motion before canvas",
+    "caption": "fade",
+    "title": "fade",
+    "tag": "template-specific",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.075,
+        "close": 1.15
+      },
+      "max_zoom": 1.15,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    },
+    "translation": "independent fade",
+    "highlight": "none"
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "bilingual_clocks",
+    "mixed_size_type",
+    "swipe",
+    "vignette"
+  ],
+  "render": {
+    "family": "经典蓝·双语",
+    "display_name": "经典蓝·双语·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSansSC-VF.ttf",
+    "font_weight": 350,
+    "scene_system": {
+      "version": 1,
+      "kind": "biblue",
+      "title_size": 49,
+      "subtitle_size": 35,
+      "body_size": 34,
+      "keyword_size": 56,
+      "translation_size": 23,
+      "tag_size": 35,
+      "display_size": 72,
+      "title_y": 0.09,
+      "caption_y": 0.785,
+      "tag_y": 0.68,
+      "tag_x": 0.79,
+      "title_duration": 2.6,
+      "allowed_canvas": [
+        "swipe",
+        "vignette"
+      ]
+    },
+    "base_size": 34,
+    "keyword_size": 56,
+    "accent": "#8BF2E7",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.075,
+        "close": 1.15
+      },
+      "max_zoom": 1.15,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "Licensed substitute fonts and original timing curves; not official engineering.",
+    "Only 3:4 and 9:16 are declared; every source needs protected-region review.",
+    "English is separately authored/reviewed; layout checks do not verify translation semantics.",
+    "Swipe is current-frame spatial displacement, not a true two-shot overlapping transition.",
+    "Automatic per-word reveal is not implemented."
+  ],
+  "revision_2026_09_23": {
+    "change": "refine-batch-a-template-fidelity",
+    "batch": "A",
+    "status": "implemented_pending_visual_acceptance",
+    "composition": "浅色半透标题条；青绿重点词混排；英文独立居中时钟。",
+    "caption_states": [
+      "cyan_keyword_bar",
+      "center_translation"
+    ],
+    "semantic_anchor": "none",
+    "known_gaps": [
+      "licensed substitute typefaces are not official Kaipai fonts",
+      "sound-effect library remains an independent deferred workstream",
+      "user aesthetic acceptance is not inferred from QA"
+    ]
+  }
+}

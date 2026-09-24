@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "target_id": "kp-36",
+  "variant_id": "ref_browngold_v1",
+  "display_name": "专业金棕·分层校准版",
+  "reference": {
+    "name": "专业金棕",
+    "sha256": "3002a49fe3574638f56073c3ee0ffb18d582b8f7b0af1aae8adf8a80b9a9c07c"
+  },
+  "identity_features": [
+    "白色主标题与金色次标题、厚棕投影立体字",
+    "金白正文的单句与双句留屏，克制镜头配方",
+    "独立书法金姓名、细金横线和衬线资料卡；身份须核验"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "body": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 800
+    },
+    "keyword": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "sticker": {
+      "file": "assets/fonts/MaShanZheng-Regular.ttf",
+      "index": 0,
+      "weight": null
+    },
+    "translation": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 600
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 2,
+    "recipe": "金白正文的单句与双句留屏，克制镜头配方"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "独立书法金姓名、细金横线和衬线资料卡；身份须核验"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "semantic camera_motion before canvas",
+    "caption": "fade",
+    "title": "fade",
+    "tag": "template-specific",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.05,
+        "close": 1.1
+      },
+      "max_zoom": 1.1,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "mixed_size_type",
+    "vignette"
+  ],
+  "render": {
+    "family": "专业金棕",
+    "display_name": "专业金棕·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSansSC-VF.ttf",
+    "font_weight": 800,
+    "scene_system": {
+      "version": 1,
+      "kind": "browngold",
+      "title_size": 57,
+      "subtitle_size": 61,
+      "body_size": 45,
+      "keyword_size": 49,
+      "translation_size": 18,
+      "tag_size": 38,
+      "display_size": 59,
+      "compact_size": 36,
+      "title_y": 0.105,
+      "caption_y": 0.835,
+      "tag_y": 0.68,
+      "tag_x": 0.79,
+      "title_duration": 3600,
+      "allowed_canvas": [
+        "vignette"
+      ],
+      "callout_y": 0.69,
+      "callout_step": 0.052
+    },
+    "base_size": 45,
+    "keyword_size": 49,
+    "accent": "#EABD77",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.05,
+        "close": 1.1
+      },
+      "max_zoom": 1.1,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "替代字体有本地授权；不声称官方1:1。",
+    "仅声明3:4和9:16；每条素材重新检查构图、人物动作与文字可读性。",
+    "参考的人物抠像白边、替换纸背景与大字接管构图未实现，不用矩形框/圆窗冒充人物轮廓。",
+    "原钞票素材未复制；词标以授权书法字替代，不对当前人物捏造头衔。"
+  ]
+}

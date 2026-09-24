@@ -1,0 +1,184 @@
+{
+  "version": 1,
+  "target_id": "kp-13",
+  "variant_id": "ref_tech_v1",
+  "display_name": "商务科技·分层校准版",
+  "reference": {
+    "name": "商务科技",
+    "sha256": "a4594f903c52b62ce3cd1836a1b7085763ca123aca52fc7d00c8723d5e9c4548"
+  },
+  "identity_features": [
+    "银白金属分段渐变与深蓝投影斜体标题",
+    "多层斜切蓝轨道持续显示，字幕在轨道内独立切换且不带动底条闪灭",
+    "独立蓝白描边强调字及来源核验后的双列竖向身份卡"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/SmileySans-Oblique.ttf",
+      "index": 0,
+      "weight": null
+    },
+    "body": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 800
+    },
+    "keyword": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 850
+    },
+    "sticker": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 850
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 1,
+    "recipe": "多层斜切蓝轨道持续显示，字幕在轨道内独立切换且不带动底条闪灭"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "独立蓝白描边强调字及来源核验后的双列竖向身份卡"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "semantic camera_motion before canvas",
+    "caption": "steady inside persistent rail",
+    "title": "fade",
+    "tag": "template-specific",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.05,
+        "close": 1.1
+      },
+      "max_zoom": 1.1,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "mixed_size_type"
+  ],
+  "render": {
+    "family": "商务科技",
+    "display_name": "商务科技·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSansSC-VF.ttf",
+    "font_weight": 800,
+    "scene_system": {
+      "version": 1,
+      "kind": "tech",
+      "title_size": 67,
+      "subtitle_size": 46,
+      "body_size": 40,
+      "keyword_size": 42,
+      "translation_size": 22,
+      "tag_size": 40,
+      "display_size": 60,
+      "compact_size": 36,
+      "title_y": 0.1,
+      "caption_y": 0.9,
+      "tag_y": 0.74,
+      "tag_x": 0.79,
+      "title_duration": 3600,
+      "allowed_canvas": [],
+      "callout_y": 0.685,
+      "callout_step": 0.06
+    },
+    "base_size": 40,
+    "keyword_size": 42,
+    "accent": "#A4F1FF",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.05,
+        "close": 1.1
+      },
+      "max_zoom": 1.1,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "替代字体有本地授权；不声称官方1:1。",
+    "仅声明3:4和9:16；每条素材重新检查构图、人物动作与文字可读性。",
+    "斜体金属字为授权替代字体加原创几何/渐变，不是官方字形。",
+    "科技轨道为原创多层几何，不包含参考工程的动态材质/扫光。",
+    "身份卡有渲染与输入校验，但实际人物资料需用户/可靠来源核验；本轮不编造身份。",
+    "得意黑不覆盖全部繁体字，字形预检失败必须停止，不静默替换。"
+  ]
+}

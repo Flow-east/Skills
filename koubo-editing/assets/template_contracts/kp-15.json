@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "target_id": "kp-15",
+  "variant_id": "ref_news_v1",
+  "display_name": "新闻蓝·分层校准版",
+  "reference": {
+    "name": "新闻蓝",
+    "sha256": "232885a9b8caf3a01d353ef6075e8130a5c69931381ab47ae14cf1080ffffbcb"
+  },
+  "identity_features": [
+    "蓝红双斜切标题条，斜体白标题",
+    "蓝字逐字米白小底片、间隙及细边",
+    "右对齐大块展示态和含原创球形图标的新闻式词条"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/SmileySans-Oblique.ttf",
+      "index": 0,
+      "weight": null
+    },
+    "body": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 850
+    },
+    "keyword": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "sticker": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 800
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 1,
+    "recipe": "蓝字逐字米白小底片、间隙及细边"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "右对齐大块展示态和含原创球形图标的新闻式词条"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "semantic camera_motion before canvas",
+    "caption": "fade",
+    "title": "fade",
+    "tag": "template-specific",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.05,
+        "close": 1.1
+      },
+      "max_zoom": 1.1,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "mixed_size_type"
+  ],
+  "render": {
+    "family": "新闻蓝",
+    "display_name": "新闻蓝·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSansSC-VF.ttf",
+    "font_weight": 850,
+    "scene_system": {
+      "version": 1,
+      "kind": "news",
+      "title_size": 62,
+      "subtitle_size": 47,
+      "body_size": 43,
+      "keyword_size": 52,
+      "translation_size": 21,
+      "tag_size": 26,
+      "display_size": 54,
+      "title_y": 0.1,
+      "caption_y": 0.78,
+      "tag_y": 0.68,
+      "tag_x": 0.79,
+      "title_duration": 2.6,
+      "allowed_canvas": []
+    },
+    "base_size": 43,
+    "keyword_size": 52,
+    "accent": "#0756D9",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.05,
+        "close": 1.1
+      },
+      "max_zoom": 1.1,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "本地许可替代字体与原创时序，非开拍官方工程。",
+    "只声明3:4和9:16；每条素材需单独检查受保护构图。",
+    "参考逐字小底片的各字独立入场尚未实现，目前整句淡入。",
+    "球形图标为原创线稿静态图形，不是官方动态地球素材。",
+    "得意黑不覆盖全部繁体字；逐字字形检查失败时停止，不能静默替字或输出方框。"
+  ]
+}

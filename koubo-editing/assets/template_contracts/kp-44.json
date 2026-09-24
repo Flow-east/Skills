@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "target_id": "kp-44",
+  "variant_id": "ref_nostalgia_v1",
+  "display_name": "古典怀旧·分层校准版",
+  "reference": {
+    "name": "古典怀旧",
+    "sha256": "311de482ff6552a114691e47fff5f9a61120ab0753a8f5e0689e5374f44962d3"
+  },
+  "identity_features": [
+    "浅金衬线标题和克制暗色细影",
+    "半透棕色横卡承载细衬线正文，左对齐文字但整卡居中",
+    "短重点句切到无底毛笔手写状态；两态独立时钟，留白不靠缩小人物"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 600
+    },
+    "body": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 500
+    },
+    "keyword": {
+      "file": "assets/fonts/MaShanZheng-Regular.ttf",
+      "index": 0,
+      "weight": null
+    },
+    "sticker": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 500
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 1,
+    "recipe": "半透棕色横卡承载细衬线正文，左对齐文字但整卡居中"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "短重点句切到无底毛笔手写状态；两态独立时钟，留白不靠缩小人物"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "semantic camera before type",
+    "caption": "independent phrase fade/soft; no inferred word timings",
+    "title": "fade",
+    "tag": "template-specific",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.05,
+        "close": 1.1
+      },
+      "max_zoom": 1.1,
+      "transitions": {
+        "punch": {
+          "seconds": 0.55
+        },
+        "glide": {
+          "seconds": 1.15
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "mixed_size_type"
+  ],
+  "render": {
+    "family": "古典怀旧",
+    "display_name": "古典怀旧·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSerifSC-VF.ttf",
+    "font_weight": 500,
+    "scene_system": {
+      "version": 1,
+      "kind": "nostalgia",
+      "title_size": 47,
+      "subtitle_size": 39,
+      "body_size": 34,
+      "display_size": 46,
+      "compact_size": 34,
+      "tag_size": 28,
+      "keyword_size": 46,
+      "title_y": 0.1,
+      "caption_y": 0.83,
+      "tag_y": 0.67,
+      "tag_x": 0.8,
+      "title_duration": 3600,
+      "allowed_canvas": []
+    },
+    "base_size": 34,
+    "keyword_size": 46,
+    "accent": "#F4E4B7",
+    "text": "#FFF9DF",
+    "stroke": "#29261F",
+    "enter": "fade",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.05,
+        "close": 1.1
+      },
+      "max_zoom": 1.1,
+      "transitions": {
+        "punch": {
+          "seconds": 0.55
+        },
+        "glide": {
+          "seconds": 1.15
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "现有授权替代字体与原创几何，不是官方1:1。",
+    "仅声明3:4和9:16；新素材重新进行字形、保护区和布局检查。",
+    "本地参考仅约4秒，不能据此推断全片状态。",
+    "原细手写字形、打字机逐字揭示及光标未复原；当前授权毛笔替代和短语淡入。"
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "target_id": "kp-53",
+  "variant_id": "ref_emojiwhite_v1",
+  "display_name": "简约emoji·分层校准版",
+  "reference": {
+    "name": "简约emoji",
+    "sha256": "b648bde020a4947fa48b8e43dbf7f985e7b278930bf3526423965f62274838f4"
+  },
+  "identity_features": [
+    "顶部黑白粗体标题采用厚黑边与紧凑双行，关键词可单字放大形成强钩子",
+    "正文白字黑边或黑色胶囊标签，展示句以大号黑白字拆分，不依赖复杂色彩",
+    "emoji仅用原创眼睛、汗滴、相机、干货胶囊等抽象符号，且必须有语义原因"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "body": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "keyword": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "sticker": {
+      "file": "assets/fonts/ZCOOLKuaiLe-Regular.ttf",
+      "index": 0,
+      "weight": null
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 2,
+    "recipe": "正文白字黑边或黑色胶囊标签，展示句以大号黑白字拆分，不依赖复杂色彩"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "emoji仅用原创眼睛、汗滴、相机、干货胶囊等抽象符号，且必须有语义原因"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "semantic camera before typography",
+    "caption": "independent phrase clocks; template-specific bounded appearance without inferred word times",
+    "title": "stable authored title geometry with bounded fade/pop",
+    "tag": "template-specific semantic original geometry",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.075,
+        "close": 1.15
+      },
+      "max_zoom": 1.15,
+      "transitions": {
+        "punch": {
+          "seconds": 0.4
+        },
+        "glide": {
+          "seconds": 1.15
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "mixed_size_type"
+  ],
+  "render": {
+    "family": "简约emoji",
+    "display_name": "简约emoji·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSansSC-VF.ttf",
+    "font_weight": 900,
+    "scene_system": {
+      "version": 1,
+      "kind": "emojiwhite",
+      "title_size": 45,
+      "subtitle_size": 41,
+      "body_size": 38,
+      "display_size": 52,
+      "compact_size": 31,
+      "tag_size": 26,
+      "title_y": 0.1,
+      "caption_y": 0.82,
+      "tag_y": 0.7,
+      "tag_x": 0.8,
+      "keyword_size": 52,
+      "title_duration": 3600,
+      "allowed_canvas": []
+    },
+    "base_size": 38,
+    "keyword_size": 52,
+    "accent": "#FFFFFF",
+    "text": "#FFFFFF",
+    "stroke": "#111111",
+    "enter": "pop",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.075,
+        "close": 1.15
+      },
+      "max_zoom": 1.15,
+      "transitions": {
+        "punch": {
+          "seconds": 0.4
+        },
+        "glide": {
+          "seconds": 1.15
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "现有授权替代字体与原创几何，不是官方1:1。",
+    "仅声明3:4和9:16；新素材必须重新检查字形、脸/手势保护区和边界。",
+    "参考中的具体相机、超级干货胶囊和大号眼前一亮排版只作类型研究，不复制资产。",
+    "Noto Sans为授权替代，原超粗窄字、拆字冲屏和emoji弹跳曲线仍有差距。"
+  ]
+}

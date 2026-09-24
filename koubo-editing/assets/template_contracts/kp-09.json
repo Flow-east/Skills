@@ -1,0 +1,206 @@
+{
+  "version": 1,
+  "target_id": "kp-09",
+  "variant_id": "ref_biyellow_v1",
+  "display_name": "百搭黄·双语·分层校准版",
+  "reference": {
+    "name": "百搭黄·双语",
+    "sha256": "2cccd79c0e5570a5ba07d4a2d89bcb171a55fba95b9e0b9034fd8efd8cf15e04"
+  },
+  "identity_features": [
+    "白主黄副重黑标题、粗黑描边",
+    "大黄中文与独立小英文居中下置",
+    "摘词黄黑角标；不虚构身份卡"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "body": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 850
+    },
+    "keyword": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "sticker": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 850
+    },
+    "translation": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 500
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 1,
+    "recipe": "大黄中文与独立小英文居中下置"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "摘词黄黑角标；不虚构身份卡"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false,
+    "translation_clock": "independent_output"
+  },
+  "motion": {
+    "video_camera": "semantic camera_motion before canvas",
+    "caption": "fade",
+    "title": "fade",
+    "tag": "template-specific",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.07,
+        "close": 1.14
+      },
+      "max_zoom": 1.14,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "mixed_size_type",
+    "vignette",
+    "bilingual_clocks"
+  ],
+  "render": {
+    "family": "百搭黄·双语",
+    "display_name": "百搭黄·双语·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSansSC-VF.ttf",
+    "font_weight": 850,
+    "scene_system": {
+      "version": 1,
+      "kind": "biyellow",
+      "title_size": 70,
+      "subtitle_size": 64,
+      "body_size": 50,
+      "keyword_size": 54,
+      "translation_size": 21,
+      "tag_size": 28,
+      "display_size": 56,
+      "title_y": 0.1,
+      "caption_y": 0.81,
+      "tag_y": 0.68,
+      "tag_x": 0.79,
+      "title_duration": 2.6,
+      "allowed_canvas": [
+        "vignette"
+      ]
+    },
+    "base_size": 50,
+    "keyword_size": 54,
+    "accent": "#FFE339",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.07,
+        "close": 1.14
+      },
+      "max_zoom": 1.14,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "本地许可替代字体与原创时序，非开拍官方工程。",
+    "只声明3:4和9:16；每条素材需单独检查受保护构图。",
+    "参考的左侧人物身份卡尚未实现；不得把普通关键词标签称为身份卡。",
+    "参考末段镜像翻转转场尚未实现。"
+  ],
+  "revision_2026_09_23": {
+    "change": "refine-batch-a-template-fidelity",
+    "batch": "A",
+    "status": "implemented_pending_visual_acceptance",
+    "composition": "黄黑角标；大黄中文/小英文组块；标题、字幕、摘词三层节奏。",
+    "caption_states": [
+      "yellow_chinese",
+      "small_english",
+      "black_yellow_tag"
+    ],
+    "semantic_anchor": "right_corner",
+    "known_gaps": [
+      "licensed substitute typefaces are not official Kaipai fonts",
+      "sound-effect library remains an independent deferred workstream",
+      "user aesthetic acceptance is not inferred from QA"
+    ]
+  }
+}

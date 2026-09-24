@@ -1,0 +1,3 @@
+# Preserve upstream license files verbatim, including their original whitespace.
+koubo-editing/assets/fonts/*-OFL.txt whitespace=-trailing-space
+koubo-editing/assets/sfx/Kenney-License.txt whitespace=-trailing-space

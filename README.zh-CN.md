@@ -13,6 +13,8 @@
 | `feishu-doc-permission` | [v0.1.0](https://github.com/Flow-east/Skills/blob/feishu-doc-permission-v0.1.0/feishu-doc-permission/README.zh-CN.md) | 在写入飞书文档前校验内容，并在创建后授予协作者编辑权限。 | 需要避免空文档和权限遗漏的飞书文档自动化。 | [中文说明](feishu-doc-permission/README.zh-CN.md) |
 | `live-selling-script` | [v0.1.0](https://github.com/Flow-east/Skills/blob/live-selling-script-v0.1.0/live-selling-script/README.zh-CN.md) | 共创、审核和改写有事实与证据边界的中文直播成交话术。 | 直播逐字稿、产品演示、异议处理、平台适配和转写改稿。 | [中文说明](live-selling-script/README.zh-CN.md) |
 | `vpn-git-handoff` | [v0.2.0](https://github.com/Flow-east/Skills/blob/vpn-git-handoff-v0.2.0/vpn-git-handoff/README.zh-CN.md) | 在切换 VPN 会导致编程智能体断线时，协调安全的 Git 交接，并可选择打开系统终端。 | 由人切换 VPN 完成 fetch、同步、push、clone 和失败恢复。 | [中文说明](vpn-git-handoff/README.zh-CN.md) |
+| `koubo-editing` | 当前校准版 | 先分析口播原话与结构，再编排开头、语义精剪、字幕、镜头、音效、转场和隐私处理，输出有声成片。 | 中文口播短视频的实际剪辑与模板化包装；54 套模板逐套待审美验收。 | [中文说明](koubo-editing/README.zh-CN.md) |
+
 
 每个 Skill 都是独立完整的目录，并采用独立的语义化版本。“首次发布”日期链接到最早发布该 Skill 的仓库提交，Git Tag 标识版本快照。用户可先阅读对应 README；触发技能后，智能体会加载 `SKILL.md` 以及当前任务需要的相关资源。
 
@@ -57,7 +59,7 @@ cp -R floweast-skills/vpn-git-handoff \
 使用 Codex 自带的 Skill Creator 校验全部 Skill：
 
 ```bash
-for skill in feishu-doc-permission live-selling-script vpn-git-handoff prompt-assistant mac-mail-management; do
+for skill in feishu-doc-permission live-selling-script vpn-git-handoff prompt-assistant mac-mail-management koubo-editing; do
   python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-creator/scripts/quick_validate.py" "$skill"
 done
 ```
@@ -68,9 +70,10 @@ done
 python3 -m unittest discover -s tests/live-selling-script -v
 python3 -m unittest discover -s tests/prompt-assistant -v
 python3 -m unittest discover -s mac-mail-management/tests -v
+python3 -m unittest discover -s koubo-editing/tests -v
 node mac-mail-management/tests/test_driver.js
 ```
 
 ## 许可证
 
-除非个别文件另有说明，本仓库全部内容采用 [MIT License](LICENSE)。
+除非个别文件另有说明（口播剪辑技能中的字体与音效遵循其各自许可，见 `koubo-editing/THIRD_PARTY_NOTICES.md`），本仓库全部内容采用 [MIT License](LICENSE)。

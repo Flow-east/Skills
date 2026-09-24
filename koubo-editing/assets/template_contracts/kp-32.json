@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "target_id": "kp-32",
+  "variant_id": "ref_redyellow_v1",
+  "display_name": "高智红黄·分层校准版",
+  "reference": {
+    "name": "高智红黄",
+    "sha256": "2670388b9eb6b4a2ad418af8000b556d8a5de3d7eb7943f7cac946b274e0cc5f"
+  },
+  "identity_features": [
+    "金色衬线开场和白色粗正文",
+    "红色衬线展示词独立进入并与前句分层",
+    "金色引导短句与红色重点短句共用锚点，短时交叠接管"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 750
+    },
+    "body": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 800
+    },
+    "keyword": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 850
+    },
+    "sticker": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 750
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 2,
+    "recipe": "红色衬线展示词独立进入并与前句分层"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "黄色下划线侧注持续，黑色内缩画框"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "semantic camera_motion before canvas",
+    "caption": "soft/fade independent clocks",
+    "title": "fade",
+    "tag": "template-specific",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.08,
+        "close": 1.16
+      },
+      "max_zoom": 1.16,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "persistent_notes",
+    "inset",
+    "phrase_takeover"
+  ],
+  "render": {
+    "family": "高智红黄",
+    "display_name": "高智红黄·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSansSC-VF.ttf",
+    "font_weight": 800,
+    "scene_system": {
+      "title_size": 58,
+      "body_size": 58,
+      "keyword_size": 74,
+      "title_y": 0.09,
+      "caption_y": 0.8,
+      "tag_size": 30,
+      "tag_y": 0.69,
+      "tag_x": 0.78,
+      "title_duration": 2.6,
+      "allowed_canvas": [
+        "inset"
+      ],
+      "kind": "redyellow",
+      "version": 1
+    },
+    "base_size": 58,
+    "keyword_size": 74,
+    "accent": "#FFFFFF",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.08,
+        "close": 1.16
+      },
+      "max_zoom": 1.16,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "Licensed substitutes; exact original font and animation curve not identified.",
+    "Calibration requires encoded-frame and aesthetic review.",
+    "authored same-anchor phrase takeover, <=0.16s crossfade (not official curve)"
+  ]
+}

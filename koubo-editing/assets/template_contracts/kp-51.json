@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "target_id": "kp-51",
+  "variant_id": "ref_transyellow_v1",
+  "display_name": "半透简黄·分层校准版",
+  "reference": {
+    "name": "半透简黄",
+    "sha256": "037fbbd8f7d36038b250f287758bf6a1384ded4c6b94a9f83a95bc870ccf170e"
+  },
+  "identity_features": [
+    "双行柠檬黄毛笔标题与暗色影",
+    "半透深灰小字幕，关键词浅黄；大字状态橙白斜体，双句左右错位",
+    "语义橙色侧词签，可选经构图复核柔边圆窗，不强制给真人套窗"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/MaShanZheng-Regular.ttf",
+      "index": 0,
+      "weight": null
+    },
+    "body": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 550
+    },
+    "keyword": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 650
+    },
+    "sticker": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 650
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 2,
+    "recipe": "半透深灰小字幕，关键词浅黄；大字状态橙白斜体，双句左右错位"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "语义橙色侧词签，可选经构图复核柔边圆窗，不强制给真人套窗"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "semantic camera before type",
+    "caption": "independent phrase fade/soft; no inferred word timings",
+    "title": "fade",
+    "tag": "template-specific",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.07,
+        "close": 1.14
+      },
+      "max_zoom": 1.14,
+      "transitions": {
+        "punch": {
+          "seconds": 0.55
+        },
+        "glide": {
+          "seconds": 1.15
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "mixed_size_type",
+    "circle"
+  ],
+  "render": {
+    "family": "半透简黄",
+    "display_name": "半透简黄·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSansSC-VF.ttf",
+    "font_weight": 550,
+    "scene_system": {
+      "version": 1,
+      "kind": "transyellow",
+      "title_size": 50,
+      "subtitle_size": 46,
+      "body_size": 27,
+      "display_size": 48,
+      "compact_size": 27,
+      "tag_size": 28,
+      "keyword_size": 48,
+      "title_y": 0.1,
+      "caption_y": 0.83,
+      "tag_y": 0.67,
+      "tag_x": 0.8,
+      "title_duration": 3600,
+      "allowed_canvas": [
+        "circle"
+      ]
+    },
+    "base_size": 27,
+    "keyword_size": 48,
+    "accent": "#F4E65B",
+    "text": "#FFF9DF",
+    "stroke": "#29261F",
+    "enter": "fade",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.07,
+        "close": 1.14
+      },
+      "max_zoom": 1.14,
+      "transitions": {
+        "punch": {
+          "seconds": 0.55
+        },
+        "glide": {
+          "seconds": 1.15
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "现有授权替代字体与原创几何，不是官方1:1。",
+    "仅声明3:4和9:16；新素材重新进行字形、保护区和布局检查。",
+    "原窄体字形、逐字动效与动态缩窗未完全复原。",
+    "可选圆窗仅固定窗口，不自动跟踪人脸；只有明确构图复核才允许使用。"
+  ]
+}

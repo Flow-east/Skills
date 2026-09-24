@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "target_id": "kp-10",
+  "variant_id": "ref_luxury_v1",
+  "display_name": "顶奢·分层校准版",
+  "reference": {
+    "name": "顶奢",
+    "sha256": "fa7bcee6c70c1ecb4f77895dc0dd195afcaed4af16ee72d2b943dd8bb80ad519"
+  },
+  "identity_features": [
+    "金色大衬线主标题与白色副标题",
+    "白衬线连接词、珊瑚重点词、金色问句展示态",
+    "左右错位短语保留，克制软入场"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "body": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 500
+    },
+    "keyword": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 800
+    },
+    "sticker": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 700
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 2,
+    "recipe": "白衬线连接词、珊瑚重点词、金色问句展示态"
+  },
+  "annotation": {
+    "tags_enabled": false,
+    "reason_required": true,
+    "recipe": "左右错位短语保留，克制软入场"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "semantic camera_motion before canvas",
+    "caption": "soft",
+    "title": "fade",
+    "tag": "template-specific",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.05,
+        "close": 1.1
+      },
+      "max_zoom": 1.1,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "mixed_size_type",
+    "vignette"
+  ],
+  "render": {
+    "family": "顶奢",
+    "display_name": "顶奢·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSerifSC-VF.ttf",
+    "font_weight": 500,
+    "scene_system": {
+      "version": 1,
+      "kind": "luxury",
+      "title_size": 64,
+      "subtitle_size": 45,
+      "body_size": 40,
+      "keyword_size": 52,
+      "translation_size": 21,
+      "tag_size": 28,
+      "display_size": 60,
+      "title_y": 0.1,
+      "caption_y": 0.805,
+      "tag_y": 0.68,
+      "tag_x": 0.79,
+      "title_duration": 2.6,
+      "allowed_canvas": [
+        "vignette"
+      ]
+    },
+    "base_size": 40,
+    "keyword_size": 52,
+    "accent": "#FFCC65",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.05,
+        "close": 1.1
+      },
+      "max_zoom": 1.1,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "本地许可替代字体与原创时序，非开拍官方工程。",
+    "只声明3:4和9:16；每条素材需单独检查受保护构图。",
+    "双人横访谈模糊填充适配及说话人定位尚未实现；本次保留竖向原构图。",
+    "参考的圆形追光、旋转边框和鼠标图标尚未实现。"
+  ]
+}

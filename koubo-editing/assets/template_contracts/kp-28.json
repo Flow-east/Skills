@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "target_id": "kp-28",
+  "variant_id": "ref_waxcute_v1",
+  "display_name": "彩蜡萌趣·分层校准版",
+  "reference": {
+    "name": "彩蜡萌趣",
+    "sha256": "0a8c26275d2c5e476dd3f7bcc714e20c8788709ec474d0f3e91adca28ffcb13f"
+  },
+  "identity_features": [
+    "粉色蜡笔标题配白边/浅棕细边，轻微上下错位；不照搬母婴标题",
+    "正文为粉黄白三层圆润描边，normal紧凑、display黄白大词两态",
+    "语义词签采用奶油云团、短箭头与原创彩色点星；仅在有重点时出现"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/ZCOOLKuaiLe-Regular.ttf",
+      "index": 0,
+      "weight": null
+    },
+    "body": {
+      "file": "assets/fonts/ZCOOLKuaiLe-Regular.ttf",
+      "index": 0,
+      "weight": null
+    },
+    "keyword": {
+      "file": "assets/fonts/ZCOOLKuaiLe-Regular.ttf",
+      "index": 0,
+      "weight": null
+    },
+    "sticker": {
+      "file": "assets/fonts/ZCOOLKuaiLe-Regular.ttf",
+      "index": 0,
+      "weight": null
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 2,
+    "recipe": "正文为粉黄白三层圆润描边，normal紧凑、display黄白大词两态"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "语义词签采用奶油云团、短箭头与原创彩色点星；仅在有重点时出现"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "semantic camera before typography",
+    "caption": "independent phrase clocks; bounded pop/soft/arc appearance without inferred word times",
+    "title": "fade with stable per-glyph geometry",
+    "tag": "template-specific semantic geometry",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.07,
+        "close": 1.14
+      },
+      "max_zoom": 1.14,
+      "transitions": {
+        "punch": {
+          "seconds": 0.42
+        },
+        "glide": {
+          "seconds": 1.15
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "mixed_size_type"
+  ],
+  "render": {
+    "family": "彩蜡萌趣",
+    "display_name": "彩蜡萌趣·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/ZCOOLKuaiLe-Regular.ttf",
+    "font_weight": null,
+    "scene_system": {
+      "version": 1,
+      "kind": "waxcute",
+      "title_size": 43,
+      "subtitle_size": 38,
+      "body_size": 42,
+      "display_size": 54,
+      "compact_size": 31,
+      "tag_size": 27,
+      "keyword_size": 54,
+      "title_y": 0.105,
+      "caption_y": 0.82,
+      "tag_y": 0.72,
+      "tag_x": 0.8,
+      "title_duration": 3600,
+      "allowed_canvas": []
+    },
+    "base_size": 42,
+    "keyword_size": 54,
+    "accent": "#F4A8CE",
+    "text": "#FFFFFF",
+    "stroke": "#211F23",
+    "enter": "pop",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.07,
+        "close": 1.14
+      },
+      "max_zoom": 1.14,
+      "transitions": {
+        "punch": {
+          "seconds": 0.42
+        },
+        "glide": {
+          "seconds": 1.15
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "现有授权替代字体与原创几何，不是官方1:1。",
+    "仅声明3:4和9:16；新素材必须重新检查字形、脸/手势保护区和边界。",
+    "参考的玩具、奶瓶、尿不湿等商品贴纸不复用；当前只绘制通用几何词签。",
+    "人物描边、黑色椭圆彩点框和逐帧彩屑动画未实现；不把画面裁成装饰窗口。"
+  ]
+}

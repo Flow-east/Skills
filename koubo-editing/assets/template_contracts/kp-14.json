@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "target_id": "kp-14",
+  "variant_id": "ref_science_v1",
+  "display_name": "醒目科普·分层校准版",
+  "reference": {
+    "name": "醒目科普",
+    "sha256": "c072f8fe0c1a23d1d8dd5083b5a8fc7715d8f775a0ce3491e5b836f102b8be7d"
+  },
+  "identity_features": [
+    "红色首行与蓝色次行粗斜标题，白边黑投影",
+    "白色短句与锯齿浅纸条展示态，黄正文配红色重点词",
+    "短词下方原创指示手、可选蓝青小身份卡与独立重点词"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "body": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 850
+    },
+    "keyword": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "sticker": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 800
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 1,
+    "recipe": "白色短句与锯齿浅纸条展示态，黄正文配红色重点词"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "短词下方原创指示手、可选蓝青小身份卡与独立重点词"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "semantic camera_motion before canvas",
+    "caption": "fade",
+    "title": "fade",
+    "tag": "template-specific",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.06,
+        "close": 1.12
+      },
+      "max_zoom": 1.12,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "mixed_size_type"
+  ],
+  "render": {
+    "family": "醒目科普",
+    "display_name": "醒目科普·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSansSC-VF.ttf",
+    "font_weight": 850,
+    "scene_system": {
+      "version": 1,
+      "kind": "science",
+      "title_size": 58,
+      "subtitle_size": 64,
+      "body_size": 43,
+      "keyword_size": 47,
+      "translation_size": 22,
+      "tag_size": 29,
+      "display_size": 60,
+      "compact_size": 36,
+      "title_y": 0.1,
+      "caption_y": 0.805,
+      "tag_y": 0.68,
+      "tag_x": 0.79,
+      "title_duration": 3600,
+      "allowed_canvas": [],
+      "callout_y": 0.685,
+      "callout_step": 0.06
+    },
+    "base_size": 43,
+    "keyword_size": 47,
+    "accent": "#132FAB",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.06,
+        "close": 1.12
+      },
+      "max_zoom": 1.12,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "替代字体有本地授权；不声称官方1:1。",
+    "仅声明3:4和9:16；每条素材重新检查构图、人物动作与文字可读性。",
+    "参考的逐字红黄高亮切换仍需显式分段，尚无自动逐字高亮时钟。",
+    "纸边与手指标为原创近似；未复原官方贴纸素材。",
+    "身份卡未绑定本素材的真实人物资料，不以示例姓名当成用户身份。"
+  ]
+}

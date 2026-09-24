@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "target_id": "kp-33",
+  "variant_id": "ref_ginger_v1",
+  "display_name": "素雅姜红·分层校准版",
+  "reference": {
+    "name": "素雅姜红",
+    "sha256": "e9135d5ae1b1763eb76bbd8ca56291bd0b24034bf73be30f0829b237b9dd9e41"
+  },
+  "identity_features": [
+    "白色斜衬线标题与局部淡粉柔光，不整屏套粉色遮罩",
+    "小字细角括线、白色展示句、粉色大词三态独立时钟",
+    "粉色大词与较小白句中置留屏，克制软入场和平滑镜头"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 650
+    },
+    "body": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 550
+    },
+    "keyword": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 750
+    },
+    "sticker": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 600
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 2,
+    "recipe": "小字细角括线、白色展示句、粉色大词三态独立时钟"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "粉色大词与较小白句中置留屏，克制软入场和平滑镜头"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "semantic camera_motion before typography",
+    "caption": "independent phrase clocks; bounded original fade/soft/pop",
+    "title": "fade",
+    "tag": "template-specific",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.05,
+        "close": 1.1
+      },
+      "max_zoom": 1.1,
+      "transitions": {
+        "punch": {
+          "seconds": 0.55
+        },
+        "glide": {
+          "seconds": 1.15
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "mixed_size_type"
+  ],
+  "render": {
+    "family": "素雅姜红",
+    "display_name": "素雅姜红·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSerifSC-VF.ttf",
+    "font_weight": 550,
+    "scene_system": {
+      "version": 1,
+      "kind": "ginger",
+      "title_size": 45,
+      "subtitle_size": 41,
+      "body_size": 37,
+      "keyword_size": 48,
+      "display_size": 53,
+      "compact_size": 34,
+      "tag_size": 28,
+      "title_y": 0.1,
+      "caption_y": 0.835,
+      "tag_y": 0.68,
+      "tag_x": 0.8,
+      "title_duration": 3600,
+      "allowed_canvas": [],
+      "callout_y": 0.66
+    },
+    "base_size": 31,
+    "keyword_size": 48,
+    "accent": "#F19BBD",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.05,
+        "close": 1.1
+      },
+      "max_zoom": 1.1,
+      "transitions": {
+        "punch": {
+          "seconds": 0.55
+        },
+        "glide": {
+          "seconds": 1.15
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "本地授权替代字体与原创几何；不是官方1:1。",
+    "仅声明3:4和9:16；新素材必须重新检查字形、脸/手势保护区和边界。",
+    "细衬线字体为授权替代；原逐字进场和精确字重/柔光曲线未复原。",
+    "参考小字装饰仅以原创细弧角线近似，不声称原模板线稿。"
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "target_id": "kp-06",
+  "variant_id": "ref_pink_v1",
+  "display_name": "轻透雅粉·分层校准版",
+  "reference": {
+    "name": "轻透雅粉",
+    "sha256": "d1bb61c6cc9706ec244594e5d21a6f90c2acd5e1908787d433f72897f3366167"
+  },
+  "identity_features": [
+    "白粉黄衬线文字与暗偏移阴影",
+    "前句左上后句右下，独立时钟且保持位置",
+    "裸衬线词标与视频层圆窗"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 800
+    },
+    "body": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 650
+    },
+    "keyword": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 750
+    },
+    "sticker": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 750
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "max_phrases": 2,
+    "recipe": "前句左上后句右下，独立时钟且保持位置"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "slots": [
+      "left",
+      "right"
+    ],
+    "recipe": "裸衬线词标与视频层圆窗"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "authored semantic camera_motion before canvas",
+    "title": "fade",
+    "caption": "soft rise/blur",
+    "tag": "fade"
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "vignette",
+    "circle",
+    "swipe"
+  ],
+  "render": {
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_visual_acceptance",
+    "font_status": "licensed_substitutes_not_identified_official_fonts",
+    "font": "assets/fonts/NotoSerifSC-VF.ttf",
+    "font_weight": 700,
+    "title_font_weight": 800,
+    "body_font_weight": 650,
+    "keyword_font_weight": 750,
+    "sticker_font_weight": 750,
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1.0,
+        "medium": 1.1,
+        "close": 1.2
+      },
+      "max_zoom": 1.23,
+      "transitions": {
+        "punch": {
+          "seconds": 0.32
+        },
+        "glide": {
+          "seconds": 1.2
+        },
+        "reframe": {
+          "seconds": 0.42
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "time_space": "output",
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "hold": "until_next_authored_decision",
+      "trigger": "reviewed_semantic_beats",
+      "reset_at_cut": false,
+      "origin": "original tunable design informed by user sample; not measured Kaipai engine parameters",
+      "framing_review": "required_at_peak_and_during_gestures"
+    },
+    "display_name": "轻透雅粉·分层校准版",
+    "family": "轻透雅粉 / calibration-v1",
+    "accent": "#F4AEC9",
+    "text": "#FFFFFF",
+    "stroke": "#15111A",
+    "scene_system": {
+      "version": 1,
+      "kind": "pink",
+      "title_size": 64,
+      "body_size": 64,
+      "keyword_size": 74,
+      "title_y": 0.095,
+      "caption_y": 0.79,
+      "tag_size": 43,
+      "tag_y": 0.66,
+      "tag_x": 0.76,
+      "title_duration": 2.6,
+      "allowed_canvas": [
+        "vignette",
+        "circle",
+        "swipe"
+      ]
+    },
+    "verified_from": "54套本地预览视觉研究；独立排版实现，字体/动效近似，等待用户视觉验收",
+    "reference_evidence": {
+      "preview_name": "轻透雅粉",
+      "sha256": "d1bb61c6cc9706ec244594e5d21a6f90c2acd5e1908787d433f72897f3366167",
+      "duration": 16.857007,
+      "dimensions": [
+        810,
+        1080
+      ],
+      "scope": "Observed preview appearance only; licensed substitute fonts; no claim of official full rule recovery"
+    }
+  },
+  "limitations": [
+    "Licensed substitute fonts, not identified official font or exact animation curves."
+  ],
+  "revision_2026_09_23": {
+    "change": "refine-batch-a-template-fidelity",
+    "batch": "A",
+    "status": "implemented_pending_visual_acceptance",
+    "composition": "轻透雅粉；前句左上、后句右下；柔和暗角维持空间。",
+    "caption_states": [
+      "left_upper",
+      "right_lower"
+    ],
+    "semantic_anchor": "side_phrase_label",
+    "known_gaps": [
+      "licensed substitute typefaces are not official Kaipai fonts",
+      "sound-effect library remains an independent deferred workstream",
+      "user aesthetic acceptance is not inferred from QA"
+    ]
+  }
+}

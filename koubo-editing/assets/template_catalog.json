@@ -1,0 +1,1459 @@
+{
+  "mint_clean": {
+    "family": "经典蓝·双语",
+    "accent": "#55DFC3",
+    "text": "#FFFFFF",
+    "stroke": "#173035",
+    "base_size": 50,
+    "keyword_size": 66,
+    "enter": "rise",
+    "caption_y": 0.86,
+    "layout": "center_lower",
+    "motion": "keyword_pop",
+    "decoration": "none",
+    "verified_from": "开拍模板样本",
+    "font": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+    "title_font": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+    "zoom_language": "gentle_push",
+    "stroke_width": 3.0,
+    "keyword_stroke_width": 3.5,
+    "shadow": false,
+    "layout_position": "lower_center",
+    "title_weight": "body",
+    "display_name": "经典蓝·双语",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1.0,
+        "medium": 1.08,
+        "close": 1.17
+      },
+      "max_zoom": 1.2,
+      "transitions": {
+        "punch": {
+          "seconds": 0.42
+        },
+        "glide": {
+          "seconds": 1.3
+        },
+        "reframe": {
+          "seconds": 0.6
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "time_space": "output",
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "hold": "until_next_authored_decision",
+      "trigger": "reviewed_semantic_beats",
+      "reset_at_cut": false,
+      "origin": "original tunable design informed by user sample; not measured Kaipai engine parameters",
+      "framing_review": "required_at_peak_and_during_gestures"
+    },
+    "sticker_font": "assets/fonts/SmileySans-Oblique.ttf",
+    "sticker_style": {
+      "shape": "cutout",
+      "fill": "#55DFC3",
+      "ink": "#17232A",
+      "border": "#FFFFFF",
+      "size": 62,
+      "angle": -3
+    }
+  },
+  "orange_hook": {
+    "family": "明快黄/橙色强钩子",
+    "accent": "#FFE24B",
+    "text": "#FFF8E7",
+    "stroke": "#191520",
+    "base_size": 53,
+    "keyword_size": 73,
+    "enter": "punch",
+    "caption_y": 0.79,
+    "layout": "center_lower",
+    "motion": "keyword_pop",
+    "decoration": "none",
+    "verified_from": "原创独立设计；参考用户样片结构，不是官方模板复刻",
+    "font": "/System/Library/Fonts/STHeiti Medium.ttc",
+    "title_font": "assets/fonts/SmileySans-Oblique.ttf",
+    "zoom_language": "punch_push",
+    "stroke_width": 5.0,
+    "keyword_stroke_width": 6.5,
+    "shadow": true,
+    "layout_position": [
+      0.5,
+      0.79
+    ],
+    "title_weight": "title",
+    "display_name": "冲击大字",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1.0,
+        "medium": 1.12,
+        "close": 1.23
+      },
+      "max_zoom": 1.26,
+      "transitions": {
+        "punch": {
+          "seconds": 0.3
+        },
+        "glide": {
+          "seconds": 1.05
+        },
+        "reframe": {
+          "seconds": 0.42
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "time_space": "output",
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "hold": "until_next_authored_decision",
+      "trigger": "reviewed_semantic_beats",
+      "reset_at_cut": false,
+      "origin": "original tunable design informed by user sample; not measured Kaipai engine parameters",
+      "framing_review": "required_at_peak_and_during_gestures"
+    },
+    "keyword_font": "assets/fonts/SmileySans-Oblique.ttf",
+    "sticker_font": "assets/fonts/SmileySans-Oblique.ttf",
+    "sticker_style": {
+      "shape": "cutout",
+      "fill": "#FFE24B",
+      "ink": "#19151E",
+      "border": "#FFFFFF",
+      "size": 62,
+      "angle": -4
+    },
+    "typography_name": "黑体正文 + 得意黑重点字",
+    "design_system": {
+      "version": 2,
+      "name": "冲击大字",
+      "caption": {
+        "kind": "impact",
+        "anchor": [
+          0.5,
+          0.79
+        ],
+        "align": "center",
+        "max_width": 0.86,
+        "chars": 12,
+        "size": 53,
+        "keyword_size": 73,
+        "line_gap": 1.16,
+        "enter": "punch",
+        "in_ms": 180,
+        "out_ms": 90,
+        "fallback_anchors": [
+          [
+            0.5,
+            0.85
+          ]
+        ]
+      },
+      "title": {
+        "kind": "headline",
+        "anchor": [
+          0.5,
+          0.115
+        ],
+        "max_width": 0.86,
+        "size": 57,
+        "duration": 3.6,
+        "enter": "punch",
+        "in_ms": 220
+      },
+      "sticker": {
+        "anchors": [
+          [
+            0.76,
+            0.095
+          ],
+          [
+            0.24,
+            0.095
+          ]
+        ],
+        "max_width": 0.37,
+        "enter": "punch",
+        "in_ms": 220,
+        "out_ms": 120,
+        "max_height": 0.12
+      }
+    },
+    "design_status": "dynamic_preview_required"
+  },
+  "yellow_stroke": {
+    "family": "基础白金/简洁黄白",
+    "accent": "#FFD52F",
+    "text": "#FFFFFF",
+    "stroke": "#17121C",
+    "base_size": 52,
+    "keyword_size": 68,
+    "enter": "pop",
+    "caption_y": 0.84,
+    "layout": "angled_lower",
+    "motion": "slide_pop",
+    "decoration": "rays",
+    "verified_from": "开拍模板样本",
+    "font": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+    "title_font": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+    "zoom_language": "gentle_push",
+    "stroke_width": 4.5,
+    "keyword_stroke_width": 5.5,
+    "shadow": true,
+    "layout_position": "lower_left",
+    "title_weight": "title",
+    "display_name": "简洁黄白",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1.0,
+        "medium": 1.1,
+        "close": 1.2
+      },
+      "max_zoom": 1.23,
+      "transitions": {
+        "punch": {
+          "seconds": 0.36
+        },
+        "glide": {
+          "seconds": 1.15
+        },
+        "reframe": {
+          "seconds": 0.48
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "time_space": "output",
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "hold": "until_next_authored_decision",
+      "trigger": "reviewed_semantic_beats",
+      "reset_at_cut": false,
+      "origin": "original tunable design informed by user sample; not measured Kaipai engine parameters",
+      "framing_review": "required_at_peak_and_during_gestures"
+    },
+    "sticker_font": "assets/fonts/SmileySans-Oblique.ttf",
+    "sticker_style": {
+      "shape": "cutout",
+      "fill": "#FFD52F",
+      "ink": "#17232A",
+      "border": "#FFFFFF",
+      "size": 62,
+      "angle": -3
+    }
+  },
+  "premium_cream": {
+    "family": "轻奢白·双语",
+    "accent": "#E8C77A",
+    "text": "#FFFDF7",
+    "stroke": "#332A2A",
+    "base_size": 46,
+    "keyword_size": 60,
+    "enter": "rise",
+    "caption_y": 0.84,
+    "layout": "split_lower",
+    "motion": "particle_reveal",
+    "decoration": "sparkle",
+    "verified_from": "开拍模板样本",
+    "font": "/System/Library/Fonts/Supplemental/Songti.ttc",
+    "title_font": "/System/Library/Fonts/Supplemental/Songti.ttc",
+    "zoom_language": "no_zoom",
+    "display_name": "轻奢白·双语",
+    "keyword_font": "/System/Library/Fonts/Supplemental/Songti.ttc",
+    "sticker_font": "/System/Library/Fonts/Supplemental/Songti.ttc",
+    "sticker_style": {
+      "shape": "seal",
+      "fill": "#FFF5DF",
+      "ink": "#382B23",
+      "border": "#B69558",
+      "size": 58,
+      "angle": 0
+    }
+  },
+  "red_warning": {
+    "family": "高级红·双语",
+    "accent": "#E84B4B",
+    "text": "#FFFFFF",
+    "stroke": "#271A20",
+    "base_size": 50,
+    "keyword_size": 70,
+    "enter": "pop",
+    "caption_y": 0.82,
+    "layout": "insert_slot",
+    "motion": "insert_pop",
+    "decoration": "burst",
+    "verified_from": "开拍模板样本",
+    "font": "assets/fonts/SmileySans-Oblique.ttf",
+    "title_font": "assets/fonts/SmileySans-Oblique.ttf",
+    "zoom_language": "punch_push",
+    "display_name": "高级红·双语",
+    "keyword_font": "assets/fonts/SmileySans-Oblique.ttf",
+    "sticker_font": "assets/fonts/SmileySans-Oblique.ttf",
+    "sticker_style": {
+      "shape": "cutout",
+      "fill": "#E84B4B",
+      "ink": "#382B23",
+      "border": "#FFFFFF",
+      "size": 58,
+      "angle": -3
+    }
+  },
+  "blue_interview": {
+    "family": "顶奢访谈",
+    "accent": "#8EE9E2",
+    "text": "#FFFFFF",
+    "stroke": "#173035",
+    "base_size": 48,
+    "keyword_size": 62,
+    "enter": "rise",
+    "caption_y": 0.78,
+    "layout": "blur_band",
+    "motion": "slow_rise",
+    "decoration": "none",
+    "verified_from": "开拍模板样本",
+    "font": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+    "title_font": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+    "zoom_language": "no_zoom",
+    "display_name": "顶奢",
+    "keyword_font": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+    "sticker_font": "/System/Library/Fonts/Hiragino Sans GB.ttc",
+    "sticker_style": {
+      "shape": "cutout",
+      "fill": "#8EE9E2",
+      "ink": "#382B23",
+      "border": "#FFFFFF",
+      "size": 58,
+      "angle": -3
+    }
+  },
+  "rounded_pop": {
+    "family": "元气卡通·快乐体",
+    "accent": "#F45F7D",
+    "text": "#23382F",
+    "stroke": "#FFFFFF",
+    "base_size": 47,
+    "keyword_size": 55,
+    "enter": "bounce",
+    "caption_y": 0.75,
+    "layout": "center_lower",
+    "motion": "keyword_pop",
+    "decoration": "none",
+    "verified_from": "原创独立设计；参考用户样片结构，不是官方模板复刻",
+    "font": "assets/fonts/ZCOOLKuaiLe-Regular.ttf",
+    "title_font": "assets/fonts/ZCOOLKuaiLe-Regular.ttf",
+    "zoom_language": "punch_push",
+    "stroke_width": 4.0,
+    "keyword_stroke_width": 4.0,
+    "shadow": false,
+    "layout_position": [
+      0.5,
+      0.75
+    ],
+    "title_weight": "title",
+    "display_name": "气泡对话",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1.0,
+        "medium": 1.1,
+        "close": 1.19
+      },
+      "max_zoom": 1.22,
+      "transitions": {
+        "punch": {
+          "seconds": 0.38
+        },
+        "glide": {
+          "seconds": 1.0
+        },
+        "reframe": {
+          "seconds": 0.42
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "time_space": "output",
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "hold": "until_next_authored_decision",
+      "trigger": "reviewed_semantic_beats",
+      "reset_at_cut": false,
+      "origin": "original tunable design informed by user sample; not measured Kaipai engine parameters",
+      "framing_review": "required_at_peak_and_during_gestures"
+    },
+    "keyword_font": "assets/fonts/ZCOOLKuaiLe-Regular.ttf",
+    "sticker_font": "assets/fonts/ZCOOLKuaiLe-Regular.ttf",
+    "sticker_style": {
+      "shape": "bubble",
+      "fill": "#FFF2C7",
+      "ink": "#244336",
+      "border": "#FFFFFF",
+      "size": 55,
+      "angle": 4
+    },
+    "typography_name": "元气卡通·快乐体",
+    "design_system": {
+      "version": 2,
+      "name": "气泡对话",
+      "caption": {
+        "kind": "dialogue",
+        "anchor": [
+          0.5,
+          0.75
+        ],
+        "align": "center",
+        "max_width": 0.8,
+        "chars": 11,
+        "size": 47,
+        "keyword_size": 55,
+        "line_gap": 1.25,
+        "enter": "bounce",
+        "in_ms": 300,
+        "out_ms": 140,
+        "fallback_anchors": [
+          [
+            0.5,
+            0.86
+          ]
+        ]
+      },
+      "title": {
+        "kind": "pill",
+        "anchor": [
+          0.5,
+          0.105
+        ],
+        "max_width": 0.79,
+        "size": 47,
+        "duration": 2.8,
+        "enter": "bounce",
+        "in_ms": 320
+      },
+      "sticker": {
+        "anchors": [
+          [
+            0.24,
+            0.095
+          ],
+          [
+            0.76,
+            0.095
+          ]
+        ],
+        "max_width": 0.35,
+        "enter": "bounce",
+        "in_ms": 360,
+        "out_ms": 160,
+        "max_height": 0.12
+      }
+    },
+    "design_status": "dynamic_preview_required"
+  },
+  "ink_note": {
+    "family": "轻透雅粉参考",
+    "accent": "#F5A6CA",
+    "text": "#FFFFFF",
+    "stroke": "#17151B",
+    "base_size": 60,
+    "keyword_size": 72,
+    "enter": "rise",
+    "caption_y": 0.77,
+    "layout": "center_lower",
+    "motion": "keyword_pop",
+    "decoration": "none",
+    "verified_from": "用户本地轻透雅粉预览；字体为本机可用近似，非官方字体确认",
+    "font": "/System/Library/Fonts/Supplemental/Songti.ttc",
+    "title_font": "/System/Library/Fonts/Supplemental/Songti.ttc",
+    "zoom_language": "punch_push",
+    "stroke_width": 2.4,
+    "keyword_stroke_width": 2.4,
+    "shadow": false,
+    "layout_position": [
+      0.5,
+      0.8
+    ],
+    "title_weight": "title",
+    "display_name": "轻透雅粉·参考重制",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1.0,
+        "medium": 1.08,
+        "close": 1.16
+      },
+      "max_zoom": 1.19,
+      "transitions": {
+        "punch": {
+          "seconds": 0.5
+        },
+        "glide": {
+          "seconds": 1.4
+        },
+        "reframe": {
+          "seconds": 0.42
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "time_space": "output",
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "hold": "until_next_authored_decision",
+      "trigger": "reviewed_semantic_beats",
+      "reset_at_cut": false,
+      "origin": "original tunable design informed by user sample; not measured Kaipai engine parameters",
+      "framing_review": "required_at_peak_and_during_gestures"
+    },
+    "keyword_font": "/System/Library/Fonts/Supplemental/Songti.ttc",
+    "sticker_font": "/System/Library/Fonts/Supplemental/Songti.ttc",
+    "sticker_style": {
+      "shape": "pink_word",
+      "size": 62,
+      "fill": "#F5A6CA",
+      "ink": "#F5A6CA",
+      "border": "#FFFFFF",
+      "angle": -3
+    },
+    "typography_name": "宋体粗字 + 错落双行 + 白粉黄分色",
+    "design_system": {
+      "version": 2,
+      "name": "轻透雅粉·参考重制",
+      "caption": {
+        "kind": "pink_stack",
+        "anchor": [
+          0.5,
+          0.8
+        ],
+        "align": "center",
+        "max_width": 0.9,
+        "chars": 13,
+        "size": 60,
+        "keyword_size": 72,
+        "line_gap": 1.13,
+        "enter": "rise",
+        "in_ms": 160,
+        "out_ms": 100,
+        "fallback_anchors": [
+          [
+            0.5,
+            0.855
+          ]
+        ]
+      },
+      "title": {
+        "kind": "pink_headline",
+        "anchor": [
+          0.5,
+          0.095
+        ],
+        "max_width": 0.88,
+        "size": 57,
+        "duration": 3.2,
+        "enter": "rise",
+        "in_ms": 220
+      },
+      "sticker": {
+        "anchors": [
+          [
+            0.76,
+            0.93
+          ],
+          [
+            0.75,
+            0.095
+          ],
+          [
+            0.25,
+            0.095
+          ]
+        ],
+        "max_width": 0.3,
+        "max_height": 0.085,
+        "enter": "rise",
+        "in_ms": 200,
+        "out_ms": 140
+      },
+      "revision": 3,
+      "reference_sample": "轻透雅粉.mp4"
+    },
+    "design_status": "reference_rework_preview_required",
+    "font_index": 1,
+    "title_font_index": 0,
+    "keyword_font_index": 0,
+    "sticker_font_index": 0
+  },
+  "cream_serif": {
+    "family": "基础白金参考",
+    "accent": "#54472D",
+    "text": "#54472D",
+    "stroke": "#FFF6D8",
+    "base_size": 53,
+    "keyword_size": 56,
+    "enter": "fade",
+    "caption_y": 0.82,
+    "layout": "center_lower",
+    "motion": "keyword_pop",
+    "decoration": "none",
+    "verified_from": "用户本地基础白金预览；字体为本机可用近似，非官方字体确认",
+    "font": "/System/Library/Fonts/STHeiti Medium.ttc",
+    "title_font": "/System/Library/Fonts/STHeiti Medium.ttc",
+    "zoom_language": "punch_push",
+    "stroke_width": 2.5,
+    "keyword_stroke_width": 2.5,
+    "shadow": false,
+    "layout_position": [
+      0.5,
+      0.8
+    ],
+    "title_weight": "title",
+    "display_name": "基础白金·参考重制",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1.0,
+        "medium": 1.1,
+        "close": 1.2
+      },
+      "max_zoom": 1.23,
+      "transitions": {
+        "punch": {
+          "seconds": 0.32
+        },
+        "glide": {
+          "seconds": 1.2
+        },
+        "reframe": {
+          "seconds": 0.42
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "time_space": "output",
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "hold": "until_next_authored_decision",
+      "trigger": "reviewed_semantic_beats",
+      "reset_at_cut": false,
+      "origin": "original tunable design informed by user sample; not measured Kaipai engine parameters",
+      "framing_review": "required_at_peak_and_during_gestures"
+    },
+    "keyword_font": "/System/Library/Fonts/STHeiti Medium.ttc",
+    "sticker_font": "/System/Library/Fonts/STHeiti Medium.ttc",
+    "sticker_style": {
+      "shape": "gold_word",
+      "size": 51,
+      "fill": "#FFF3CE",
+      "ink": "#54472D",
+      "border": "#FFFFFF",
+      "angle": 0
+    },
+    "typography_name": "厚黑体白金标题 + 棕色填字奶白外轮廓",
+    "design_system": {
+      "version": 2,
+      "name": "基础白金·参考重制",
+      "caption": {
+        "kind": "gold_outline",
+        "anchor": [
+          0.5,
+          0.8
+        ],
+        "align": "center",
+        "max_width": 0.84,
+        "chars": 14,
+        "size": 53,
+        "keyword_size": 56,
+        "line_gap": 1.13,
+        "enter": "fade",
+        "in_ms": 100,
+        "out_ms": 90,
+        "fallback_anchors": [
+          [
+            0.5,
+            0.865
+          ]
+        ]
+      },
+      "title": {
+        "kind": "gold_headline",
+        "anchor": [
+          0.5,
+          0.095
+        ],
+        "max_width": 0.9,
+        "size": 59,
+        "duration": 4.2,
+        "enter": "fade",
+        "in_ms": 160
+      },
+      "sticker": {
+        "anchors": [
+          [
+            0.76,
+            0.91
+          ],
+          [
+            0.75,
+            0.095
+          ],
+          [
+            0.25,
+            0.095
+          ]
+        ],
+        "max_width": 0.3,
+        "max_height": 0.09,
+        "enter": "punch",
+        "in_ms": 160,
+        "out_ms": 110
+      },
+      "revision": 3,
+      "reference_sample": "基础白金.mp4"
+    },
+    "design_status": "reference_rework_preview_required",
+    "font_index": 0,
+    "title_font_index": 0,
+    "keyword_font_index": 0,
+    "sticker_font_index": 0
+  },
+  "ref_pink_v1": {
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_visual_acceptance",
+    "font_status": "licensed_substitutes_not_identified_official_fonts",
+    "font": "assets/fonts/NotoSerifSC-VF.ttf",
+    "font_weight": 700,
+    "title_font_weight": 800,
+    "body_font_weight": 650,
+    "keyword_font_weight": 750,
+    "sticker_font_weight": 750,
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1.0,
+        "medium": 1.1,
+        "close": 1.2
+      },
+      "max_zoom": 1.23,
+      "transitions": {
+        "punch": {
+          "seconds": 0.32
+        },
+        "glide": {
+          "seconds": 1.2
+        },
+        "reframe": {
+          "seconds": 0.42
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "time_space": "output",
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "hold": "until_next_authored_decision",
+      "trigger": "reviewed_semantic_beats",
+      "reset_at_cut": false,
+      "origin": "original tunable design informed by user sample; not measured Kaipai engine parameters",
+      "framing_review": "required_at_peak_and_during_gestures"
+    },
+    "display_name": "轻透雅粉·分层校准版",
+    "family": "轻透雅粉 / calibration-v1",
+    "accent": "#F4AEC9",
+    "text": "#FFFFFF",
+    "stroke": "#15111A",
+    "scene_system": {
+      "version": 1,
+      "kind": "pink",
+      "title_size": 64,
+      "body_size": 64,
+      "keyword_size": 74,
+      "title_y": 0.095,
+      "caption_y": 0.79,
+      "tag_size": 43,
+      "tag_y": 0.66,
+      "tag_x": 0.76,
+      "title_duration": 2.6,
+      "allowed_canvas": [
+        "vignette",
+        "circle",
+        "swipe"
+      ]
+    },
+    "verified_from": "54套本地预览视觉研究；独立排版实现，字体/动效近似，等待用户视觉验收",
+    "reference_evidence": {
+      "preview_name": "轻透雅粉",
+      "sha256": "d1bb61c6cc9706ec244594e5d21a6f90c2acd5e1908787d433f72897f3366167",
+      "duration": 16.857007,
+      "dimensions": [
+        810,
+        1080
+      ],
+      "scope": "Observed preview appearance only; licensed substitute fonts; no claim of official full rule recovery"
+    },
+    "contract_file": "assets/template_contracts/kp-06.json"
+  },
+  "ref_gold_v1": {
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_visual_acceptance",
+    "font_status": "licensed_substitutes_not_identified_official_fonts",
+    "font": "assets/fonts/NotoSansSC-VF.ttf",
+    "font_weight": 700,
+    "title_font_weight": 900,
+    "body_font_weight": 800,
+    "keyword_font_weight": 800,
+    "sticker_font_weight": 700,
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1.0,
+        "medium": 1.1,
+        "close": 1.2
+      },
+      "max_zoom": 1.23,
+      "transitions": {
+        "punch": {
+          "seconds": 0.32
+        },
+        "glide": {
+          "seconds": 1.2
+        },
+        "reframe": {
+          "seconds": 0.42
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "time_space": "output",
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "hold": "until_next_authored_decision",
+      "trigger": "reviewed_semantic_beats",
+      "reset_at_cut": false,
+      "origin": "original tunable design informed by user sample; not measured Kaipai engine parameters",
+      "framing_review": "required_at_peak_and_during_gestures"
+    },
+    "display_name": "基础白金·分层校准版",
+    "family": "基础白金 / calibration-v1",
+    "accent": "#F5DFAC",
+    "text": "#FFFFFF",
+    "stroke": "#15111A",
+    "scene_system": {
+      "version": 1,
+      "kind": "gold",
+      "title_size": 75,
+      "body_size": 52,
+      "keyword_size": 52,
+      "title_y": 0.09,
+      "caption_y": 0.77,
+      "tag_size": 34,
+      "tag_y": 0.68,
+      "tag_x": 0.73,
+      "title_duration": 999,
+      "allowed_canvas": [
+        "swipe"
+      ],
+      "title_max_lines": 1
+    },
+    "verified_from": "54套本地预览视觉研究；独立排版实现，字体/动效近似，等待用户视觉验收",
+    "reference_evidence": {
+      "preview_name": "基础白金",
+      "sha256": "8bbed31848789644e3a6e2753f47c0f6aa1d9b46dcc5cdba03bd57b6818c5831",
+      "duration": 4.061995,
+      "dimensions": [
+        810,
+        1080
+      ],
+      "scope": "Observed preview appearance only; licensed substitute fonts; no claim of official full rule recovery"
+    },
+    "contract_file": "assets/template_contracts/kp-07.json"
+  },
+  "ref_grid_v1": {
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_visual_acceptance",
+    "font_status": "licensed_substitutes_not_identified_official_fonts",
+    "font": "assets/fonts/NotoSansSC-VF.ttf",
+    "font_weight": 700,
+    "title_font_weight": 900,
+    "body_font_weight": 900,
+    "keyword_font_weight": 800,
+    "sticker_font_weight": null,
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1.0,
+        "medium": 1.1,
+        "close": 1.2
+      },
+      "max_zoom": 1.23,
+      "transitions": {
+        "punch": {
+          "seconds": 0.32
+        },
+        "glide": {
+          "seconds": 1.2
+        },
+        "reframe": {
+          "seconds": 0.42
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "time_space": "output",
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "hold": "until_next_authored_decision",
+      "trigger": "reviewed_semantic_beats",
+      "reset_at_cut": false,
+      "origin": "original tunable design informed by user sample; not measured Kaipai engine parameters",
+      "framing_review": "required_at_peak_and_during_gestures"
+    },
+    "display_name": "蓝紫方格·分层校准版",
+    "family": "蓝紫方格 / calibration-v1",
+    "accent": "#AD75FF",
+    "text": "#FFFFFF",
+    "stroke": "#15111A",
+    "title_font": "assets/fonts/NotoSansSC-VF.ttf",
+    "sticker_font": "assets/fonts/SmileySans-Oblique.ttf",
+    "scene_system": {
+      "version": 1,
+      "kind": "grid",
+      "title_size": 62,
+      "body_size": 42,
+      "keyword_size": 42,
+      "title_y": 0.106,
+      "caption_y": 0.84,
+      "tag_size": 46,
+      "tag_y": 0.71,
+      "tag_x": 0.74,
+      "title_duration": 999,
+      "allowed_canvas": [],
+      "title_glyph_scales": [
+        1.12,
+        0.94,
+        1.02,
+        0.96,
+        1.07,
+        0.95
+      ]
+    },
+    "verified_from": "54套本地预览视觉研究；独立排版实现，字体/动效近似，等待用户视觉验收",
+    "reference_evidence": {
+      "preview_name": "蓝紫方格",
+      "sha256": "cae04878e432a13eec8980309e916f97c1b96e1e04a8203136271b65d87d14d2",
+      "duration": 4.92263,
+      "dimensions": [
+        1080,
+        1440
+      ],
+      "scope": "Observed preview appearance only; licensed substitute fonts; no claim of official full rule recovery"
+    },
+    "contract_file": "assets/template_contracts/kp-48.json"
+  },
+  "ref_white_v1": {
+    "family": "简约白",
+    "display_name": "简约白·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_visual_acceptance",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSansSC-VF.ttf",
+    "font_weight": 400,
+    "scene_system": {
+      "title_size": 59,
+      "body_size": 39,
+      "keyword_size": 44,
+      "title_y": 0.09,
+      "caption_y": 0.81,
+      "tag_size": 30,
+      "tag_y": 0.68,
+      "tag_x": 0.78,
+      "title_duration": 3.2,
+      "allowed_canvas": [],
+      "kind": "white",
+      "version": 1
+    },
+    "base_size": 39,
+    "keyword_size": 44,
+    "accent": "#FFFFFF",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "contract_file": "assets/template_contracts/kp-18.json"
+  },
+  "ref_redyellow_v1": {
+    "family": "高智红黄",
+    "display_name": "高智红黄·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_visual_acceptance",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSansSC-VF.ttf",
+    "font_weight": 800,
+    "scene_system": {
+      "title_size": 58,
+      "body_size": 58,
+      "keyword_size": 74,
+      "title_y": 0.09,
+      "caption_y": 0.8,
+      "tag_size": 30,
+      "tag_y": 0.69,
+      "tag_x": 0.78,
+      "title_duration": 2.6,
+      "allowed_canvas": [
+        "inset"
+      ],
+      "kind": "redyellow",
+      "version": 1
+    },
+    "base_size": 58,
+    "keyword_size": 74,
+    "accent": "#FFFFFF",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "contract_file": "assets/template_contracts/kp-32.json"
+  },
+  "ref_variety_v1": {
+    "family": "台式综艺",
+    "display_name": "台式综艺·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_visual_acceptance",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/ZCOOLKuaiLe-Regular.ttf",
+    "font_weight": null,
+    "scene_system": {
+      "title_size": 59,
+      "body_size": 59,
+      "keyword_size": 86,
+      "title_y": 0.1,
+      "caption_y": 0.8,
+      "tag_size": 33,
+      "tag_y": 0.67,
+      "tag_x": 0.79,
+      "title_duration": 2.6,
+      "allowed_canvas": [],
+      "kind": "variety",
+      "version": 1
+    },
+    "base_size": 59,
+    "keyword_size": 86,
+    "accent": "#FFFFFF",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "contract_file": "assets/template_contracts/kp-47.json"
+  },
+  "ref_ink_v1": {
+    "family": "淡雅新中式",
+    "display_name": "淡雅新中式·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_visual_acceptance",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/LXGWWenKai-Medium.ttf",
+    "font_weight": null,
+    "scene_system": {
+      "title_size": 67,
+      "body_size": 40,
+      "keyword_size": 40,
+      "title_y": 0.095,
+      "caption_y": 0.8,
+      "tag_size": 30,
+      "tag_y": 0.67,
+      "tag_x": 0.79,
+      "title_duration": 2.4,
+      "allowed_canvas": [],
+      "kind": "ink",
+      "version": 1
+    },
+    "base_size": 40,
+    "keyword_size": 40,
+    "accent": "#FFFFFF",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "contract_file": "assets/template_contracts/kp-23.json"
+  },
+  "ref_latte_v1": {
+    "family": "黄油拿铁",
+    "display_name": "黄油拿铁·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_visual_acceptance",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSansSC-VF.ttf",
+    "font_weight": 900,
+    "scene_system": {
+      "title_size": 54,
+      "body_size": 58,
+      "keyword_size": 72,
+      "title_y": 0.09,
+      "caption_y": 0.8,
+      "tag_size": 30,
+      "tag_y": 0.69,
+      "tag_x": 0.78,
+      "title_duration": 3.0,
+      "allowed_canvas": [
+        "circle",
+        "inset"
+      ],
+      "kind": "latte",
+      "version": 1
+    },
+    "base_size": 58,
+    "keyword_size": 72,
+    "accent": "#FFFFFF",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "contract_file": "assets/template_contracts/kp-37.json"
+  },
+  "ref_bired_v1": {
+    "family": "高级红·双语",
+    "display_name": "高级红·双语·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-01.json",
+    "verified_from": "User-provided local preview, dense sequence and native frames; substitute typography"
+  },
+  "ref_biluxe_v1": {
+    "family": "轻奢白·双语",
+    "display_name": "轻奢白·双语·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-02.json",
+    "verified_from": "User-provided local preview, dense sequence and native frames; substitute typography"
+  },
+  "ref_biblue_v1": {
+    "family": "经典蓝·双语",
+    "display_name": "经典蓝·双语·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-03.json",
+    "verified_from": "User-provided local preview, dense sequence and native frames; substitute typography"
+  },
+  "ref_biyellow_v1": {
+    "family": "百搭黄·双语",
+    "display_name": "百搭黄·双语·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-09.json",
+    "verified_from": "Local downloaded reference sequence plus native frames; licensed substitutes, explicit core gaps"
+  },
+  "ref_luxury_v1": {
+    "family": "顶奢",
+    "display_name": "顶奢·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-10.json",
+    "verified_from": "Local downloaded reference sequence plus native frames; licensed substitutes, explicit core gaps"
+  },
+  "ref_brightyellow_v1": {
+    "family": "明快黄",
+    "display_name": "明快黄·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-11.json",
+    "verified_from": "Local downloaded reference sequence plus native frames; licensed substitutes, explicit core gaps"
+  },
+  "ref_navy_v1": {
+    "family": "沉稳墨蓝",
+    "display_name": "沉稳墨蓝·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-12.json",
+    "verified_from": "Local downloaded reference sequence plus native frames; licensed substitutes, explicit core gaps"
+  },
+  "ref_news_v1": {
+    "family": "新闻蓝",
+    "display_name": "新闻蓝·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-15.json",
+    "verified_from": "Local downloaded reference sequence plus native frames; licensed substitutes, explicit core gaps"
+  },
+  "ref_crispred_v1": {
+    "family": "利落红",
+    "display_name": "利落红·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-17.json",
+    "verified_from": "Local downloaded reference sequence plus native frames; licensed substitutes, explicit core gaps"
+  },
+  "ref_vividblue_v1": {
+    "family": "靓眼蓝",
+    "display_name": "靓眼蓝·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-21.json",
+    "verified_from": "Local downloaded reference sequence plus native frames; licensed substitutes, explicit core gaps"
+  },
+  "ref_shine_v1": {
+    "family": "黄色闪亮",
+    "display_name": "黄色闪亮·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-04.json",
+    "verified_from": "Local reference sequence/native images; bounded original component implementation"
+  },
+  "ref_green_v1": {
+    "family": "吸睛绿",
+    "display_name": "吸睛绿·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-08.json",
+    "verified_from": "Local reference sequence/native images; bounded original component implementation"
+  },
+  "ref_tech_v1": {
+    "family": "商务科技",
+    "display_name": "商务科技·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-13.json",
+    "verified_from": "Local reference sequence/native images; bounded original component implementation"
+  },
+  "ref_science_v1": {
+    "family": "醒目科普",
+    "display_name": "醒目科普·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-14.json",
+    "verified_from": "Local reference sequence/native images; bounded original component implementation"
+  },
+  "ref_neon_v1": {
+    "family": "荧光绿",
+    "display_name": "荧光绿·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-19.json",
+    "verified_from": "Local reference sequence/native images; bounded original component implementation"
+  },
+  "ref_purple_v1": {
+    "family": "Ultra·紫",
+    "display_name": "Ultra·紫·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-20.json",
+    "verified_from": "Local reference sequence/native images; bounded original component implementation"
+  },
+  "ref_warm_v1": {
+    "family": "暖系橙黄",
+    "display_name": "暖系橙黄·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-26.json",
+    "verified_from": "Local reference sequence/native images; bounded original component implementation"
+  },
+  "ref_mono_v1": {
+    "family": "基础黑白",
+    "display_name": "基础黑白·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-29.json",
+    "verified_from": "Local reference sequence/native images; bounded original component implementation"
+  },
+  "ref_elegantpink_v1": {
+    "family": "秀丽粉",
+    "display_name": "秀丽粉·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-30.json",
+    "verified_from": "Local reference sequence/native images; bounded original component implementation"
+  },
+  "ref_promo_v1": {
+    "family": "爆款促销",
+    "display_name": "爆款促销·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-34.json",
+    "verified_from": "Local reference sequence/native images; bounded original component implementation"
+  },
+  "ref_browngold_v1": {
+    "family": "专业金棕",
+    "display_name": "专业金棕·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-36.json",
+    "verified_from": "Local reference sequence/native images; bounded original component implementation"
+  },
+  "ref_hotpink_v1": {
+    "family": "活泼亮粉",
+    "display_name": "活泼亮粉·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-43.json",
+    "verified_from": "Local reference sequence/native images; bounded original component implementation"
+  },
+  "ref_orangeline_v1": {
+    "family": "暖线映橙",
+    "display_name": "暖线映橙·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-16.json",
+    "verified_from": "Local 2fps sequence and native frames; original B5a calibration"
+  },
+  "ref_colorful_v1": {
+    "family": "明快彩彩",
+    "display_name": "明快彩彩·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-22.json",
+    "verified_from": "Local 2fps sequence and native frames; original B5a calibration"
+  },
+  "ref_mint_v1": {
+    "family": "古雅水绿",
+    "display_name": "古雅水绿·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-24.json",
+    "verified_from": "Local 2fps sequence and native frames; original B5a calibration"
+  },
+  "ref_tornred_v1": {
+    "family": "撕纸红",
+    "display_name": "撕纸红·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-25.json",
+    "verified_from": "Local 2fps sequence and native frames; original B5a calibration"
+  },
+  "ref_deepbrown_v1": {
+    "family": "古典深棕",
+    "display_name": "古典深棕·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-27.json",
+    "verified_from": "Local reference sequence and native frames; original B5b calibration"
+  },
+  "ref_ginger_v1": {
+    "family": "素雅姜红",
+    "display_name": "素雅姜红·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-33.json",
+    "verified_from": "Local reference sequence and native frames; original B5b calibration"
+  },
+  "ref_blackyellow_v1": {
+    "family": "黑黄框框（支持繁中）",
+    "display_name": "黑黄框框（支持繁中）·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-38.json",
+    "verified_from": "Local reference sequence and native frames; original B5b calibration"
+  },
+  "ref_verdant_v1": {
+    "family": "绿意漾漾",
+    "display_name": "绿意漾漾·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-40.json",
+    "verified_from": "Local reference sequence and native frames; original B5b calibration"
+  },
+  "ref_ins_v1": {
+    "family": "极简Ins风",
+    "display_name": "极简Ins风·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-41.json",
+    "verified_from": "Local B5c reference boards/native frames; original calibrated design"
+  },
+  "ref_nostalgia_v1": {
+    "family": "古典怀旧",
+    "display_name": "古典怀旧·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-44.json",
+    "verified_from": "Local B5c reference boards/native frames; original calibrated design"
+  },
+  "ref_transyellow_v1": {
+    "family": "半透简黄",
+    "display_name": "半透简黄·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-51.json",
+    "verified_from": "Local B5c reference boards/native frames; original calibrated design"
+  },
+  "ref_tornedge_v1": {
+    "family": "极简撕边",
+    "display_name": "极简撕边·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-52.json",
+    "verified_from": "Local B5c reference boards/native frames; original calibrated design"
+  },
+  "ref_cleanwhite_v1": {
+    "family": "简洁黄白",
+    "display_name": "简洁黄白·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-05.json",
+    "verified_from": "Local B6a reference sequence/native frames; original calibrated geometry"
+  },
+  "ref_waxcute_v1": {
+    "family": "彩蜡萌趣",
+    "display_name": "彩蜡萌趣·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-28.json",
+    "verified_from": "Local B6a reference sequence/native frames; original calibrated geometry"
+  },
+  "ref_qqcute_v1": {
+    "family": "QQ萌趣",
+    "display_name": "QQ萌趣·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-31.json",
+    "verified_from": "Local B6a reference sequence/native frames; original calibrated geometry"
+  },
+  "ref_energycartoon_v1": {
+    "family": "元气卡通",
+    "display_name": "元气卡通·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-35.json",
+    "verified_from": "Local B6a reference sequence/native frames; original calibrated geometry"
+  },
+  "ref_floraltravel_v1": {
+    "family": "一路繁花2",
+    "display_name": "一路繁花2·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-39.json",
+    "verified_from": "Local B6b reference sequence/native frames; original calibrated geometry"
+  },
+  "ref_magenta_v1": {
+    "family": "时髦玫红",
+    "display_name": "时髦玫红·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-42.json",
+    "verified_from": "Local B6b reference sequence/native frames; original calibrated geometry"
+  },
+  "ref_lightbulb_v1": {
+    "family": "萌探2024",
+    "display_name": "萌探2024·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-45.json",
+    "verified_from": "Local B6b reference sequence/native frames; original calibrated geometry"
+  },
+  "ref_redfestive_v1": {
+    "family": "元气红",
+    "display_name": "元气红·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-46.json",
+    "verified_from": "Local B6b reference sequence/native frames; original calibrated geometry"
+  },
+  "ref_comicred_v1": {
+    "family": "喜人奇妙夜",
+    "display_name": "喜人奇妙夜·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-49.json",
+    "verified_from": "Local B6c reference sequence/native frames; original calibrated geometry"
+  },
+  "ref_romance_v1": {
+    "family": "恋爱兄妹",
+    "display_name": "恋爱兄妹·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-50.json",
+    "verified_from": "Local B6c reference sequence/native frames; original calibrated geometry"
+  },
+  "ref_emojiwhite_v1": {
+    "family": "简约emoji",
+    "display_name": "简约emoji·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-53.json",
+    "verified_from": "Local B6c reference sequence/native frames; original calibrated geometry"
+  },
+  "ref_contrastpop_v1": {
+    "family": "潮流撞色",
+    "display_name": "潮流撞色·分层校准版",
+    "design_status": "implemented_pending_visual_acceptance",
+    "contract_file": "assets/template_contracts/kp-54.json",
+    "verified_from": "Local B6c reference sequence/native frames; original calibrated geometry"
+  }
+}
