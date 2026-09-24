@@ -1,14 +1,14 @@
 # 镜头运动：景别状态与语义决策
 
 ## 参考与判断
-有用户参考时先覆盖全片抽样，再对景别切换区间密集取帧；几张相同景别截图不能推断全片幅度。需要分辨背景同步缩放与人物前倾。样本有快速切近再保持，不能把“丝滑”等同于“小幅度、慢动作”，也不能把所有转场都变成机械推近后退回。
+有剪辑参考时先覆盖全片抽样，再对景别切换区间密集取帧；几张相同景别截图不能推断全片幅度。需要分辨背景同步缩放与人物前倾。样本有快速切近再保持，不能把“丝滑”等同于“小幅度、慢动作”，也不能把所有转场都变成机械推近后退回。
 
-模板 `camera_recipe` 绑定普通/中近/近景倍率，以及 punch（快速切近）、glide（缓推）、reframe（构图转换）、cut（明确硬切）的时长。它们是原创可调参数，不是测得开拍内部值。幅度按头顶、脸部、手势与源清晰度复核；只要要求安全，就把所有镜头压成微缩放，也不算完成。
+模板 `camera_recipe` 绑定普通/中近/近景倍率，以及 punch（快速切近）、glide（缓推）、reframe（构图转换）、cut（明确硬切）的时长。幅度按头顶、脸部、手势与源清晰度复核；只要要求安全，就把所有镜头压成微缩放，也不算完成。
 
 ## 编译：先定内容，再定镜头
 使用 `camera_motion.build_track(duration, decisions, recipe, anchor)`：
 ```python
-recipe = get_template('orange_hook')['camera_recipe']
+recipe = get_template('tpl-orange-line')['camera_recipe']
 track = build_track(final_duration, [
     {'start': 4.0, 'level': 'close', 'kind': 'punch', 'reason': '反转句落点'},
     {'start': 10.0, 'level': 'normal', 'kind': 'reframe', 'reason': '进入解释段'},

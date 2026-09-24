@@ -2,7 +2,7 @@
 
 以下素材随技能打包，供根据内容结构和画面动作选择；并非每条视频都要加音效。
 
-原始 MP3 在 `assets/sfx/sources/`，渲染用 48 kHz 单声道 WAV 在 `assets/sfx/collection/`，`assets/sfx/catalog.json` 存逐项许可、作者、哈希与建议语境。此前六项 Kenney UI 素材仍为 `rejected_by_user`，禁止选择。公开剪映音效分类映射来自历史清单，不声称与当前客户端逐字相同。
+原始 MP3 在 `assets/sfx/sources/`，渲染用 48 kHz 单声道 WAV 在 `assets/sfx/collection/`，`assets/sfx/catalog.json` 存逐项许可、作者、哈希与建议语境。仅选择 `selection_status:approved` 的素材。
 
 选择顺序：语义节点与原声空间 → 画面动作/花字/转场是否有落点 → 模板强弱与内容语气 → 试听短样 → `sound_events`。不允许按句号机械插声；每个事件最多一声；长环境声不能盖口播。严格按照 `roles`、`styles` 和 `selection_guidance` 判断。
 

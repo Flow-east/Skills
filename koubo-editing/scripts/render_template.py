@@ -52,6 +52,8 @@ class Painter:
                 bbox=alpha.getbbox()
                 if not bbox: raise ValueError('Empty sticker')
                 self.sprites[str(q)]=im.crop(bbox)
+        from illustrations import load as load_illustrations
+        self.illustrations=load_illustrations(self)
 
     def font_path(self,role='body'):
         path=Path(self.variant.get(role+'_font',self.variant.get('font',self.p['font'])))
@@ -322,7 +324,8 @@ class Painter:
                 im=im.crop((round(x),round(y),round(x+cw),round(y+ch))).resize((self.w,self.h),Image.Resampling.LANCZOS)
         if self.variant.get('scene_system'):
             from template_scenes import paint as paint_scene
-            return paint_scene(self,im,t)
+            from illustrations import paint as paint_illustrations
+            return paint_illustrations(paint_scene(self,im,t),self.illustrations,t)
         canvas=im.convert('RGBA')
         # Optional canvas state events: circle portrait, dark surround, or blurred-band layouts.
         for ev in (c.get('viewport_events',[]) + self.p.get('viewport_events',[])):
@@ -367,7 +370,8 @@ class Painter:
             sprite=self.sprites[st['path']]; sw=round(self.w*st['width']); sh=round(sw*sprite.height/sprite.width)
             if self.h*st['y']+sh>self.h: raise ValueError('Sticker exceeds lower edge')
             self.overlay(canvas,sprite.resize((sw,sh),Image.Resampling.LANCZOS),self.w*st['x'],self.h*st['y'],t-a,b-t,True)
-        return canvas.convert('RGB')
+        from illustrations import paint as paint_illustrations
+        return paint_illustrations(canvas,self.illustrations,t)
 
 
 def audio_design(p,out,theme):
@@ -500,6 +504,9 @@ def render(plan_path,output_dir):
         run(['ffmpeg','-v','error','-i',str(final),'-f','null','-'],output_dir/'decode_check.log')
         qa={'duration':p['duration'],'frame_count':p['frame_count'],'video_duration':float(v['duration']),'audio_duration':float(a['duration']),'width':v['width'],'height':v['height'],'audio_present':True,'decode_passed':True,'sound':sound,'font_coverage_passed':font_qa['passed'],'font_qa':'font_qa.json','visual_review':'pending','frame_fit_audit':p['frame_fit_audit'],'semantic_review':p.get('review',{})}
         if layout_qa is not None:qa['layout_qa']='layout_qa.json'
+        if painter.illustrations:
+            from illustrations import audit as audit_illustrations
+            qa['illustrations']=audit_illustrations(painter.illustrations)
         if p.get('hook_audit'):qa['hook_audit']='hook_audit.json'
         if boundary_events:
             qa['transition_qa']='transition_qa.json'

@@ -1,4 +1,4 @@
-# 口播剪辑 · v0.2.1
+# 口播剪辑 · v0.3.0
 
 [English](README.md) | **简体中文**
 
@@ -26,7 +26,7 @@ cp -R koubo-editing "${CODEX_HOME:-$HOME/.codex}/skills/koubo-editing"
 
 提供可读取的口播视频，并说“帮我剪这条口播”或使用 `$koubo-editing`。技能先复核原话与内容结构，再制作创作方案和成片；只要求分析时不会自动渲染。生图、外部服务和付费调用须另行具备可用工具与授权。
 
-快速预览及精细计划分别见 [`references/quickstart.md`](references/quickstart.md)、[`references/plan-format.md`](references/plan-format.md)。选择某套模板时查看 [`references/template-library.md`](references/template-library.md) 中的能力与状态。
+快速预览及精细计划分别见 [`references/quickstart.md`](references/quickstart.md)、[`references/plan-format.md`](references/plan-format.md)。选择某套模板时查看 [`references/template-library.md`](references/template-library.md) 中的选择与限制。
 
 ## 环境与验证
 

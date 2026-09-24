@@ -1,4 +1,4 @@
-# Spoken-video editing · v0.2.1
+# Spoken-video editing · v0.3.0
 
 **English** | [简体中文](README.zh-CN.md)
 
@@ -26,7 +26,7 @@ Alternatively, give this directory to a compatible agent or run `npx skills add 
 
 Provide a readable local spoken-video file and ask the agent to edit it, or invoke `$koubo-editing`. The workflow checks spoken content and structure before creating a brief and rendering; analysis-only requests do not trigger a render. External image-generation services and paid calls require an available tool and separate authorization.
 
-See [`references/quickstart.md`](references/quickstart.md) for a quick preview, [`references/plan-format.md`](references/plan-format.md) for the plan schema, and [`references/template-library.md`](references/template-library.md) for template capabilities and status. Detailed working references are in Chinese because the editing workflow targets Chinese speech.
+See [`references/quickstart.md`](references/quickstart.md) for a quick preview, [`references/plan-format.md`](references/plan-format.md) for the plan schema, and [`references/template-library.md`](references/template-library.md) for template selection and limits. Detailed working references are in Chinese because the editing workflow targets Chinese speech.
 
 ## Requirements and validation
 
