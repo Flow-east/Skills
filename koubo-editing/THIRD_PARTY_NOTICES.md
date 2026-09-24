@@ -1,8 +1,6 @@
-# Third-party materials
+# 第三方素材 / Third-party materials
 
-This skill's original code and documentation are covered by the repository's MIT license. Third-party assets retain their own terms:
+本技能原创代码与文档遵循仓库 MIT 许可；随附素材遵循各自授权。 / Original code and documentation use the repository MIT license; bundled assets retain their respective terms.
 
-- `assets/fonts/*.ttf`: SIL Open Font License 1.1. Each font's source, hash, and applicable `*-OFL.txt` license file appear in `assets/fonts/manifest.json`. Preserve those license files when redistributing fonts.
-- `assets/sfx/collection/*.wav`, `assets/sfx/sources/*.mp3`: CC0 1.0 materials with each original page, uploader, hash, and derivative-file hash in `assets/sfx/catalog.json`. The separately included Kenney UI sounds and their `Kenney-License.txt` are also CC0 1.0, but marked rejected in the catalog and should not be selected for new edits.
-
-The visual template names and calibration notes refer to third-party examples for comparative research. No source preview videos, screenshots, exported official graphics, commercial fonts, or proprietary sound files are bundled.
+- **字体 / Fonts:** `assets/fonts/*.ttf` 遵循 SIL Open Font License 1.1。每款字体的来源、哈希与对应的 `*-OFL.txt` 见 `assets/fonts/manifest.json`；再分发请保留许可文件。 / Fonts use SIL OFL 1.1. Each font's source, hash, and license file are listed in the manifest; retain the license files when redistributing.
+- **音效 / Sound effects:** `assets/sfx/collection/*.wav`、`assets/sfx/sources/*.mp3` 的来源、作者、哈希与 CC0 1.0 状态逐项记录在 `assets/sfx/catalog.json`。另附 Kenney UI 音效及 `Kenney-License.txt`，这些候选在目录中标为不推荐用于新剪辑。 / Per-item provenance, creator, hashes, and CC0 1.0 status are recorded in the sound catalog. The bundled Kenney UI candidates carry their own license file and are marked as unsuitable for new edits in the catalog.

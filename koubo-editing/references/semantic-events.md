@@ -28,7 +28,7 @@
 
 `apply_review.py PLAN --review REVIEW.json --out FINAL_PLAN.json` 只接受用户明确列出的 `accept` 候选编号，例如 `{"accept":[2,5]}`；它会把候选写入 `removed`，并把保留片段按删除区间安全切开，避免相邻片段拼接时把已删语音带回。没有明确接受的候选不会被删除。
 
-语义 mark 可选 `sticker` 和 `sticker_reason`。只有编辑者明确认为文字不足以表达语义时才填写，例如 `negative` 配 `cross`、`warning` 配 `pointer`；编译器只记录 `sticker_candidate`，不会因此自动消费 Nexora 额度，实际生成前仍需检查本地素材和授权。
+语义 mark 可选 `sticker` 和 `sticker_reason`。只有编辑者明确认为文字不足以表达语义时才填写，例如 `negative` 配 `cross`、`warning` 配 `pointer`；编译器只记录 `sticker_candidate`，不会因此自动调用生图服务，实际生成前仍需检查本地素材和授权。
 
 语义类型还会提供保守的默认入场：推荐/结论使用轻弹入，警示/转折使用上移，数字使用缩放；编辑者可用 `enter` 覆盖。默认动效不代表固定照搬某一款官方模板，而是按样本归纳的可配置候选。
 

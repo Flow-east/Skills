@@ -1,6 +1,6 @@
 # 54套目标与独立契约
 
-`assets/template_targets.json` 是54条参考身份，不是54套可运行模板。`assets/template_progress.json` 是实施状态。默认先运行：
+`assets/template_targets.json` 定义54个风格目标；`assets/template_progress.json` 记录对应实现与验收状态。默认先运行：
 
 ```bash
 python3 <SKILL_DIR>/scripts/template_library.py summary

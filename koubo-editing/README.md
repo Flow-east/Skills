@@ -1,21 +1,36 @@
-# Spoken-video editing (`koubo-editing`)
+# Spoken-video editing · v0.1.0
 
-[简体中文](README.zh-CN.md)
+**English** | [简体中文](README.zh-CN.md)
 
-A Chinese-language talking-head editing skill: assess the spoken content first, then decide on structure, opening hook, semantic cuts, captions, camera rhythm, sound effects, transitions, optional stickers, and privacy masking before rendering a **video with audio**. It keeps a plan, subtitles, creative brief, and QA report; it does not equate technical checks with human review.
+A skill for editing Chinese talking-head videos from content review to an audio-backed final cut. It plans the narrative first, then applies a visual style, renders, and verifies the result.
 
-The package includes **54 reference-led calibration templates** and 74 provenance-recorded CC0 sound-effect choices. These are preview-grade implementations awaiting individual aesthetic acceptance, **not** official templates or a 1:1 clone of any editing product. The underlying reference videos, user footage, transcripts, personal credentials, and speech models are not included.
+## Features
+
+- Local speech transcription with word-level timestamps; semantic removal of repetition, slips, and pauses without clipping sentence endings.
+- Opening and content structure, camera rhythm, caption hierarchy, keyword stickers, sound effects, transitions, and privacy masking.
+- 54 packaged visual style variants and 74 optional sound effects. Illustrative stickers can use any available, authorized image-generation tool; no specific provider is required.
+- Audio-backed MP4, reusable edit plan, SRT subtitles, creative brief, and QA report.
 
 ## Install
+
+From the repository root:
 
 ```bash
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
 cp -R koubo-editing "${CODEX_HOME:-$HOME/.codex}/skills/koubo-editing"
 ```
 
-Ask the agent in Chinese to edit a spoken video, or explicitly invoke `$koubo-editing`. Provide a local video. Python 3, Pillow, NumPy, and FFmpeg/ffprobe are required; choose and install an optional speech-recognition backend/model separately. See `SKILL.md`, `references/runtime.md`, and `references/plan-format.md`. Optional external image generation requires its own installed skill and explicit permission to send material and incur charges.
+Alternatively, give this directory to a compatible agent or run `npx skills add Flow-east/Skills --skill koubo-editing`.
 
-## Validate
+## Use
+
+Provide a readable local spoken-video file and ask the agent to edit it, or invoke `$koubo-editing`. The workflow checks spoken content and structure before creating a brief and rendering; analysis-only requests do not trigger a render. External image-generation services and paid calls require an available tool and separate authorization.
+
+See [`references/quickstart.md`](references/quickstart.md) for a quick preview, [`references/plan-format.md`](references/plan-format.md) for the plan schema, and [`references/template-library.md`](references/template-library.md) for template capabilities and status. Detailed working references are in Chinese because the editing workflow targets Chinese speech.
+
+## Requirements and validation
+
+Python 3, Pillow, NumPy, and FFmpeg/ffprobe are required. Configure a local speech-recognition backend and model separately as described in [`references/runtime.md`](references/runtime.md).
 
 ```bash
 python3 -m unittest discover -s koubo-editing/tests -v
@@ -23,4 +38,6 @@ python3 koubo-editing/scripts/template_library.py validate
 python3 koubo-editing/tests/smoke_test.py
 ```
 
-Original code/docs are MIT-licensed. Bundled font licenses (SIL OFL) and sound effects (CC0 1.0, with per-item provenance) are **not** relicensed by the repository MIT license. See [third-party notices](THIRD_PARTY_NOTICES.md).
+## License
+
+Original code and documentation use the repository MIT license. Bundled fonts and sound effects keep their own licenses and provenance; see [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).

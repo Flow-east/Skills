@@ -8,7 +8,7 @@ python3 scripts/run_auto_pipeline.py /absolute/video.mp4 --out-dir /absolute/out
 
 可选：`--title`、`--template auto|list-cards|knowledge|service`、`--shot-type wide|medium|close`、`--model /absolute/model`、`--backend mlx|faster|whisper`。
 
-一键模式会生成本地转写、自动计划、开拍式预览、复核报告和 QA。默认不自动删除现场沟通/重录，也不会自动调用 Nexora；如需快速清理句中、带明显停顿的高置信填充词，可显式加 `--remove-high-confidence-fillers`，仍需检查报告。
+一键模式会生成本地转写、自动计划、模板预览、复核报告和 QA。默认不自动删除现场沟通/重录，也不会自动调用生图服务；如需快速清理句中、带明显停顿的高置信填充词，可显式加 `--remove-high-confidence-fillers`，仍需检查报告。
 
 ## 复核后最终剪辑
 
@@ -25,9 +25,9 @@ python3 scripts/apply_review.py auto_plan.json --review review.json --out final_
 python3 scripts/render_template.py final_plan.json --out-dir final_render
 ```
 
-## 精细开拍事件
+## 精细字幕与画面事件
 
-复杂的“场景/答案两层”“预留槽位插入”“中英独立轨道”“圆形人物/模糊带”写入 `caption_events`、`runs`、`english`、`viewport_events`；详细字段见 `references/plan-format.md`。贴纸必须是实际透明素材，缺素材时再按 `nexora-imagegen` 流程生成。
+复杂的“场景/答案两层”“预留槽位插入”“中英独立轨道”“圆形人物/模糊带”写入 `caption_events`、`runs`、`english`、`viewport_events`；详细字段见 `references/plan-format.md`。贴纸必须是实际透明素材，缺素材时再使用当前环境可用且获授权的生图工具生成。
 
 
 ## 模板变体

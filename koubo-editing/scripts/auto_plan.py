@@ -147,11 +147,11 @@ def build(raw, out, font, width=None,height=None,fps=30,title='',template='auto'
     p['review']['sound_selection']='needs_editorial_review_no_automatic_audio'
     Path(out).write_text(json.dumps(p,ensure_ascii=False,indent=2),encoding='utf8')
     report=Path(out).with_name(Path(out).stem+'_review.md')
-    lines=['# 自动剪辑复核报告','',f'- 片段数：{len(clips)}',f'- 自动删除高置信填充词：{len(removed)} 个' ,f'- 逐词数量：{len(words)}',f'- 模式：reference_mode（开拍式预览）',f'- 模板变体：{template_variant}（绑定字体、配色与镜头语言）','', '## 待复核候选']
+    lines=['# 自动剪辑复核报告','',f'- 片段数：{len(clips)}',f'- 自动删除高置信填充词：{len(removed)} 个' ,f'- 逐词数量：{len(words)}',f'- 模式：reference_mode（模板预览）',f'- 模板变体：{template_variant}（绑定字体、配色与镜头语言）','', '## 待复核候选']
     if review_candidates:
         for i,r in enumerate(review_candidates,1): lines.append(f'{i}. `{r["start"]:.2f}s–{r["end"]:.2f}s`：{r["reason"]}')
     else: lines.append('暂无自动候选。')
-    lines += ['', '## 开头候选（未自动采用）', f'- {len(hook_candidates)} 种真实口播片段候选，见 `{hook_file.with_suffix('.md').name}` 与 `{hook_file.name}`；前置必须人工核查原意、句尾和正文兑现。', '', '## 音效候选（未自动采用）', f'- {len(sound_candidates["decisions"])} 个经逐词间隙初筛的音效/留白决策，见 `{sound_file.with_suffix(".md").name}`。必须先听原声及 A/B；不能按标点逐句加声。', '', '## 内容分析摘要', f'- 内容单元：{len(content_analysis["units"])} 个', f'- 删除候选：{len(content_analysis["deletion_candidates"])} 个', '', '## 交付前检查', '- 试听候选区间，确认是否为现场沟通或重录。', '- 校对品牌名、数字和专有名词。', '- 确认字幕没有遮挡脸部、嘴部和关键手势。', '- 确认语义贴纸确有必要后再调用 Nexora。', '- 自动预览不会替代人工语义剪辑决定。']
+    lines += ['', '## 开头候选（未自动采用）', f'- {len(hook_candidates)} 种真实口播片段候选，见 `{hook_file.with_suffix('.md').name}` 与 `{hook_file.name}`；前置必须人工核查原意、句尾和正文兑现。', '', '## 音效候选（未自动采用）', f'- {len(sound_candidates["decisions"])} 个经逐词间隙初筛的音效/留白决策，见 `{sound_file.with_suffix(".md").name}`。必须先听原声及 A/B；不能按标点逐句加声。', '', '## 内容分析摘要', f'- 内容单元：{len(content_analysis["units"])} 个', f'- 删除候选：{len(content_analysis["deletion_candidates"])} 个', '', '## 交付前检查', '- 试听候选区间，确认是否为现场沟通或重录。', '- 校对品牌名、数字和专有名词。', '- 确认字幕没有遮挡脸部、嘴部和关键手势。', '- 确认语义贴纸确有必要后再使用可用且获授权的生图工具。', '- 自动预览不会替代人工语义剪辑决定。']
     report.write_text('\n'.join(lines)+'\n',encoding='utf8')
     return p
 if __name__=='__main__':
