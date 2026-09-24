@@ -1,19 +1,22 @@
 """Authored, output-clock privacy masks. No object detection or inferred tracking.
 
-Boxes locate the sensitive CORE after camera/scene video transforms. Appearance is
-procedural and always opaque over that core; human review of the encoded video is
-still required before claiming that the detected target was located correctly.
+Boxes locate the sensitive CORE after camera/scene video transforms. Privacy
+styles (procedural or raster art) are always opaque over that core; human
+review of the encoded video is still required before claiming that the detected target was located correctly.
 """
+import json
 import math
+from functools import lru_cache
+from pathlib import Path
 from PIL import Image, ImageDraw, ImageFilter
+from sticker_catalog import resolve
 
-STYLES = {
-    'cloud': {'kinds': ('text', 'object', 'screen'), 'label': '柔边云团', 'color': '#E8E5DC', 'pad': .018},
-    'paper-strip': {'kinds': ('text', 'screen', 'object'), 'label': '纸条', 'color': '#F3EEE1', 'pad': .014},
-    'solid-card': {'kinds': ('text', 'screen', 'object', 'face'), 'label': '实色信息卡', 'color': '#26272E', 'pad': .016},
-    'face-patch': {'kinds': ('face', 'object'), 'label': '面部实心贴', 'color': '#2B2D39', 'pad': .026},
-    'face-oval': {'kinds': ('face',), 'label': '柔和实心椭圆', 'color': '#ECE1CF', 'pad': .032},
-}
+# Privacy-capable stickers are one part of the broader, portable sticker catalogue.
+CATALOG = json.loads((Path(__file__).resolve().parents[1]/'assets/stickers/catalog.json').read_text(encoding='utf8'))
+STYLES = {v['id']: {'kinds': tuple(v['targets']), 'label': v['name'], 'color': v['color'],
+                    'pad': v['pad'], 'family': v['family'], 'asset': 'path' in v}
+          for v in CATALOG['privacy']+CATALOG['decorative'] if v['privacy_safe']}
+
 KINDS = {'text', 'screen', 'face', 'object'}
 
 
@@ -27,8 +30,15 @@ def choose_style(kind, *, preferred=None, mood='neutral'):
         if preferred not in STYLES or kind not in STYLES[preferred]['kinds']:
             raise ValueError('Requested privacy style cannot cover this target kind')
         return preferred
-    return ('face-patch' if kind == 'face' else 'solid-card' if kind == 'screen'
-            else 'paper-strip' if mood in ('warm', 'editorial') else 'cloud')
+    return ('cloud' if kind == 'text' and mood not in ('tech', 'serious')
+            else 'mosaic-warm' if kind == 'screen' and mood in ('warm', 'calm', 'playful')
+            else 'mosaic-charcoal' if kind in ('text', 'screen') and mood in ('tech', 'serious')
+            else 'mosaic-neutral' if kind == 'screen' and mood == 'neutral'
+            else 'mascot-cloud' if kind == 'face' and mood in ('warm', 'playful')
+            else 'flower-doodle' if kind == 'face' and mood == 'editorial'
+            else 'pixel-confetti' if kind == 'face'
+            else 'brush-swipe' if kind == 'text' and mood in ('warm', 'editorial')
+            else 'mosaic-neutral' if kind in ('text', 'screen') else 'cloud')
 
 
 def _box(box):
@@ -105,6 +115,16 @@ def compile_privacy(plan):
                 raise ValueError('Privacy keyframes must be ordered and span the event')
             if any(b[0]-a[0]>max(1,round(.25*fps)) for a,b in zip(boxes,boxes[1:])):
                 raise ValueError('Moving mask keyframe gap too large; add observed positions')
+        if STYLES[style]['asset']:
+            samples=[b for _,b in boxes]
+            samples += [[min(a[0],b[0]),min(a[1],b[1]),max(a[0]+a[2],b[0]+b[2])-min(a[0],b[0]),
+                         max(a[1]+a[3],b[1]+b[3])-min(a[1],b[1])]
+                        for (_,a),(_,b) in zip(boxes,boxes[1:])]
+            w,h=plan['width'],plan['height']
+            for bx,by,bw,bh in samples:
+                core=(max(0,math.floor(bx*w)),max(0,math.floor(by*h)),
+                      min(w,math.ceil((bx+bw)*w)),min(h,math.ceil((by+bh)*h)))
+                _asset_position(style,core,(w,h))
         if ev.get('occlusion') not in (None,'none'):
             raise ValueError('Automatic foreground occlusion is not supported; author visible intervals explicitly')
         compiled.append({'id':ident,'target_id':tid,'clip_id':clip['id'],'style_id':style,
@@ -160,35 +180,171 @@ def box_at(ev,frame):
     return boxes[-1][1]
 
 
+
+@lru_cache(maxsize=96)
+def _fitted_asset(style_id, width, height):
+    """Fit a complete sticker so every pixel of the sensitive box lies inside its opaque art."""
+    path=resolve(style_id)['path']
+    with Image.open(path) as source: art=source.convert('RGBA')
+    scale=max(width*1.2/art.width,height*1.2/art.height)
+    for step in range(28):
+        factor=scale*1.10**step
+        sw=max(1,round(art.width*factor));sh=max(1,round(art.height*factor))
+        if sw>width*5+80 or sh>height*5+80:break
+        sprite=art.resize((sw,sh),Image.Resampling.LANCZOS)
+        xx=(sw-width)//2;yy=(sh-height)//2
+        if xx<0 or yy<0:continue
+        if sprite.getchannel('A').crop((xx,yy,xx+width,yy+height)).getextrema()==(255,255):
+            return sprite
+    raise ValueError('Sticker cannot reliably cover the entire privacy core')
+
+
+def _asset_position(style_id,core,frame_size):
+    x0,y0,x1,y1=core;w,h=frame_size
+    sprite=_fitted_asset(style_id,x1-x0,y1-y0)
+    x=round((x0+x1-sprite.width)/2);y=round((y0+y1-sprite.height)/2)
+    if x<0 or y<0 or x+sprite.width>w or y+sprite.height>h:
+        raise ValueError('Privacy sticker exceeds the frame; choose a smaller style or move target')
+    return sprite,x,y
+
+
+@lru_cache(maxsize=128)
+def _cloud_alpha(width, height, pad):
+    """Generate a soft, irregular silhouette for this box size, not a fixed PNG."""
+    margin=max(3,min(pad,round(min(width,height)*.18)))
+    halo=max(5,round(margin*2.4))
+    mask=Image.new('L',(width+2*halo,height+2*halo),0)
+    d=ImageDraw.Draw(mask)
+    d.rounded_rectangle((halo-margin,halo-margin,halo+width+margin,
+                         halo+height+margin),radius=max(2,round(margin*.9)),fill=255)
+    # Scallops protrude beyond the rounded base; their spacing scales with
+    # the target aspect ratio so a short name and a long nameplate differ.
+    count=max(3,min(11,round(width/max(12,height*.6))))
+    for n in range(count):
+        frac=(n+.5)/count
+        rx=max(margin*1.4,width/count*(.60+.09*((n*7)%4)))
+        ry=margin*(1.12+.08*((n*5)%3))
+        cx=halo+width*frac
+        for top in (True,False):
+            cy=halo-margin*.14 if top else halo+height+margin*.12
+            offset=(n%3-1)*margin*.12
+            d.ellipse((cx-rx,cy-ry+offset,cx+rx,cy+ry+offset),fill=255)
+    for frac,size in ((.22,.95),(.73,1.15)):
+        cy=halo+height*frac;r=margin*size
+        for cx in (halo-margin*.15,halo+width+margin*.2):
+            d.ellipse((cx-r*.8,cy-r,cx+r*.8,cy+r),fill=255)
+    mask=mask.filter(ImageFilter.GaussianBlur(max(.8,margin*.26)))
+    # No alpha reduction is permitted over any of the sensitive core.
+    ImageDraw.Draw(mask).rectangle((halo,halo,halo+width-1,halo+height-1),fill=255)
+    return mask,halo
+
+
+def _sticker(canvas,style_id,core,outer,pad):
+    """Draw original sticker art. Every shape has an opaque core independent of its decorative edge."""
+    layer=Image.new('RGBA',canvas.size,(0,0,0,0)); d=ImageDraw.Draw(layer)
+    x0,y0,x1,y1=core; ox0,oy0,ox1,oy1=outer
+    fill=STYLES[style_id]['color']
+    if STYLES[style_id]['asset']:
+        sprite,x,y=_asset_position(style_id,core,canvas.size)
+        layer.alpha_composite(sprite,(x,y))
+    elif style_id in ('mosaic-neutral','mosaic-warm','mosaic-charcoal'):
+        # Opaque source-independent pixels: conventional mosaic look without
+        # retaining readable fragments of the original name, number, or face.
+        palettes={
+            'mosaic-neutral':('#79838D','#9BA3AB','#C0C4C7','#8C969E','#ABB2B7'),
+            'mosaic-warm':('#AC8D81','#D3B9A4','#E5D0BE','#B69D8E','#C9AE9C'),
+            'mosaic-charcoal':('#303844','#434A54','#606977','#49515C','#353D49'),
+        }
+        colors=palettes[style_id]
+        cell=max(5,min(15,round(min(x1-x0,y1-y0)/6)))
+        for yy in range(oy0,oy1,cell):
+            for xx in range(ox0,ox1,cell):
+                idx=((xx//cell*29)^(yy//cell*53)^(xx//cell*yy//cell*7))%len(colors)
+                d.rectangle((xx,yy,min(xx+cell,ox1),min(yy+cell,oy1)),fill=colors[idx])
+        # Draw tiles over the entire (possibly clipped) core. Never sample the
+        # underlying private pixels or soften the core with partial alpha.
+        for yy in range(y0,y1,cell):
+            for xx in range(x0,x1,cell):
+                idx=((xx//cell*17)^(yy//cell*31)^(xx//cell*yy//cell*11))%len(colors)
+                d.rectangle((xx,yy,min(xx+cell,x1),min(yy+cell,y1)),fill=colors[idx])
+    elif style_id=='cloud':
+        # Recompute from the sensitive region's width/height; keep a compact
+        # fully opaque center and soften only the irregular exterior.
+        alpha,halo=_cloud_alpha(x1-x0,y1-y0,pad)
+        tint=Image.new('RGBA',alpha.size,fill)
+        tint.putalpha(alpha)
+        layer.alpha_composite(tint,(x0-halo,y0-halo))
+    elif style_id=='brush-swipe':
+        span=ox1-ox0; top=[]; bottom=[]
+        for n in range(13):
+            xx=ox0+n*span/12
+            top.append((xx,max(0,oy0+(n*7%5-2)*pad*.22)))
+            bottom.append((xx,min(canvas.height,oy1+(n*11%5-2)*pad*.23)))
+        d.polygon(top+bottom[::-1],fill=fill)
+        d.rectangle(core,fill=fill)
+        for i in range(4):
+            yy=oy0+((i*7)%5)*pad*.34
+            d.line((ox0+span*.09+pad*i,yy,ox0+span*(.3+.12*i),yy-pad*.1),fill='#FFF8EB',width=max(1,pad//7))
+        for n in range(3):
+            yy=oy1-pad*.14+(n-1)*max(2,pad//5)
+            d.line((ox0+span*.2,yy,ox1-span*.08-n*pad,yy-pad*.2),fill=fill,width=max(1,pad//6))
+    elif style_id=='pixel-confetti':
+        cell=max(5,min(19,round(min(x1-x0,y1-y0)/5)))
+        colors=('#27344A','#425974','#718096','#D6DEE2','#EFCA79')
+        left=(x0//cell-1)*cell;top=(y0//cell-1)*cell
+        for yy in range(top,y1+cell*2,cell):
+            for xx in range(left,x1+cell*2,cell):
+                inside=xx<x1 and xx+cell>x0 and yy<y1 and yy+cell>y0
+                if inside or (xx+cell>=x0-cell and xx<=x1+cell and yy+cell>=y0-cell and yy<=y1+cell and (xx//cell*13+yy//cell*7)%4==0):
+                    idx=(xx//cell*17+yy//cell*11)%len(colors)
+                    d.rectangle((xx,yy,xx+cell+1,yy+cell+1),fill=colors[idx])
+        # Draw the actual sensitive core last: decorative pixels are never the privacy proof.
+        # Use a dense coloured cell grid inside instead of a semi-transparent source mosaic.
+        for yy in range((y0//cell)*cell,y1,cell):
+            for xx in range((x0//cell)*cell,x1,cell):
+                a=max(xx,x0);b=max(yy,y0);c=min(xx+cell,x1);e=min(yy+cell,y1)
+                if a<c and b<e:
+                    d.rectangle((a,b,c,e),fill=colors[(xx//cell*17+yy//cell*11)%len(colors)])
+    elif style_id in ('mascot-cloud','flower-doodle'):
+        cx=(x0+x1)/2;cy=(y0+y1)/2
+        rx=(x1-x0)/2+pad*1.25;ry=(y1-y0)/2+pad*1.25
+        if style_id=='flower-doodle':
+            for n in range(8):
+                theta=2*math.pi*n/8
+                px=cx+math.cos(theta)*rx*.95;py=cy+math.sin(theta)*ry*.95
+                d.ellipse((px-rx*.56,py-ry*.56,px+rx*.56,py+ry*.56),fill='#F6D181',outline='#B67054',width=max(2,pad//9))
+            # Superellipse contains the entire rectangular privacy core without visible square corners.
+            pts=[]
+            for k in range(96):
+                theta=2*math.pi*k/96;co=math.cos(theta);si=math.sin(theta)
+                pts.append((cx+rx*.96*math.copysign(abs(co)**.5,co),cy+ry*.96*math.copysign(abs(si)**.5,si)))
+            d.polygon(pts,fill=fill)
+        else:
+            d.ellipse((cx-rx,cy-ry,cx+rx,cy+ry),fill=fill)
+            for px,py,r in ((cx-rx*.66,cy-ry*.58,.46),(cx+rx*.45,cy-ry*.63,.4),(cx-rx*.55,cy+ry*.55,.42),(cx+rx*.58,cy+ry*.48,.43)):
+                d.ellipse((px-rx*r,py-ry*r,px+rx*r,py+ry*r),fill=fill)
+        # Rectangular safety core lies inside the illustrated face, even for unusual aspect ratios.
+        d.rectangle(core,fill=fill)
+        eye=max(2,round(min(rx,ry)*.10))
+        for ex in (cx-rx*.28,cx+rx*.28):
+            d.ellipse((ex-eye,cy-eye*.9,ex+eye,cy+eye*1.1),fill='#403641')
+        d.arc((cx-rx*.22,cy+ry*.02,cx+rx*.22,cy+ry*.52),start=10,end=170,fill='#403641',width=max(2,eye//2))
+        if style_id=='mascot-cloud':
+            for ex in (cx-rx*.55,cx+rx*.55):
+                d.ellipse((ex-eye*.9,cy+eye*.6,ex+eye*.9,cy+eye*2),fill='#E9A7A0')
+    else:raise ValueError('Unknown privacy sticker: '+style_id)
+    return layer
+
+
 def paint(canvas,compiled,t,fps):
     frame=round(t*fps); result=canvas.convert('RGBA')
     for ev in compiled['events']:
         if not ev['start_frame']<=frame<ev['end_frame']:continue
         core=box_at(ev,frame); w,h=result.size; x,y,bw,bh=core
         x0=max(0,math.floor(x*w));y0=max(0,math.floor(y*h));x1=min(w,math.ceil((x+bw)*w));y1=min(h,math.ceil((y+bh)*h))
-        style=STYLES[ev['style_id']]; pad=max(3,round(style['pad']*w)); outer=(max(0,x0-pad),max(0,y0-pad),min(w,x1+pad),min(h,y1+pad))
-        layer=Image.new('RGBA',result.size,(0,0,0,0)); draw=ImageDraw.Draw(layer)
-        if ev['style_id']=='cloud':
-            m=Image.new('L',result.size); d=ImageDraw.Draw(m)
-            d.rounded_rectangle(outer,radius=min(pad*2,(outer[3]-outer[1])//2),fill=255)
-            # Deterministic small lobes break the rectangle silhouette; the private
-            # core below remains fully opaque regardless of antialiasing/feather.
-            for frac,size in ((.12,.8),(.38,1.15),(.7,.9),(.91,.65)):
-                cx=outer[0]+(outer[2]-outer[0])*frac; r=pad*size
-                for cy in (outer[1]+pad*.35,outer[3]-pad*.35):
-                    d.ellipse((cx-r,cy-r,cx+r,cy+r),fill=255)
-            m=m.filter(ImageFilter.GaussianBlur(max(1,pad//3)))
-            d=ImageDraw.Draw(m);d.rectangle((x0,y0,x1,y1),fill=255)
-            fill=Image.new('RGBA',result.size,style['color']);fill.putalpha(m);result.alpha_composite(fill)
-        else:
-            if ev['style_id']=='face-oval':
-                draw.ellipse(outer,fill=style['color'])
-            else:
-                radius=pad//2 if ev['style_id']!='paper-strip' else 1
-                draw.rounded_rectangle(outer,radius=radius,fill=style['color'])
-            # Drawing the sensitive core last makes coverage independent of edge antialiasing.
-            draw.rectangle((x0,y0,x1,y1),fill=style['color'])
-            result.alpha_composite(layer)
+        style=STYLES[ev['style_id']]; pad=max(3,round(style['pad']*w))
+        outer=(max(0,x0-pad),max(0,y0-pad),min(w,x1+pad),min(h,y1+pad))
+        result.alpha_composite(_sticker(result,ev['style_id'],(x0,y0,x1,y1),outer,pad))
     return result
 
 

@@ -1,0 +1,382 @@
+{
+  "privacy": [
+    {
+      "id": "mosaic-neutral",
+      "name": "中性像素马赛克",
+      "family": "mosaic",
+      "targets": [
+        "text",
+        "screen",
+        "object",
+        "face"
+      ],
+      "moods": [
+        "neutral",
+        "editorial",
+        "tech"
+      ],
+      "renderer": "privacy_masking.paint",
+      "privacy_safe": true,
+      "color": "#9BA3AB",
+      "pad": 0.012
+    },
+    {
+      "id": "mosaic-warm",
+      "name": "暖色像素马赛克",
+      "family": "mosaic",
+      "targets": [
+        "text",
+        "screen",
+        "object",
+        "face"
+      ],
+      "moods": [
+        "warm",
+        "calm",
+        "playful"
+      ],
+      "renderer": "privacy_masking.paint",
+      "privacy_safe": true,
+      "color": "#C8AD9A",
+      "pad": 0.012
+    },
+    {
+      "id": "mosaic-charcoal",
+      "name": "深灰像素马赛克",
+      "family": "mosaic",
+      "targets": [
+        "text",
+        "screen",
+        "object",
+        "face"
+      ],
+      "moods": [
+        "tech",
+        "serious",
+        "editorial"
+      ],
+      "renderer": "privacy_masking.paint",
+      "privacy_safe": true,
+      "color": "#434A54",
+      "pad": 0.012
+    },
+    {
+      "id": "cloud",
+      "name": "动态柔边云朵",
+      "family": "soft",
+      "targets": [
+        "text",
+        "screen",
+        "object"
+      ],
+      "moods": [
+        "neutral",
+        "warm",
+        "calm"
+      ],
+      "renderer": "privacy_masking.paint",
+      "privacy_safe": true,
+      "color": "#F1F1EE",
+      "pad": 0.012
+    },
+    {
+      "id": "brush-swipe",
+      "name": "不规则笔刷",
+      "family": "handmade",
+      "targets": [
+        "text",
+        "screen",
+        "object"
+      ],
+      "moods": [
+        "editorial",
+        "warm"
+      ],
+      "renderer": "privacy_masking.paint",
+      "privacy_safe": true,
+      "color": "#EDBA73",
+      "pad": 0.017
+    },
+    {
+      "id": "pixel-confetti",
+      "name": "像素碎片",
+      "family": "pixel",
+      "targets": [
+        "text",
+        "screen",
+        "face",
+        "object"
+      ],
+      "moods": [
+        "energetic",
+        "tech"
+      ],
+      "renderer": "privacy_masking.paint",
+      "privacy_safe": true,
+      "color": "#293446",
+      "pad": 0.012
+    },
+    {
+      "id": "mascot-cloud",
+      "name": "云团表情",
+      "family": "character",
+      "targets": [
+        "face",
+        "object"
+      ],
+      "moods": [
+        "warm",
+        "playful"
+      ],
+      "renderer": "privacy_masking.paint",
+      "privacy_safe": true,
+      "color": "#F5E3B9",
+      "pad": 0.033
+    },
+    {
+      "id": "flower-doodle",
+      "name": "涂鸦花朵",
+      "family": "character",
+      "targets": [
+        "face",
+        "object"
+      ],
+      "moods": [
+        "playful",
+        "editorial"
+      ],
+      "renderer": "privacy_masking.paint",
+      "privacy_safe": true,
+      "color": "#EFC56A",
+      "pad": 0.037
+    }
+  ],
+  "emphasis": [
+    {
+      "id": "keyword-cutout",
+      "name": "关键词剪贴",
+      "family": "typography",
+      "renderer": "keyword_stickers.badge",
+      "shape": "cutout",
+      "privacy_safe": false
+    },
+    {
+      "id": "keyword-bubble",
+      "name": "关键词气泡",
+      "family": "typography",
+      "renderer": "keyword_stickers.badge",
+      "shape": "bubble",
+      "privacy_safe": false
+    },
+    {
+      "id": "keyword-annotation",
+      "name": "手写标注",
+      "family": "typography",
+      "renderer": "keyword_stickers.badge",
+      "shape": "annotation",
+      "privacy_safe": false
+    }
+  ],
+  "decorative": [
+    {
+      "id": "sun-smile",
+      "name": "笑脸小太阳",
+      "family": "character",
+      "use": "轻松话题的积极情绪点",
+      "privacy_safe": false,
+      "path": "assets/stickers/art/sun-smile.png",
+      "sha256": "63c3476e1c59740fffe5d6af9faebbbc80f6b8919544d7d73743b9d45bb1deda"
+    },
+    {
+      "id": "cloud-smile",
+      "name": "云朵笑脸",
+      "family": "character",
+      "use": "柔和语气的引导或惊喜",
+      "privacy_safe": false,
+      "path": "assets/stickers/art/cloud-smile.png",
+      "sha256": "2dfb866f8de720f70a4a03c819eeb726c79d90b11250aef04f32d64e23808c52"
+    },
+    {
+      "id": "heart-pop",
+      "name": "爱心组合",
+      "family": "emotion",
+      "use": "认可与感谢的单次强调",
+      "privacy_safe": false,
+      "path": "assets/stickers/art/heart-pop.png",
+      "sha256": "a01bc48e4818b63340ab2fd51fd5af098900b7d2f05839976772cbbe9807febd"
+    },
+    {
+      "id": "pointer-arrow",
+      "name": "手绘箭头",
+      "family": "direction",
+      "use": "指向画面中具体对象，避免指错",
+      "privacy_safe": false,
+      "path": "assets/stickers/art/pointer-arrow.png",
+      "sha256": "0beb0773fa3ce1a7f7f7171f9814cff5a222ecebc62fe9fbd079caf633ac16a1"
+    },
+    {
+      "id": "sheep-lavender",
+      "name": "薰衣草小羊",
+      "family": "character",
+      "use": "温暖、轻松语气的人物替代形象",
+      "privacy_safe": false,
+      "path": "assets/stickers/art/sheep-lavender.png",
+      "sha256": "7d8b98aa0ceb012be20969cfa4403ea6b1f739e85ffa27629ba650a8c7ec4379",
+      "source": "Nexora gpt-image-2; original text prompt; no third-party image references"
+    },
+    {
+      "id": "frog-surprise",
+      "name": "惊讶青蛙",
+      "family": "character",
+      "use": "惊讶、反转或问题引入",
+      "privacy_safe": false,
+      "path": "assets/stickers/art/frog-surprise.png",
+      "sha256": "1e98c7b1c71e0f8bce41e8f704de8d9f68ecc0f36ae28115498638b33141e55e",
+      "source": "Nexora gpt-image-2; original text prompt; no third-party image references"
+    },
+    {
+      "id": "toast-cheer",
+      "name": "开心吐司",
+      "family": "character",
+      "use": "轻松的结果确认",
+      "privacy_safe": false,
+      "path": "assets/stickers/art/toast-cheer.png",
+      "sha256": "6dbdbad19bcf5afcab3509ff866885c519fa108afe2e611ed15aed2b0df74b56",
+      "source": "Nexora gpt-image-2; original text prompt; no third-party image references"
+    },
+    {
+      "id": "paper-plane-smile",
+      "name": "笑脸纸飞机",
+      "family": "character",
+      "use": "流程推进、发送与传播",
+      "privacy_safe": false,
+      "path": "assets/stickers/art/paper-plane-smile.png",
+      "sha256": "06f39f91ac19b6f311435946dac41863f74e1a2267d4d525ee8208eb3e09428c",
+      "source": "Nexora gpt-image-2; original text prompt; no third-party image references"
+    },
+    {
+      "id": "idea-bulb",
+      "name": "灵感灯泡",
+      "family": "semantic",
+      "use": "观点、方法或灵感出现",
+      "privacy_safe": false,
+      "path": "assets/stickers/art/idea-bulb.png",
+      "sha256": "abaff3dc0de2c5c12f55352a594b789f538bbd21081c329d6347c6a0ff07567d",
+      "source": "Nexora gpt-image-2; original text prompt; no third-party image references"
+    },
+    {
+      "id": "triple-check",
+      "name": "三项勾选",
+      "family": "semantic",
+      "use": "三项步骤或清单总结",
+      "privacy_safe": false,
+      "path": "assets/stickers/art/triple-check.png",
+      "sha256": "5374fa82683f13d5988466112530245b31b8b0fe12f02434fcee332f509e2804",
+      "source": "Nexora gpt-image-2; original text prompt; no third-party image references"
+    },
+    {
+      "id": "blank-speech",
+      "name": "空白对话泡",
+      "family": "semantic",
+      "use": "提出问题或引用短语；文字仍用渲染器叠加",
+      "privacy_safe": false,
+      "path": "assets/stickers/art/blank-speech.png",
+      "sha256": "a21ff6e8c49bb3c4aaa1be5bdbc19a719b2461793e4b9c2434a185bdeb37c65e",
+      "source": "Nexora gpt-image-2; original text prompt; no third-party image references"
+    },
+    {
+      "id": "discover-lens",
+      "name": "发现放大镜",
+      "family": "semantic",
+      "use": "发现细节与查找证据",
+      "privacy_safe": false,
+      "path": "assets/stickers/art/discover-lens.png",
+      "sha256": "c13564565be54b4f17dd64c8fbc22c873f6e728b0359b0c5bcacd418c7e6b0b3",
+      "source": "Nexora gpt-image-2; original text prompt; no third-party image references"
+    },
+    {
+      "id": "sleepy-cloud-cover",
+      "name": "瞌睡云团",
+      "family": "cover-character",
+      "use": "温柔趣味的人脸遮挡",
+      "privacy_safe": true,
+      "targets": [
+        "face",
+        "object"
+      ],
+      "moods": [
+        "warm",
+        "playful"
+      ],
+      "renderer": "privacy_masking.paint",
+      "color": "#FFF5DC",
+      "pad": 0.02,
+      "path": "assets/stickers/art/sleepy-cloud-cover.png",
+      "sha256": "8a2ab427e32ce92e9dcc1eb263dd96829d257e015e4e36e23b3063fbd7268202",
+      "source": "Nexora gpt-image-2; original text prompt; no third-party image references"
+    },
+    {
+      "id": "orange-flower-cover",
+      "name": "橘色花朵",
+      "family": "cover-character",
+      "use": "明快活泼的人脸遮挡",
+      "privacy_safe": true,
+      "targets": [
+        "face",
+        "object"
+      ],
+      "moods": [
+        "warm",
+        "playful"
+      ],
+      "renderer": "privacy_masking.paint",
+      "color": "#FFF5DC",
+      "pad": 0.02,
+      "path": "assets/stickers/art/orange-flower-cover.png",
+      "sha256": "d1782f08af6270f4cbc219baf73b7770908b87d164ba7bbd3e60eae14733c4d8",
+      "source": "Nexora gpt-image-2; original text prompt; no third-party image references"
+    },
+    {
+      "id": "mint-cat-cover",
+      "name": "薄荷猫咪",
+      "family": "cover-character",
+      "use": "轻松活泼的人脸遮挡",
+      "privacy_safe": true,
+      "targets": [
+        "face",
+        "object"
+      ],
+      "moods": [
+        "warm",
+        "playful"
+      ],
+      "renderer": "privacy_masking.paint",
+      "color": "#FFF5DC",
+      "pad": 0.02,
+      "path": "assets/stickers/art/mint-cat-cover.png",
+      "sha256": "1fe2477857a75590eecf9bf574cf88464bbb883bb14a7490f1dc83e5d64520ae",
+      "source": "Nexora gpt-image-2; original text prompt; no third-party image references"
+    },
+    {
+      "id": "pixel-creature-cover",
+      "name": "像素小怪兽",
+      "family": "cover-character",
+      "use": "游戏感、科技感的人脸遮挡",
+      "privacy_safe": true,
+      "targets": [
+        "face",
+        "object"
+      ],
+      "moods": [
+        "warm",
+        "playful"
+      ],
+      "renderer": "privacy_masking.paint",
+      "color": "#FFF5DC",
+      "pad": 0.02,
+      "path": "assets/stickers/art/pixel-creature-cover.png",
+      "sha256": "f7905a1b46ad0493e98e17bbb44b5357c86733110c55990ae03aa8140b36ea2a",
+      "source": "Nexora gpt-image-2; original text prompt; no third-party image references"
+    }
+  ]
+}

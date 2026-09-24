@@ -22,8 +22,30 @@ def options(plan, target_id):
                                                  mood=plan.get('privacy_mood','neutral'))
              for ev in plan.get('privacy_events',[]) if ev.get('target_id')==target_id}
     if not current:raise ValueError('Target has no visual privacy events')
+    family=STYLES[next(iter(current))]['family']
     candidates=[key for key,v in STYLES.items() if target['kind'] in v['kinds'] and key not in current]
-    return candidates[:3]
+    same=[key for key in candidates if STYLES[key]['family']==family][:2]
+    seen={family}
+    distinct=[]
+    for key in candidates:
+        group=STYLES[key]['family']
+        if group not in seen:
+            distinct.append(key);seen.add(group)
+    candidates=same+distinct+[key for key in candidates if key not in same+distinct]
+    result=[]
+    for style in candidates:
+        trial=copy.deepcopy(plan)
+        for ev in trial['privacy_events']:
+            if ev.get('target_id')==target_id:
+                ev['style_id']=style
+                ev['style_override_confirmed']=True
+        target_trial=next(t for t in trial['privacy_targets'] if t['id']==target_id)
+        target_trial['preferred_style']=style
+        try: compile_plan(trial)
+        except ValueError: continue  # Some raster stickers cannot fit near an edge.
+        result.append(style)
+        if len(result)==3:break
+    return result
 
 
 def changed_plan(plan,target_id,style,*,user_selected=False,preview_only=False):

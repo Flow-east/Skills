@@ -1,4 +1,4 @@
-# 口播剪辑 · v0.4.0
+# 口播剪辑 · v0.4.1
 
 [English](README.md) | **简体中文**
 
@@ -8,7 +8,7 @@
 
 - 本地语音转写与逐词时间码；按语义处理重复、口误和停顿，保留完整句尾。
 - 设计开头、内容顺序、镜头节奏、字幕层级、关键词贴纸、音效、转场；隐私目标可由 AI 选择可靠遮挡样式，成片后按反馈局部换款。
-- 按内容选择整套视觉模板：内置 54 套字幕与包装模板、74 种可选音效。贴纸插图可接入当前环境可用的生图工具，不绑定特定服务。
+- 按内容选择整套视觉模板：内置 54 套字幕与包装模板、74 种可选音效。贴纸库含 16 款透明插图（其中 12 款为生图原创），另有 8 款程序化遮挡（含动态柔边云朵和 3 款姓名牌马赛克）和 4 款经覆盖验证的角色遮挡候选；关键词字牌另随模板设计；其他贴纸插图可接入当前环境可用的生图工具，不绑定特定服务。
 - 输出有声 MP4、剪辑计划、SRT 字幕、创作方案和 QA 记录。
 
 ## 安装
@@ -26,7 +26,7 @@ cp -R koubo-editing "${CODEX_HOME:-$HOME/.codex}/skills/koubo-editing"
 
 提供可读取的口播视频，并说“帮我剪这条口播”或使用 `$koubo-editing`。技能先复核原话与内容结构，再制作创作方案和成片；只要求分析时不会自动渲染。生图、外部服务和付费调用须另行具备可用工具与授权。
 
-快速预览及精细计划分别见 [`references/quickstart.md`](references/quickstart.md)、[`references/plan-format.md`](references/plan-format.md)。选择某套模板时查看 [`references/template-library.md`](references/template-library.md) 中的选择与限制。
+快速预览及精细计划分别见 [`references/quickstart.md`](references/quickstart.md)、[`references/plan-format.md`](references/plan-format.md)。选择某套模板时查看 [`references/template-library.md`](references/template-library.md) 中的选择与限制；贴纸使用见 [`references/sticker-library.md`](references/sticker-library.md)。
 
 ## 环境与验证
 
@@ -35,6 +35,7 @@ cp -R koubo-editing "${CODEX_HOME:-$HOME/.codex}/skills/koubo-editing"
 ```bash
 python3 -m unittest discover -s koubo-editing/tests -v
 python3 koubo-editing/scripts/template_library.py validate
+python3 koubo-editing/scripts/sticker_catalog.py validate
 python3 koubo-editing/tests/smoke_test.py
 ```
 

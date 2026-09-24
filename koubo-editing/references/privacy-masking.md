@@ -4,21 +4,28 @@
 
 扫描画面、口播、字幕和交付文本；用户明确指定的对象直接列入目标。AI 发现但不确定是否属于私密内容时，标记 `pending`，说明时间点并确认；未确认前不要称公开版本已脱敏。无目标时不加遮挡。用户只说“遮住姓名”无需追问贴纸样式：按对象、构图及模板选择可靠方案并做初版。用户指定样式时优先遵从；不支持则解释缺口并问可否改用等效覆盖，不暗换。
 
-内置程序化遮挡方案（由 `scripts/privacy_masking.py` 定义，不需外部图片）：
+内置遮挡方案（`scripts/privacy_masking.py`；完整目录见 [贴纸库](sticker-library.md)）：
 
 | ID | 外观 | 适合 | 注意 |
 |---|---|---|---|
-| `cloud` | 浅色柔边云团，核心实心 | 小块文字/物体 | 柔边只能在核心外；用户提供具体参考时还要核对轮廓 |
-| `paper-strip` | 浅色纸条 | 文字、屏幕局部 | 比云团利落，不适合未验证的大幅运动人脸 |
-| `solid-card` | 深色圆角实心卡 | 文字、屏幕、面孔 | 较醒目，可配模板但核心始终不透明 |
-| `face-patch` | 深色面部实心贴 | 面孔、局部物体 | 不能替代人物追踪；实测连续运动 |
-| `face-oval` | 浅色实心椭圆 | 面孔 | 与深色方案区分，但仍须实测覆盖与主体关系 |
+| `mosaic-neutral` | 中性方块马赛克 | 姓名牌、号码、屏幕信息 | 云朵构图不合适时使用；不采样原始敏感像素 |
+| `mosaic-warm` | 暖色方块马赛克 | 姓名牌、号码、屏幕信息 | 暖色模板中使用 |
+| `mosaic-charcoal` | 深灰方块马赛克 | 姓名牌、号码、屏幕信息 | 严肃/科技风，也适合浅色名牌 |
+| `cloud` | 动态柔边云朵 | 姓名牌、短文本、局部物体 | 默认局部文字方案；按目标范围重算轮廓，柔边只在不透明核心外 |
+| `brush-swipe` | 不规则笔刷 | 文字、屏幕局部、物体 | 视觉轮廓不规则；核心完全实心 |
+| `pixel-confetti` | 像素碎片 | 文字、屏幕、面孔、物体 | 不透明像素图案，不读取原画面像素 |
+| `mascot-cloud` | 云团表情 | 人脸、物体 | 轻松题材；移动目标需逐帧复核 |
+| `flower-doodle` | 涂鸦花朵 | 人脸、物体 | 轻松或编辑风；不要当通用屏幕遮挡 |
+| `sleepy-cloud-cover` | 瞌睡云团 PNG | 人脸、物体 | 温柔口吻；验证整张脸和构图 |
+| `orange-flower-cover` | 橘色花朵 PNG | 人脸、物体 | 明快口吻；留意较宽轮廓 |
+| `mint-cat-cover` | 薄荷猫咪 PNG | 人脸、物体 | 轻松口吻；不宜严肃场景 |
+| `pixel-creature-cover` | 像素小怪兽 PNG | 人脸、物体 | 游戏/科技风；边缘较宽 |
 
-这些方案与关键词装饰贴纸独立。仅程序化图形，随技能源码按仓库 MIT 许可；没有付费或外发素材。`privacy_mood: "editorial"` 或 `"warm"` 可建议纸条，否则文字默认云团、屏幕默认信息卡、面孔默认实心贴。AI 仍要依据实际画面检验安全区与主体，不能只凭类型盲选。
+遮挡只是 [贴纸库](sticker-library.md) 的一个子类。关键词强调贴纸不能用来替代遮挡。用户未指定样式时按对象、语境和构图自动选择，试看成片后再调整；姓名牌优先按文字范围生成柔边云朵，构图不合适时再用方块马赛克，不默认添加规则卡片。另有 12 款生图透明 PNG 可用于普通装饰；只有上表 4 款生图贴纸具备覆盖验证。库中不包含剪映素材。
 
 ## 剪辑计划
 
-在 `clips` 和 `scene_*` 之外填写成片时钟的目标与事件。`visible` 是目标实际可见的每个**剪辑片段实例**，不是自动检测结果；`box` 是镜头缩放和 scene 画面操作**之后**的敏感核心坐标，格式为 `[x,y,width,height]`，均为 0–1 的成片相对尺寸。这里不是原片坐标，也不是安全边缘：渲染器会在核心外扩边并确保核心不透明。`start/end` 必须按输出帧对齐，覆盖每一个可见帧。隐藏于前景的时段可拆开 `visible` 区间；能力不足时不要假装已处理复杂前后遮挡。
+在 `clips` 和 `scene_*` 之外填写成片时钟的目标与事件。`visible` 是目标实际可见的每个**剪辑片段实例**，不是自动检测结果；`box` 是镜头缩放和 scene 画面操作**之后**的敏感核心坐标，格式为 `[x,y,width,height]`，均为 0–1 的成片相对尺寸。这里不是原片坐标，也不是安全边缘：渲染器要求核心完全不透明；生图贴纸无法放入画幅或盖住旁边必要信息时换款。`start/end` 必须按输出帧对齐，覆盖每一个可见帧。隐藏于前景的时段可拆开 `visible` 区间；能力不足时不要假装已处理复杂前后遮挡。
 
 ```json
 {
@@ -48,7 +55,7 @@ python3 scripts/privacy_revision.py preview plan.json --target-id name-1 --out-d
 该脚本会从原计划分别完整渲染再截取同一短段，预览只供选择，不能当脱敏最终片。用户选定后，仅改对应目标的遮挡样式并保存新计划，再用常规渲染器完整重渲染、检查所有受影响画面与音轨：
 
 ```bash
-python3 scripts/privacy_revision.py apply plan.json --target-id name-1 --style paper-strip --out-plan /absolute/updated-plan.json --user-selected
+python3 scripts/privacy_revision.py apply plan.json --target-id name-1 --style brush-swipe --out-plan /absolute/updated-plan.json --user-selected
 python3 scripts/render_template.py /absolute/updated-plan.json --out-dir /absolute/updated-render
 ```
 

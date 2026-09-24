@@ -5,8 +5,9 @@ from PIL import Image
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from timeline import compile_plan, base_filter
 from render_template import Painter, render
-from privacy_masking import STYLES, audit, choose_style, scan_text
+from privacy_masking import CATALOG, STYLES, _cloud_alpha, _sticker, audit, choose_style, scan_text
 from privacy_revision import options, changed_plan
+from sticker_catalog import catalog, resolve
 from test_template_scenes import plan as scene_plan
 
 
@@ -24,9 +25,107 @@ class PrivacyTests(unittest.TestCase):
         plain=scene_plan('pink');compiled=compile_plan(plain)
         self.assertEqual(compiled['_privacy']['events'],[])
         self.assertEqual(Painter(compiled).privacy['events'],[])
-        self.assertEqual(choose_style('face'),'face-patch')
-        self.assertEqual(choose_style('text',mood='editorial'),'paper-strip')
+        self.assertEqual(choose_style('face'),'pixel-confetti')
+        self.assertEqual(choose_style('text',mood='editorial'),'cloud')
         self.assertGreaterEqual(len(STYLES),3)
+
+    def test_sticker_catalog_and_private_core(self):
+        self.assertEqual(set(STYLES),{v['id'] for group in CATALOG.values() for v in group if v['privacy_safe']})
+        self.assertTrue(all(x['privacy_safe'] for x in CATALOG['privacy']))
+        self.assertTrue(all(not x['privacy_safe'] for x in CATALOG['emphasis']))
+        for item in CATALOG['decorative']:
+            with self.subTest(asset=item['id']):
+                self.assertTrue(Path(resolve(item['id'])['path']).is_file())
+        self.assertFalse({'paper-strip','solid-card','face-patch'} & set(STYLES))
+        for style in STYLES:
+            with self.subTest(style=style):
+                core=(210,240,326,303);pad=30
+                image=_sticker(Image.new('RGBA',(720,960)),style,core,
+                               (core[0]-pad,core[1]-pad,core[2]+pad,core[3]+pad),pad)
+                alpha=image.getchannel('A')
+                self.assertEqual(alpha.crop(core).getextrema(),(255,255))
+                self.assertIsNotNone(alpha.getbbox())
+
+    def test_generated_character_cover_is_validated_before_render(self):
+        p=self.plan();p['privacy_targets'][0]['kind']='face'
+        p['privacy_events'][0]['box']=[.255,.192,.232,.197]
+        p['privacy_events'][0]['style_id']='mint-cat-cover'
+        c=compile_plan(p)
+        self.assertEqual(c['_privacy']['events'][0]['style_id'],'mint-cat-cover')
+        p['privacy_events'][0]['box']=[0,0,.232,.197]
+        with self.assertRaisesRegex(ValueError,'exceeds the frame'):
+            compile_plan(p)
+
+    def test_all_generated_covers_opaque_and_frame_rejection(self):
+        covers=[v['id'] for v in CATALOG['decorative'] if v['privacy_safe']]
+        self.assertEqual(len(covers),4)
+        for style in covers:
+            with self.subTest(style=style):
+                p=self.plan();p['privacy_targets'][0]['kind']='face'
+                p['privacy_events'][0]['box']=[.34,.18,.24,.15]
+                p['privacy_events'][0]['style_id']=style
+                c=compile_plan(p)
+                self.assertEqual(c['_privacy']['events'][0]['style_id'],style)
+                core=(245,173,418,317)
+                art=_sticker(Image.new('RGBA',(720,960)),style,core,core,12)
+                self.assertEqual(art.getchannel('A').crop(core).getextrema(),(255,255))
+                p['privacy_events'][0]['box']=[0,0,.24,.15]
+                with self.assertRaisesRegex(ValueError,'exceeds the frame'):
+                    compile_plan(p)
+
+    def test_cloud_is_dynamic_soft_and_opaque_for_varied_regions(self):
+        shapes=[]
+        for width,height,pad in ((70,32,7),(143,42,9),(250,48,9),(90,90,12)):
+            with self.subTest(box=(width,height)):
+                mask,halo=_cloud_alpha(width,height,pad)
+                self.assertEqual(mask.crop((halo,halo,halo+width,halo+height)).getextrema(),
+                                 (255,255))
+                self.assertEqual(mask.getpixel((0,0)),0)
+                self.assertTrue(any(0<v<255 for v in mask.getdata()))
+                tops=[]
+                for x in range(halo+8,halo+width-8,4):
+                    col=mask.crop((x,0,x+1,halo))
+                    if col.getbbox():tops.append(col.getbbox()[1])
+                self.assertGreater(len(set(tops)),1)
+                shapes.append(mask.size)
+        self.assertEqual(len(set(shapes)),4)
+        core=(474,328,617,370)
+        light=_sticker(Image.new('RGBA',(720,960),'white'),'cloud',core,core,9)
+        dark=_sticker(Image.new('RGBA',(720,960),'black'),'cloud',core,core,9)
+        self.assertEqual(light.tobytes(),dark.tobytes())
+
+    def test_nameplate_mosaic_styles_and_contextual_choice(self):
+        self.assertEqual(choose_style('text'),'cloud')
+        self.assertEqual(choose_style('text',mood='warm'),'cloud')
+        self.assertEqual(choose_style('screen',mood='serious'),'mosaic-charcoal')
+        frame=Image.new('RGBA',(720,960),'white')
+        core=(476,333,614,370)
+        for style in ('mosaic-neutral','mosaic-warm','mosaic-charcoal'):
+            with self.subTest(style=style):
+                p=self.plan();p['privacy_events'][0]['style_id']=style
+                self.assertEqual(compile_plan(p)['_privacy']['events'][0]['style_id'],style)
+                layer=_sticker(frame,style,core,(466,323,624,380),10)
+                self.assertEqual(layer.getchannel('A').crop(core).getextrema(),(255,255))
+                self.assertEqual(layer.getpixel((100,100))[3],0)
+                self.assertGreater(len(set(layer.crop(core).getdata())),3)
+        p=self.plan();p['privacy_events'][0]['style_id']='mosaic-neutral'
+        self.assertEqual(options(p,'person-name')[:2],['mosaic-warm','mosaic-charcoal'])
+        p=self.plan();p['privacy_events'][0]['style_id']='cloud'
+        families=[STYLES[s]['family'] for s in options(p,'person-name')]
+        self.assertEqual(len(set(families)),3)
+
+    def test_all_bundled_art_has_real_transparent_exterior(self):
+        for item in CATALOG['decorative']:
+            with self.subTest(sticker=item['id']):
+                with Image.open(resolve(item['id'])['path']) as image:
+                    alpha=image.getchannel('A')
+                    self.assertEqual(image.mode,'RGBA')
+                    self.assertEqual(alpha.getextrema(),(0,255))
+                    self.assertEqual([alpha.getpixel(pt) for pt in
+                                      ((0,0),(image.width-1,0),(0,image.height-1),
+                                       (image.width-1,image.height-1))],[0]*4)
+                    counts=alpha.histogram()
+                    self.assertGreater(sum(counts[:255]),image.width*image.height*.1)
 
     def test_mask_opaque_with_scene_and_legacy(self):
         for template in ('pink','legacy'):
@@ -63,7 +162,7 @@ class PrivacyTests(unittest.TestCase):
     def test_pending_and_user_style(self):
         p=self.plan();p['privacy_targets'][0]['status']='pending'
         self.assertEqual(compile_plan(p)['_privacy']['confirmation'],'pending')
-        p=self.plan();p['privacy_targets'][0]['preferred_style']='paper-strip';p['privacy_events'][0]['style_id']='cloud'
+        p=self.plan();p['privacy_targets'][0]['preferred_style']='brush-swipe';p['privacy_events'][0]['style_id']='cloud'
         with self.assertRaisesRegex(ValueError,'silently'):compile_plan(p)
         p['privacy_events'][0]['style_override_confirmed']=True
         self.assertEqual(compile_plan(p)['_privacy']['events'][0]['style_id'],'cloud')
@@ -165,8 +264,8 @@ class PrivacyTests(unittest.TestCase):
     def test_face_and_untrusted_style(self):
         p=self.plan();p['privacy_targets'][0]['kind']='face';p['privacy_events'][0]['style_id']='cloud'
         with self.assertRaisesRegex(ValueError,'Invalid privacy style'):compile_plan(p)
-        p['privacy_events'][0]['style_id']='face-patch'
-        self.assertEqual(compile_plan(p)['_privacy']['events'][0]['style_id'],'face-patch')
+        p['privacy_events'][0]['style_id']='mascot-cloud'
+        self.assertEqual(compile_plan(p)['_privacy']['events'][0]['style_id'],'mascot-cloud')
         self.assertGreaterEqual(len(options(p,'person-name')),2)
 
 
