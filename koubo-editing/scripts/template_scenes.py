@@ -634,6 +634,8 @@ def video_layer(p,im,t):
 
 def paint(p,im,t):
     canvas=video_layer(p,im,t)
+    from privacy_masking import paint as paint_privacy
+    canvas=paint_privacy(canvas,p.privacy,t,p.p['fps'])
     for e in layout(p):
         if not e['start']<=t<e['end']:continue
         age=t-e['start'];remaining=e['end']-t;im=e['image'];dx=dy=0

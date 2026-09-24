@@ -54,6 +54,7 @@ class Painter:
                 self.sprites[str(q)]=im.crop(bbox)
         from illustrations import load as load_illustrations
         self.illustrations=load_illustrations(self)
+        self.privacy=p['_privacy']
 
     def font_path(self,role='body'):
         path=Path(self.variant.get(role+'_font',self.variant.get('font',self.p['font'])))
@@ -340,6 +341,8 @@ class Painter:
                 original=canvas.copy(); blurred=original.filter(ImageFilter.GaussianBlur(round(18*self.unit)))
                 canvas=blurred; band_h=ev.get('band_height',.46)*self.h; top=round((self.h-band_h)/2)
                 canvas.alpha_composite(original.crop((0,top,self.w,top+round(band_h))),(0,top))
+        from privacy_masking import paint as paint_privacy
+        canvas=paint_privacy(canvas,self.privacy,t,self.p['fps'])
         tdur=self.p.get('title_duration',2.0)
         if self.variant.get('design_system'):
             from design_system import paint_title
@@ -448,7 +451,10 @@ def render(plan_path,output_dir):
         layout_qa=audit_layout(painter)
         if layout_qa is not None:
             (output_dir/'layout_qa.json').write_text(json.dumps(layout_qa,ensure_ascii=False,indent=2))
-        (output_dir/'compiled_plan.json').write_text(json.dumps(p,ensure_ascii=False,indent=2),encoding='utf8')
+        if not p['_privacy']['targets']:
+            (output_dir/'compiled_plan.json').write_text(json.dumps(p,ensure_ascii=False,indent=2),encoding='utf8')
+        # For privacy jobs, keep the editable source plan outside the deliverable folder.
+        # It may contain original names, raw transcript and private match terms.
         if p.get('hook_audit'):
             (output_dir/'hook_audit.json').write_text(json.dumps(p['hook_audit'],ensure_ascii=False,indent=2))
         if boundary_events:
@@ -473,6 +479,10 @@ def render(plan_path,output_dir):
                     review_frames.update(range(ev['start_frame'],ev['end_frame']))
                 else:
                     review_frames.update(f for f in (ev['cut_frame']-1,ev['cut_frame']) if 0<=f<p['frame_count'])
+            from privacy_masking import audit as privacy_audit
+            privacy_qa=privacy_audit(p['_privacy'],p)
+            if p['_privacy']['targets']:
+                review_frames.update(privacy_qa['risk_frames'])
             for frame in range(p['frame_count']):
                 raw=decoder.stdout.read(w*h*3)
                 if len(raw)!=w*h*3: raise RuntimeError(f'Decoder ended at frame {frame}; expected {p["frame_count"]}')
@@ -488,6 +498,8 @@ def render(plan_path,output_dir):
         score=output_dir/'sound.wav'; sound=audio_design(p,score,painter.theme)
         final=output_dir/'final.mp4'
         run(['ffmpeg','-v','error','-n','-i',str(silent),'-i',str(base),'-i',str(score),'-filter_complex','[1:a][2:a]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.95:level=false[a]','-map','0:v','-map','[a]','-c:v','copy','-c:a','aac','-b:a','192k','-movflags','+faststart',str(final)],log)
+        if p['_privacy']['targets']:
+            base.unlink()  # Never leave an unmasked A/V intermediate in a privacy delivery folder.
         if painter.variant.get('scene_system'):
             from template_scenes import write_srt as write_scene_srt
             write_scene_srt(p,output_dir/'captions.srt')
@@ -503,6 +515,20 @@ def render(plan_path,output_dir):
         if int(v.get('nb_frames',0))!=p['frame_count']: raise RuntimeError('Unexpected frame count')
         run(['ffmpeg','-v','error','-i',str(final),'-f','null','-'],output_dir/'decode_check.log')
         qa={'duration':p['duration'],'frame_count':p['frame_count'],'video_duration':float(v['duration']),'audio_duration':float(a['duration']),'width':v['width'],'height':v['height'],'audio_present':True,'decode_passed':True,'sound':sound,'font_coverage_passed':font_qa['passed'],'font_qa':'font_qa.json','visual_review':'pending','frame_fit_audit':p['frame_fit_audit'],'semantic_review':p.get('review',{})}
+        if p['_privacy']['targets']:
+            # Computer checks cannot prove the sensitive object was correctly located.
+            from privacy_masking import scan_text
+            privacy_qa['text_scan']=scan_text(p,output_dir)
+            if privacy_qa['text_scan']['status']=='failed':
+                privacy_qa['coverage']='failed_text_leak'
+                (output_dir/'privacy_qa.json').write_text(json.dumps(privacy_qa,ensure_ascii=False,indent=2))
+                for unsafe in ('final.mp4','visual.mp4','captions.srt','captions.en.srt','translations.json'):
+                    (output_dir/unsafe).unlink(missing_ok=True)
+                for frame_path in output_dir.glob('frame_*.jpg'):
+                    frame_path.unlink()
+                raise ValueError('Sensitive term remains in delivered text; unsafe render removed')
+            (output_dir/'privacy_qa.json').write_text(json.dumps(privacy_qa,ensure_ascii=False,indent=2))
+            qa['privacy']='privacy_qa.json'
         if layout_qa is not None:qa['layout_qa']='layout_qa.json'
         if painter.illustrations:
             from illustrations import audit as audit_illustrations
@@ -523,6 +549,8 @@ def render(plan_path,output_dir):
         state.update(status='failed',error=f'{type(e).__name__}: {e}'); save()
         for proc in (decoder,encoder):
             if proc and proc.poll() is None: proc.terminate(); proc.wait()
+        if p['_privacy']['targets']:
+            (output_dir/'base.mp4').unlink(missing_ok=True)
         raise
 
 if __name__=='__main__':

@@ -118,13 +118,23 @@ def compile_plan(p):
             z=dict(ev); z['start']=cursor/fps+ev['start']-sf/fps; z['end']=cursor/fps+ev['end']-sf/fps
             q['viewport_events'].append(z)
         clips.append(q); cursor+=n
-    compiled=dict(p,clips=clips,frame_count=cursor,duration=cursor/fps)
+    hold=p.get('tail_hold_frames',0)
+    if type(hold)!=int or not 0<=hold<=5*fps:
+        raise ValueError('tail_hold_frames must be an integer from 0 to five seconds')
+    if hold:
+        clips[-1]['output_frame_end']+=hold
+        clips[-1]['output_end']=(cursor+hold)/fps
+    compiled=dict(p,clips=clips,frame_count=cursor+hold,duration=(cursor+hold)/fps)
     if p.get('hook_design') is not None:
         from opening_hooks import verify as verify_hook
         compiled['hook_audit']=verify_hook(compiled)
     if p.get('boundary_transitions') is not None:
         from boundary_transitions import compile_transitions
         compiled['boundary_events']=compile_transitions(compiled)
+    from privacy_masking import compile_privacy
+    compiled['_privacy']=compile_privacy(compiled)
+    from privacy_masking import redact_compiled_text
+    redact_compiled_text(compiled)
     return compiled
 
 
@@ -138,10 +148,19 @@ def base_filter(p):
     fs=[f'[0:v]setpts=PTS-STARTPTS,fps={fps},split={n}'+''.join(f'[vi{i}]' for i in range(n)),
         f'[0:a]asetpts=PTS-STARTPTS,asplit={n}'+''.join(f'[ai{i}]' for i in range(n))]
     for i,c in enumerate(p['clips']):
-        fs.append(f'[vi{i}]trim=start_frame={c["source_frame_start"]}:end_frame={c["source_frame_end"]},setpts=PTS-STARTPTS,{transform},setsar=1[v{i}]')
+        tail=p.get('tail_hold_frames',0)/fps if i==n-1 else 0
+        vpad=f',tpad=stop_mode=clone:stop_duration={tail:.9f}' if tail else ''
+        fs.append(f'[vi{i}]trim=start_frame={c["source_frame_start"]}:end_frame={c["source_frame_end"]},setpts=PTS-STARTPTS,{transform},setsar=1{vpad}[v{i}]')
         duration=c['source_end']-c['source_start']
         gain=c.get('audio_gain',1.)
-        fs.append(f'[ai{i}]atrim=start={c["source_start"]:.9f}:end={c["source_end"]:.9f},asetpts=PTS-STARTPTS,aresample=48000,volume={gain:.6f},afade=t=in:d=0.005,afade=t=out:st={max(0,duration-.005):.9f}:d=0.005[a{i}]')
+        audio_chain=f'[ai{i}]atrim=start={c["source_start"]:.9f}:end={c["source_end"]:.9f},asetpts=PTS-STARTPTS,aresample=48000,volume={gain:.6f},afade=t=in:d=0.005,afade=t=out:st={max(0,duration-.005):.9f}:d=0.005'
+        for redaction in p.get('_privacy',{}).get('audio_redactions',[]):
+            if redaction['clip_id']==c['id']:
+                start=redaction['source_start']-c['source_start']
+                end=redaction['source_end']-c['source_start']
+                audio_chain+=f",volume=0:enable='between(t\\,{start:.9f}\\,{end:.9f})'"
+        if tail:audio_chain+=f',apad=pad_dur={tail:.9f}'
+        fs.append(audio_chain+f'[a{i}]')
     fs.append(''.join(f'[v{i}][a{i}]' for i in range(n))+f'concat=n={n}:v=1:a=1[v][a]')
     return ';\n'.join(fs)
 

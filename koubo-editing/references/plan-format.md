@@ -138,3 +138,7 @@
 ```
 
 `x/y/width` 是相对成片画幅的左上角和宽度，高度按原素材等比计算。自有透明素材写 `source:{"kind":"local"}`；生成素材需真实授权来源。仅接受有可见内容和真实透明背景的 PNG 等图片。插图与字幕、标签、受保护的人物区域冲突或哈希不符时拒绝渲染；检查 `qa.json.illustrations` 及首/中/尾实际画面。生图能力与授权流程见 [贴纸规则](keyword-stickers.md)。
+
+## 隐私目标与独立遮挡层
+
+`privacy_targets`、`privacy_events`、`audio_redactions` 的成片/源时间格式、内置样式和改稿命令见 [隐私遮挡与改稿](privacy-masking.md)。隐私事件独立于 `illustrations`、装饰贴纸和 `protected_regions`。源画面变换之后、字幕之前绘制遮挡；编译器要求每个已声明的可见目标区间按输出帧完整覆盖。含隐私目标的 QA 默认保留人工连续复核状态，不将解码或静态抽帧视为脱敏通过。
