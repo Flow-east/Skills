@@ -20,9 +20,9 @@
   "audio": {"bed":"none", "cues":false, "sound_style":"premium", "original_sound_review":"pending"},
   "sound_events": [
     {"id":"opening-point", "clip_id":"hook", "word_index":16, "edge":"end",
-     "asset_id":"common-005", "role":"keyword", "reason":"马上：结果提前给出", "gain":0.12},
+     "asset_id":"sfx-handclap-accent", "role":"keyword", "reason":"马上：结果提前给出", "gain":0.12},
     {"id":"opening-answer", "clip_id":"hook", "word_index":20,
-     "asset_id":"common-064", "role":"sentence_end", "reason":"纠正：完整结果落点", "gain":0.10}
+     "asset_id":"sfx-short-chime", "role":"sentence_end", "reason":"纠正：完整结果落点", "gain":0.10}
   ]
 }
 ```

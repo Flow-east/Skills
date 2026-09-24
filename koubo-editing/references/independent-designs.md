@@ -1,6 +1,6 @@
 # 独立模板设计：布局 v2 / 实样重制 revision 3
 
-> 这是旧计划兼容文档。新任务的第一批样片分层版本见 [sample-led-scenes.md](sample-led-scenes.md)，优先使用 ref_pink_v1 / ref_gold_v1 / ref_grid_v1；本页ID不会自动替换历史成片。
+> 这是旧计划兼容文档。新任务的第一批样片分层版本见 [sample-led-scenes.md](sample-led-scenes.md)，优先使用 tpl-soft-pink / tpl-white-gold / tpl-blue-purple-grid；本页ID不会自动替换历史成片。
 
 ## 选择的是整套设计，不是字体皮肤
 

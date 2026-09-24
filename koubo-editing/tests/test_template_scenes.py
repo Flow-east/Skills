@@ -7,10 +7,17 @@ from timeline import compile_plan
 from template_scenes import audit_layout,layout,video_layer,write_srt
 from font_guard import inspect_font,display_text
 from test_pipeline import fixture
+from template_catalog import catalog, get
+
+def variant_for_kind(kind):
+    matches=[key for key,value in catalog().items() if get(key).get("scene_system",{}).get("kind")==kind]
+    if len(matches)!=1:raise ValueError(f"Expected one template for scene kind {kind}: {matches}")
+    return matches[0]
+
 
 
 def plan(kind='pink',stack=False):
-    p=fixture();p.update(width=720,height=960,template_variant=f'ref_{kind}_v1',scene_time_space='output',title='方法清楚',scene_title_lines=['方法清楚'],title_duration=1.0)
+    p=fixture();p.update(width=720,height=960,template_variant=variant_for_kind(kind),scene_time_space='output',title='方法清楚',scene_title_lines=['方法清楚'],title_duration=1.0)
     # Fixture duration is four seconds; source-independent typography test content.
     p['clips']=[dict(id='t',start=0,end=4,reason='test',words=[dict(text='方法',start=.1,end=1),dict(text='清楚',start=1,end=2)])]
     phrases=[dict(start=.1,end=3.8,text='方法'),dict(start=1,end=3.8,runs=[dict(text='清楚',role='keyword')])] if stack else [dict(start=.1,end=3.8,text='方法清楚')]

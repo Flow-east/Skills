@@ -28,7 +28,7 @@ class B2RevisionTests(unittest.TestCase):
    p['scene_ornaments'][0]['kind']='unsupported'
    with self.assertRaisesRegex(ValueError,'unsupported'):painter(p)
  def test_variety_uses_licensed_rounder_condensed_font(self):
-  c=get('ref_variety_v1')['_contract'];self.assertIn('ZCOOLQingKeHuangYou',c['typography']['body']['file'])
+  c=get('tpl-taiwan-variety')['_contract'];self.assertIn('ZCOOLQingKeHuangYou',c['typography']['body']['file'])
   a=painter(plan('variety'))
   self.assertIn('ZCOOLQingKeHuangYou',a.font_path('body'))
 

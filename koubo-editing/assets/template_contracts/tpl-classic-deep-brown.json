@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "target_id": "tpl-classic-deep-brown",
+  "variant_id": "tpl-classic-deep-brown",
+  "display_name": "古典深棕·分层校准版",
+  "reference": {
+    "name": "古典深棕",
+    "sha256": "af06d9013cc0eb75565f11180f34aae2c97c6a6cfd24807b83f8baf0f67196c6"
+  },
+  "identity_features": [
+    "细金纹毛笔标题与深棕投影，固定原创纹理不逐帧乱闪",
+    "棕字米边/米字棕边粗正文，独立角色形成双色而非整句金字",
+    "小型棕米词标与可选暗角；仅有约4秒本地参考，不补造长段状态"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/MaShanZheng-Regular.ttf",
+      "index": 0,
+      "weight": null
+    },
+    "body": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "keyword": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "sticker": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 800
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 1,
+    "recipe": "棕字米边/米字棕边粗正文，独立角色形成双色而非整句金字"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "小型棕米词标与可选暗角；仅有约4秒本地参考，不补造长段状态"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "semantic camera_motion before typography",
+    "caption": "independent phrase clocks; bounded original fade/soft/pop",
+    "title": "fade",
+    "tag": "template-specific",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.05,
+        "close": 1.1
+      },
+      "max_zoom": 1.1,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.15
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "mixed_size_type",
+    "vignette"
+  ],
+  "render": {
+    "family": "古典深棕",
+    "display_name": "古典深棕·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSansSC-VF.ttf",
+    "font_weight": 900,
+    "scene_system": {
+      "version": 1,
+      "kind": "deepbrown",
+      "title_size": 68,
+      "subtitle_size": 48,
+      "body_size": 45,
+      "keyword_size": 45,
+      "display_size": 45,
+      "compact_size": 33,
+      "tag_size": 28,
+      "title_y": 0.1,
+      "caption_y": 0.835,
+      "tag_y": 0.68,
+      "tag_x": 0.8,
+      "title_duration": 3600,
+      "allowed_canvas": [
+        "vignette"
+      ],
+      "callout_y": 0.66
+    },
+    "base_size": 45,
+    "keyword_size": 45,
+    "accent": "#F4D48F",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.05,
+        "close": 1.1
+      },
+      "max_zoom": 1.1,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.15
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "本地授权替代字体与原创几何；不是官方1:1。",
+    "仅声明3:4和9:16；新素材必须重新检查字形、脸/手势保护区和边界。",
+    "本地参考约4秒，只能确认开场与短正文；长段状态未获参考证据。",
+    "毛笔字形、参考标题金粉/飞白动效未复原；目前授权毛笔替代和静态原创细纹。"
+  ]
+}

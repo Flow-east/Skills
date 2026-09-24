@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "target_id": "tpl-colorful-pop",
+  "variant_id": "tpl-colorful-pop",
+  "display_name": "明快彩彩·分层校准版",
+  "reference": {
+    "name": "明快彩彩",
+    "sha256": "a8ba9cf63f55a0e047b369ec395118e52a1dc5007880083d716f0600675c48bb"
+  },
+  "identity_features": [
+    "细衬线紫色外沿斜标题；正文使用真正剪切斜体而非整句旋转",
+    "白小句/黄展示句/红强调句的错位组合和独立时钟",
+    "紫色细边产品标签可跨句保留，只有已说过的特征可入标签"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 500
+    },
+    "body": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 600
+    },
+    "keyword": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 650
+    },
+    "sticker": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 500
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 2,
+    "recipe": "白小句/黄展示句/红强调句的错位组合和独立时钟"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "紫色细边产品标签可跨句保留，只有已说过的特征可入标签"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "semantic camera_motion before typography",
+    "caption": "independent phrase clocks; template-specific label/pop/fade",
+    "title": "fade",
+    "tag": "template-specific",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.06,
+        "close": 1.12
+      },
+      "max_zoom": 1.12,
+      "transitions": {
+        "punch": {
+          "seconds": 0.46
+        },
+        "glide": {
+          "seconds": 1.05
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "mixed_size_type"
+  ],
+  "render": {
+    "family": "明快彩彩",
+    "display_name": "明快彩彩·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSerifSC-VF.ttf",
+    "font_weight": 600,
+    "scene_system": {
+      "version": 1,
+      "kind": "colorful",
+      "title_size": 43,
+      "subtitle_size": 41,
+      "body_size": 34,
+      "keyword_size": 44,
+      "display_size": 49,
+      "tag_size": 25,
+      "title_y": 0.1,
+      "caption_y": 0.835,
+      "tag_y": 0.68,
+      "tag_x": 0.8,
+      "title_duration": 3600,
+      "allowed_canvas": [],
+      "callout_y": 0.65
+    },
+    "base_size": 34,
+    "keyword_size": 44,
+    "accent": "#B679D2",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.06,
+        "close": 1.12
+      },
+      "max_zoom": 1.12,
+      "transitions": {
+        "punch": {
+          "seconds": 0.46
+        },
+        "glide": {
+          "seconds": 1.05
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "替代字体有本地许可；不声称官方1:1。",
+    "仅声明3:4和9:16；新素材重新检查构图、字形、人物手势与安全布局。",
+    "原参考逐字闪亮、柔光及结尾柔边窗口未复原；不自动缩小主体套窗。",
+    "细衬线斜字使用授权宋体剪切变换，不声称原商业字体。"
+  ]
+}

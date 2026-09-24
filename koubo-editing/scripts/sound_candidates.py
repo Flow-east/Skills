@@ -8,8 +8,8 @@ import argparse, json
 from pathlib import Path
 from sound_events import library, STYLES
 
-QUESTION_CHOICES=('common-007','common-017','common-064')
-STATEMENT_CHOICES=('common-017','common-064','common-007')
+QUESTION_CHOICES=('sfx-wooden-mallet-hit','sfx-electronic-beep','sfx-short-chime')
+STATEMENT_CHOICES=('sfx-electronic-beep','sfx-short-chime','sfx-wooden-mallet-hit')
 PUNCTUATION='。！？!?；;'
 
 

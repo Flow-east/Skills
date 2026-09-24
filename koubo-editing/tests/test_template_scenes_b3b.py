@@ -2,7 +2,7 @@ import copy,hashlib,json,sys,unittest
 from pathlib import Path
 from PIL import Image
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from test_template_scenes import plan,painter
+from test_template_scenes import plan,painter,variant_for_kind
 from template_scenes import audit_layout,layout,texts
 from template_scenes_b3b import KINDS,BILINGUAL,line,title,news_tiles
 from template_contracts import validate
@@ -20,7 +20,7 @@ def fixture(k,stack=False):
 
 class B3bTests(unittest.TestCase):
     def test_seven_contracts_validate(self):
-        for k in KINDS:validate(get('ref_'+k+'_v1')['_contract'],verify_assets=True)
+        for k in KINDS:validate(get(variant_for_kind(k))['_contract'],verify_assets=True)
     def test_seven_different_title_geometries(self):
         ims=[title(painter(fixture(k))) for k in KINDS]
         self.assertEqual(len({hashlib.sha256(i.tobytes()).hexdigest() for i in ims}),7)
@@ -42,7 +42,7 @@ class B3bTests(unittest.TestCase):
         es=[e for e in layout(painter(p)) if e['role']=='caption']
         self.assertEqual([e['start'] for e in es],[.1,1,2]);self.assertEqual(len({e['y'] for e in es}),3)
         self.assertTrue(audit_layout(painter(p))['passed'])
-        p['template_variant']='ref_luxury_v1'
+        p['template_variant']='tpl-luxury-gold'
         with self.assertRaises(ValueError):painter(p)
     def test_news_tiles_have_transparent_gaps(self):
         a=painter(fixture('news'));im=news_tiles(a,dict(text='清楚'));cols=[im.getchannel('A').crop((x,0,x+1,im.height)).getbbox() for x in range(im.width)]
@@ -68,7 +68,7 @@ class B3bTests(unittest.TestCase):
             p=fixture(k);p['scene_translations']=[]
             with self.assertRaises(ValueError):painter(p)
     def test_nonbilingual_rejects_translation(self):
-        p=fixture('biyellow');p['template_variant']='ref_news_v1'
+        p=fixture('biyellow');p['template_variant']='tpl-news-blue'
         with self.assertRaises(ValueError):painter(p)
     def test_long_text_blocks_instead_of_tiny_font(self):
         for k in KINDS:

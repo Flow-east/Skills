@@ -94,6 +94,6 @@ def validate_plan(painter):
         raise ValueError('Camera track exceeds selected template recipe; do not silently override whole-template rules')
     if painter.p.get('template_delivery') not in (None,'preview','accepted'):raise ValueError('Unknown delivery mode')
     if painter.p.get('template_delivery')=='accepted':
-        from template_library import read,eligible
-        if c['target_id'] not in {r['id'] for r in eligible(read(ROOT/'assets/template_progress.json'))}:
+        from template_library import read,completed
+        if c['target_id'] not in {r['id'] for r in read(ROOT/'assets/template_progress.json')['targets'] if completed(r)}:
             raise ValueError('Template has not passed formal acceptance; explicit preview only')

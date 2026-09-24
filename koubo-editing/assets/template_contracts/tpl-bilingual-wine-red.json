@@ -1,0 +1,208 @@
+{
+  "version": 1,
+  "target_id": "tpl-bilingual-wine-red",
+  "variant_id": "tpl-bilingual-wine-red",
+  "display_name": "高级红·双语·分层校准版",
+  "reference": {
+    "name": "高级红·双语",
+    "sha256": "f81f1cce40cc822cbe014ffb6bd4112f639691e314db2be4ac7fd0187cf1f17e"
+  },
+  "identity_features": [
+    "白色斜衬线主标题、红字白边副标题",
+    "白正文与更大红衬线重点词同基线",
+    "双语短语错位保留与独立右侧词标"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "body": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 800
+    },
+    "keyword": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "sticker": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 850
+    },
+    "translation": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 450
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 2,
+    "recipe": "白正文与更大红衬线重点词同基线"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "双语短语错位保留与独立右侧词标"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false,
+    "translation_clock": "independent_output"
+  },
+  "motion": {
+    "video_camera": "semantic camera_motion before canvas",
+    "caption": "fade",
+    "title": "fade",
+    "tag": "template-specific",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.06,
+        "close": 1.12
+      },
+      "max_zoom": 1.12,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    },
+    "translation": "independent fade",
+    "highlight": "none"
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "bilingual_clocks",
+    "mixed_size_type",
+    "vignette"
+  ],
+  "render": {
+    "family": "高级红·双语",
+    "display_name": "高级红·双语·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSerifSC-VF.ttf",
+    "font_weight": 800,
+    "scene_system": {
+      "version": 1,
+      "kind": "bired",
+      "title_size": 53,
+      "subtitle_size": 57,
+      "body_size": 41,
+      "keyword_size": 55,
+      "translation_size": 23,
+      "tag_size": 36,
+      "display_size": 74,
+      "title_y": 0.1,
+      "caption_y": 0.795,
+      "tag_y": 0.68,
+      "tag_x": 0.79,
+      "title_duration": 2.6,
+      "allowed_canvas": [
+        "vignette"
+      ]
+    },
+    "base_size": 41,
+    "keyword_size": 55,
+    "accent": "#983633",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.06,
+        "close": 1.12
+      },
+      "max_zoom": 1.12,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "Licensed substitute fonts and original timing curves; not official engineering.",
+    "Only 3:4 and 9:16 are declared; every source needs protected-region review.",
+    "English is separately authored/reviewed; layout checks do not verify translation semantics.",
+    "Oblique serif title is a geometric approximation, not the identified reference font.",
+    "Original keyword insertion timing is not reproduced word by word."
+  ],
+  "revision_2026_09_23": {
+    "change": "refine-batch-a-template-fidelity",
+    "batch": "A",
+    "status": "implemented_in_use_iterating",
+    "composition": "上方酒红标题轨；白正文与红衬线重点词同基线；双语错位与右侧摘词。",
+    "caption_states": [
+      "red_serif_keyword",
+      "white_body_translation"
+    ],
+    "semantic_anchor": "right_safe_slot",
+    "known_gaps": [
+      "licensed substitute typefaces are not official Kaipai fonts",
+      "sound-effect library remains an independent deferred workstream",
+      "user aesthetic acceptance is not inferred from QA"
+    ]
+  }
+}

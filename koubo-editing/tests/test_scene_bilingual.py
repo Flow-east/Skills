@@ -74,7 +74,7 @@ class BilingualTests(unittest.TestCase):
         p=bilingual();del p['scene_translations'][0]['reviewer']
         with self.assertRaises(ValueError):painter(p)
     def test_legacy_template_cannot_silently_ignore_translations(self):
-        p=bilingual();p['template_variant']='ref_pink_v1'
+        p=bilingual();p['template_variant']='tpl-soft-pink'
         with self.assertRaisesRegex(ValueError,'Bilingual'):painter(p)
     def test_translation_font_guard_actual_role(self):
         p=bilingual();p['scene_translations'][0]['text']='AI效率提升30%，3.5小時'
@@ -96,10 +96,11 @@ class BilingualTests(unittest.TestCase):
         p=bilingual('biluxe');p['scene_highlights']=[dict(start=.2,end=3,text='方法',phrase_id='p0',reason='test')]
         with self.assertRaisesRegex(ValueError,'collide'):audit_layout(painter(p))
     def test_missing_translation_font_contract_rejected(self):
-        c=json.loads((ROOT/'assets/template_contracts/kp-01.json').read_text());del c['typography']['translation']
+        c=json.loads((ROOT/'assets/template_contracts/tpl-bilingual-wine-red.json').read_text());del c['typography']['translation']
         with self.assertRaisesRegex(ValueError,'font role'):validate(c)
     def test_all_three_licensed_contracts(self):
-        for i in (1,2,3):validate(json.loads((ROOT/f'assets/template_contracts/kp-{i:02}.json').read_text()),verify_assets=True)
+        for name in ('tpl-bilingual-wine-red','tpl-bilingual-ivory-luxe','tpl-bilingual-classic-blue'):
+            validate(json.loads((ROOT/f'assets/template_contracts/{name}.json').read_text()),verify_assets=True)
     def test_formal_delivery_still_requires_user_acceptance(self):
         p=bilingual();p['template_delivery']='accepted'
         with self.assertRaisesRegex(ValueError,'acceptance'):painter(p)

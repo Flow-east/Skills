@@ -737,9 +737,9 @@
     "keyword_font_index": 0,
     "sticker_font_index": 0
   },
-  "ref_pink_v1": {
+  "tpl-soft-pink": {
     "reference_mode": "sample_led_approximation",
-    "design_status": "implemented_pending_visual_acceptance",
+    "design_status": "implemented_in_use_iterating",
     "font_status": "licensed_substitutes_not_identified_official_fonts",
     "font": "assets/fonts/NotoSerifSC-VF.ttf",
     "font_weight": 700,
@@ -814,11 +814,11 @@
       ],
       "scope": "Observed preview appearance only; licensed substitute fonts; no claim of official full rule recovery"
     },
-    "contract_file": "assets/template_contracts/kp-06.json"
+    "contract_file": "assets/template_contracts/tpl-soft-pink.json"
   },
-  "ref_gold_v1": {
+  "tpl-white-gold": {
     "reference_mode": "sample_led_approximation",
-    "design_status": "implemented_pending_visual_acceptance",
+    "design_status": "implemented_in_use_iterating",
     "font_status": "licensed_substitutes_not_identified_official_fonts",
     "font": "assets/fonts/NotoSansSC-VF.ttf",
     "font_weight": 700,
@@ -892,11 +892,11 @@
       ],
       "scope": "Observed preview appearance only; licensed substitute fonts; no claim of official full rule recovery"
     },
-    "contract_file": "assets/template_contracts/kp-07.json"
+    "contract_file": "assets/template_contracts/tpl-white-gold.json"
   },
-  "ref_grid_v1": {
+  "tpl-blue-purple-grid": {
     "reference_mode": "sample_led_approximation",
-    "design_status": "implemented_pending_visual_acceptance",
+    "design_status": "implemented_in_use_iterating",
     "font_status": "licensed_substitutes_not_identified_official_fonts",
     "font": "assets/fonts/NotoSansSC-VF.ttf",
     "font_weight": 700,
@@ -977,13 +977,13 @@
       ],
       "scope": "Observed preview appearance only; licensed substitute fonts; no claim of official full rule recovery"
     },
-    "contract_file": "assets/template_contracts/kp-48.json"
+    "contract_file": "assets/template_contracts/tpl-blue-purple-grid.json"
   },
-  "ref_white_v1": {
+  "tpl-minimal-white": {
     "family": "简约白",
     "display_name": "简约白·分层校准版",
     "reference_mode": "sample_led_approximation",
-    "design_status": "implemented_pending_visual_acceptance",
+    "design_status": "implemented_in_use_iterating",
     "font_status": "licensed_substitutes_not_official_fonts",
     "font": "assets/fonts/NotoSansSC-VF.ttf",
     "font_weight": 400,
@@ -1007,13 +1007,13 @@
     "text": "#FFFFFF",
     "stroke": "#181818",
     "enter": "fade",
-    "contract_file": "assets/template_contracts/kp-18.json"
+    "contract_file": "assets/template_contracts/tpl-minimal-white.json"
   },
-  "ref_redyellow_v1": {
+  "tpl-red-yellow-editorial": {
     "family": "高智红黄",
     "display_name": "高智红黄·分层校准版",
     "reference_mode": "sample_led_approximation",
-    "design_status": "implemented_pending_visual_acceptance",
+    "design_status": "implemented_in_use_iterating",
     "font_status": "licensed_substitutes_not_official_fonts",
     "font": "assets/fonts/NotoSansSC-VF.ttf",
     "font_weight": 800,
@@ -1039,13 +1039,13 @@
     "text": "#FFFFFF",
     "stroke": "#181818",
     "enter": "fade",
-    "contract_file": "assets/template_contracts/kp-32.json"
+    "contract_file": "assets/template_contracts/tpl-red-yellow-editorial.json"
   },
-  "ref_variety_v1": {
+  "tpl-taiwan-variety": {
     "family": "台式综艺",
     "display_name": "台式综艺·分层校准版",
     "reference_mode": "sample_led_approximation",
-    "design_status": "implemented_pending_visual_acceptance",
+    "design_status": "implemented_in_use_iterating",
     "font_status": "licensed_substitutes_not_official_fonts",
     "font": "assets/fonts/ZCOOLKuaiLe-Regular.ttf",
     "font_weight": null,
@@ -1069,13 +1069,13 @@
     "text": "#FFFFFF",
     "stroke": "#181818",
     "enter": "fade",
-    "contract_file": "assets/template_contracts/kp-47.json"
+    "contract_file": "assets/template_contracts/tpl-taiwan-variety.json"
   },
-  "ref_ink_v1": {
+  "tpl-oriental-ink": {
     "family": "淡雅新中式",
     "display_name": "淡雅新中式·分层校准版",
     "reference_mode": "sample_led_approximation",
-    "design_status": "implemented_pending_visual_acceptance",
+    "design_status": "implemented_in_use_iterating",
     "font_status": "licensed_substitutes_not_official_fonts",
     "font": "assets/fonts/LXGWWenKai-Medium.ttf",
     "font_weight": null,
@@ -1099,13 +1099,13 @@
     "text": "#FFFFFF",
     "stroke": "#181818",
     "enter": "fade",
-    "contract_file": "assets/template_contracts/kp-23.json"
+    "contract_file": "assets/template_contracts/tpl-oriental-ink.json"
   },
-  "ref_latte_v1": {
+  "tpl-butter-latte": {
     "family": "黄油拿铁",
     "display_name": "黄油拿铁·分层校准版",
     "reference_mode": "sample_led_approximation",
-    "design_status": "implemented_pending_visual_acceptance",
+    "design_status": "implemented_in_use_iterating",
     "font_status": "licensed_substitutes_not_official_fonts",
     "font": "assets/fonts/NotoSansSC-VF.ttf",
     "font_weight": 900,
@@ -1132,328 +1132,328 @@
     "text": "#FFFFFF",
     "stroke": "#181818",
     "enter": "fade",
-    "contract_file": "assets/template_contracts/kp-37.json"
+    "contract_file": "assets/template_contracts/tpl-butter-latte.json"
   },
-  "ref_bired_v1": {
+  "tpl-bilingual-wine-red": {
     "family": "高级红·双语",
     "display_name": "高级红·双语·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-01.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-bilingual-wine-red.json",
     "verified_from": "User-provided local preview, dense sequence and native frames; substitute typography"
   },
-  "ref_biluxe_v1": {
+  "tpl-bilingual-ivory-luxe": {
     "family": "轻奢白·双语",
     "display_name": "轻奢白·双语·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-02.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-bilingual-ivory-luxe.json",
     "verified_from": "User-provided local preview, dense sequence and native frames; substitute typography"
   },
-  "ref_biblue_v1": {
+  "tpl-bilingual-classic-blue": {
     "family": "经典蓝·双语",
     "display_name": "经典蓝·双语·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-03.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-bilingual-classic-blue.json",
     "verified_from": "User-provided local preview, dense sequence and native frames; substitute typography"
   },
-  "ref_biyellow_v1": {
+  "tpl-bilingual-yellow": {
     "family": "百搭黄·双语",
     "display_name": "百搭黄·双语·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-09.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-bilingual-yellow.json",
     "verified_from": "Local downloaded reference sequence plus native frames; licensed substitutes, explicit core gaps"
   },
-  "ref_luxury_v1": {
+  "tpl-luxury-gold": {
     "family": "顶奢",
     "display_name": "顶奢·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-10.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-luxury-gold.json",
     "verified_from": "Local downloaded reference sequence plus native frames; licensed substitutes, explicit core gaps"
   },
-  "ref_brightyellow_v1": {
+  "tpl-bright-yellow": {
     "family": "明快黄",
     "display_name": "明快黄·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-11.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-bright-yellow.json",
     "verified_from": "Local downloaded reference sequence plus native frames; licensed substitutes, explicit core gaps"
   },
-  "ref_navy_v1": {
+  "tpl-deep-navy": {
     "family": "沉稳墨蓝",
     "display_name": "沉稳墨蓝·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-12.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-deep-navy.json",
     "verified_from": "Local downloaded reference sequence plus native frames; licensed substitutes, explicit core gaps"
   },
-  "ref_news_v1": {
+  "tpl-news-blue": {
     "family": "新闻蓝",
     "display_name": "新闻蓝·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-15.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-news-blue.json",
     "verified_from": "Local downloaded reference sequence plus native frames; licensed substitutes, explicit core gaps"
   },
-  "ref_crispred_v1": {
+  "tpl-crisp-red": {
     "family": "利落红",
     "display_name": "利落红·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-17.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-crisp-red.json",
     "verified_from": "Local downloaded reference sequence plus native frames; licensed substitutes, explicit core gaps"
   },
-  "ref_vividblue_v1": {
+  "tpl-vivid-blue": {
     "family": "靓眼蓝",
     "display_name": "靓眼蓝·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-21.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-vivid-blue.json",
     "verified_from": "Local downloaded reference sequence plus native frames; licensed substitutes, explicit core gaps"
   },
-  "ref_shine_v1": {
+  "tpl-golden-sparkle": {
     "family": "黄色闪亮",
     "display_name": "黄色闪亮·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-04.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-golden-sparkle.json",
     "verified_from": "Local reference sequence/native images; bounded original component implementation"
   },
-  "ref_green_v1": {
+  "tpl-vivid-green": {
     "family": "吸睛绿",
     "display_name": "吸睛绿·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-08.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-vivid-green.json",
     "verified_from": "Local reference sequence/native images; bounded original component implementation"
   },
-  "ref_tech_v1": {
+  "tpl-business-tech": {
     "family": "商务科技",
     "display_name": "商务科技·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-13.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-business-tech.json",
     "verified_from": "Local reference sequence/native images; bounded original component implementation"
   },
-  "ref_science_v1": {
+  "tpl-science-highlight": {
     "family": "醒目科普",
     "display_name": "醒目科普·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-14.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-science-highlight.json",
     "verified_from": "Local reference sequence/native images; bounded original component implementation"
   },
-  "ref_neon_v1": {
+  "tpl-neon-green": {
     "family": "荧光绿",
     "display_name": "荧光绿·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-19.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-neon-green.json",
     "verified_from": "Local reference sequence/native images; bounded original component implementation"
   },
-  "ref_purple_v1": {
+  "tpl-ultra-purple": {
     "family": "Ultra·紫",
     "display_name": "Ultra·紫·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-20.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-ultra-purple.json",
     "verified_from": "Local reference sequence/native images; bounded original component implementation"
   },
-  "ref_warm_v1": {
+  "tpl-warm-orange": {
     "family": "暖系橙黄",
     "display_name": "暖系橙黄·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-26.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-warm-orange.json",
     "verified_from": "Local reference sequence/native images; bounded original component implementation"
   },
-  "ref_mono_v1": {
+  "tpl-black-white": {
     "family": "基础黑白",
     "display_name": "基础黑白·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-29.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-black-white.json",
     "verified_from": "Local reference sequence/native images; bounded original component implementation"
   },
-  "ref_elegantpink_v1": {
+  "tpl-elegant-pink": {
     "family": "秀丽粉",
     "display_name": "秀丽粉·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-30.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-elegant-pink.json",
     "verified_from": "Local reference sequence/native images; bounded original component implementation"
   },
-  "ref_promo_v1": {
+  "tpl-promo-burst": {
     "family": "爆款促销",
     "display_name": "爆款促销·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-34.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-promo-burst.json",
     "verified_from": "Local reference sequence/native images; bounded original component implementation"
   },
-  "ref_browngold_v1": {
+  "tpl-professional-brown-gold": {
     "family": "专业金棕",
     "display_name": "专业金棕·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-36.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-professional-brown-gold.json",
     "verified_from": "Local reference sequence/native images; bounded original component implementation"
   },
-  "ref_hotpink_v1": {
+  "tpl-hot-pink": {
     "family": "活泼亮粉",
     "display_name": "活泼亮粉·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-43.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-hot-pink.json",
     "verified_from": "Local reference sequence/native images; bounded original component implementation"
   },
-  "ref_orangeline_v1": {
+  "tpl-orange-line": {
     "family": "暖线映橙",
     "display_name": "暖线映橙·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-16.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-orange-line.json",
     "verified_from": "Local 2fps sequence and native frames; original B5a calibration"
   },
-  "ref_colorful_v1": {
+  "tpl-colorful-pop": {
     "family": "明快彩彩",
     "display_name": "明快彩彩·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-22.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-colorful-pop.json",
     "verified_from": "Local 2fps sequence and native frames; original B5a calibration"
   },
-  "ref_mint_v1": {
+  "tpl-antique-mint": {
     "family": "古雅水绿",
     "display_name": "古雅水绿·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-24.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-antique-mint.json",
     "verified_from": "Local 2fps sequence and native frames; original B5a calibration"
   },
-  "ref_tornred_v1": {
+  "tpl-red-torn-paper": {
     "family": "撕纸红",
     "display_name": "撕纸红·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-25.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-red-torn-paper.json",
     "verified_from": "Local 2fps sequence and native frames; original B5a calibration"
   },
-  "ref_deepbrown_v1": {
+  "tpl-classic-deep-brown": {
     "family": "古典深棕",
     "display_name": "古典深棕·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-27.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-classic-deep-brown.json",
     "verified_from": "Local reference sequence and native frames; original B5b calibration"
   },
-  "ref_ginger_v1": {
+  "tpl-ginger-red": {
     "family": "素雅姜红",
     "display_name": "素雅姜红·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-33.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-ginger-red.json",
     "verified_from": "Local reference sequence and native frames; original B5b calibration"
   },
-  "ref_blackyellow_v1": {
+  "tpl-black-yellow-frame": {
     "family": "黑黄框框（支持繁中）",
     "display_name": "黑黄框框（支持繁中）·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-38.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-black-yellow-frame.json",
     "verified_from": "Local reference sequence and native frames; original B5b calibration"
   },
-  "ref_verdant_v1": {
+  "tpl-verdant-green": {
     "family": "绿意漾漾",
     "display_name": "绿意漾漾·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-40.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-verdant-green.json",
     "verified_from": "Local reference sequence and native frames; original B5b calibration"
   },
-  "ref_ins_v1": {
+  "tpl-minimal-ins": {
     "family": "极简Ins风",
     "display_name": "极简Ins风·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-41.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-minimal-ins.json",
     "verified_from": "Local B5c reference boards/native frames; original calibrated design"
   },
-  "ref_nostalgia_v1": {
+  "tpl-vintage-classic": {
     "family": "古典怀旧",
     "display_name": "古典怀旧·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-44.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-vintage-classic.json",
     "verified_from": "Local B5c reference boards/native frames; original calibrated design"
   },
-  "ref_transyellow_v1": {
+  "tpl-translucent-yellow": {
     "family": "半透简黄",
     "display_name": "半透简黄·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-51.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-translucent-yellow.json",
     "verified_from": "Local B5c reference boards/native frames; original calibrated design"
   },
-  "ref_tornedge_v1": {
+  "tpl-minimal-torn-edge": {
     "family": "极简撕边",
     "display_name": "极简撕边·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-52.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-minimal-torn-edge.json",
     "verified_from": "Local B5c reference boards/native frames; original calibrated design"
   },
-  "ref_cleanwhite_v1": {
+  "tpl-minimal-yellow-white": {
     "family": "简洁黄白",
     "display_name": "简洁黄白·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-05.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-minimal-yellow-white.json",
     "verified_from": "Local B6a reference sequence/native frames; original calibrated geometry"
   },
-  "ref_waxcute_v1": {
+  "tpl-crayon-cute": {
     "family": "彩蜡萌趣",
     "display_name": "彩蜡萌趣·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-28.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-crayon-cute.json",
     "verified_from": "Local B6a reference sequence/native frames; original calibrated geometry"
   },
-  "ref_qqcute_v1": {
+  "tpl-playful-pink-yellow": {
     "family": "QQ萌趣",
     "display_name": "QQ萌趣·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-31.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-playful-pink-yellow.json",
     "verified_from": "Local B6a reference sequence/native frames; original calibrated geometry"
   },
-  "ref_energycartoon_v1": {
+  "tpl-energy-cartoon": {
     "family": "元气卡通",
     "display_name": "元气卡通·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-35.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-energy-cartoon.json",
     "verified_from": "Local B6a reference sequence/native frames; original calibrated geometry"
   },
-  "ref_floraltravel_v1": {
+  "tpl-floral-travel": {
     "family": "一路繁花2",
     "display_name": "一路繁花2·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-39.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-floral-travel.json",
     "verified_from": "Local B6b reference sequence/native frames; original calibrated geometry"
   },
-  "ref_magenta_v1": {
+  "tpl-fashion-magenta": {
     "family": "时髦玫红",
     "display_name": "时髦玫红·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-42.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-fashion-magenta.json",
     "verified_from": "Local B6b reference sequence/native frames; original calibrated geometry"
   },
-  "ref_lightbulb_v1": {
+  "tpl-playful-detective": {
     "family": "萌探2024",
     "display_name": "萌探2024·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-45.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-playful-detective.json",
     "verified_from": "Local B6b reference sequence/native frames; original calibrated geometry"
   },
-  "ref_redfestive_v1": {
+  "tpl-festive-red": {
     "family": "元气红",
     "display_name": "元气红·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-46.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-festive-red.json",
     "verified_from": "Local B6b reference sequence/native frames; original calibrated geometry"
   },
-  "ref_comicred_v1": {
+  "tpl-red-comic-variety": {
     "family": "喜人奇妙夜",
     "display_name": "喜人奇妙夜·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-49.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-red-comic-variety.json",
     "verified_from": "Local B6c reference sequence/native frames; original calibrated geometry"
   },
-  "ref_romance_v1": {
+  "tpl-soft-romance": {
     "family": "恋爱兄妹",
     "display_name": "恋爱兄妹·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-50.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-soft-romance.json",
     "verified_from": "Local B6c reference sequence/native frames; original calibrated geometry"
   },
-  "ref_emojiwhite_v1": {
+  "tpl-monochrome-emoji": {
     "family": "简约emoji",
     "display_name": "简约emoji·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-53.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-monochrome-emoji.json",
     "verified_from": "Local B6c reference sequence/native frames; original calibrated geometry"
   },
-  "ref_contrastpop_v1": {
+  "tpl-color-contrast-pop": {
     "family": "潮流撞色",
     "display_name": "潮流撞色·分层校准版",
-    "design_status": "implemented_pending_visual_acceptance",
-    "contract_file": "assets/template_contracts/kp-54.json",
+    "design_status": "implemented_in_use_iterating",
+    "contract_file": "assets/template_contracts/tpl-color-contrast-pop.json",
     "verified_from": "Local B6c reference sequence/native frames; original calibrated geometry"
   }
 }

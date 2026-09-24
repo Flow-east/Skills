@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "target_id": "tpl-oriental-ink",
+  "variant_id": "tpl-oriental-ink",
+  "display_name": "淡雅新中式·分层校准版",
+  "reference": {
+    "name": "淡雅新中式",
+    "sha256": "2f75570bab1d6ec2d9cb6d1e0eaaa94051e2396980c646e2becf315d9fd9a238"
+  },
+  "identity_features": [
+    "黑色笔刷双行标题和小红印记",
+    "细白手写正文，留白不加粗边",
+    "逐字逐词显现的窄白字幕（保留原话时钟）"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/MaShanZheng-Regular.ttf",
+      "index": 0,
+      "weight": null
+    },
+    "body": {
+      "file": "assets/fonts/LXGWWenKai-Medium.ttf",
+      "index": 0,
+      "weight": null
+    },
+    "keyword": {
+      "file": "assets/fonts/LXGWWenKai-Medium.ttf",
+      "index": 0,
+      "weight": null
+    },
+    "sticker": {
+      "file": "assets/fonts/LXGWWenKai-Medium.ttf",
+      "index": 0,
+      "weight": null
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 1,
+    "recipe": "细白手写正文，留白不加粗边"
+  },
+  "annotation": {
+    "tags_enabled": false,
+    "reason_required": true,
+    "recipe": "重点段切换窄纸条黑字，不套大卡片"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "semantic camera_motion before canvas",
+    "caption": "soft/fade independent clocks",
+    "title": "fade",
+    "tag": "template-specific",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.06,
+        "close": 1.12
+      },
+      "max_zoom": 1.12,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "paper_strip",
+    "ink_write"
+  ],
+  "render": {
+    "family": "淡雅新中式",
+    "display_name": "淡雅新中式·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/LXGWWenKai-Medium.ttf",
+    "font_weight": null,
+    "scene_system": {
+      "title_size": 67,
+      "body_size": 40,
+      "keyword_size": 40,
+      "title_y": 0.095,
+      "caption_y": 0.8,
+      "tag_size": 30,
+      "tag_y": 0.67,
+      "tag_x": 0.79,
+      "title_duration": 2.4,
+      "allowed_canvas": [],
+      "kind": "ink",
+      "version": 1
+    },
+    "base_size": 40,
+    "keyword_size": 40,
+    "accent": "#FFFFFF",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.06,
+        "close": 1.12
+      },
+      "max_zoom": 1.12,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "Licensed substitutes; exact original font and animation curve not identified.",
+    "Calibration requires encoded-frame and aesthetic review.",
+    "licensed brush substitute; authored ink_write caption reveal (not original frame-accurate curve)"
+  ]
+}

@@ -3,7 +3,7 @@
   "scope": "54 user-provided downloaded previews; not the current online catalogue",
   "targets": [
     {
-      "id": "kp-01",
+      "id": "tpl-bilingual-wine-red",
       "name": "高级红·双语",
       "reference_sha256": "f81f1cce40cc822cbe014ffb6bd4112f639691e314db2be4ac7fd0187cf1f17e",
       "batch": "B3",
@@ -13,7 +13,7 @@
       ]
     },
     {
-      "id": "kp-02",
+      "id": "tpl-bilingual-ivory-luxe",
       "name": "轻奢白·双语",
       "reference_sha256": "f7525511630eea1bc7d8fc741ddfe581f3d9e81271396a901997cc2b9c5b6aeb",
       "batch": "B3",
@@ -23,7 +23,7 @@
       ]
     },
     {
-      "id": "kp-03",
+      "id": "tpl-bilingual-classic-blue",
       "name": "经典蓝·双语",
       "reference_sha256": "243f5008f62ad955f94e4ced4b429e731816baee659ed5b5310afcfba2c0102c",
       "batch": "B3",
@@ -33,7 +33,7 @@
       ]
     },
     {
-      "id": "kp-04",
+      "id": "tpl-golden-sparkle",
       "name": "黄色闪亮",
       "reference_sha256": "7e1f498d7d3534da98a6c591cd61b7c5db9ef21bd9ba6753fc8927c77d2efeaf",
       "batch": "B4",
@@ -43,7 +43,7 @@
       ]
     },
     {
-      "id": "kp-05",
+      "id": "tpl-minimal-yellow-white",
       "name": "简洁黄白",
       "reference_sha256": "5c8e5a8641ff21b2fa39bfccbf20fe7b4829bb72ca66d3cd8d88630ade25a78d",
       "batch": "B6",
@@ -53,7 +53,7 @@
       ]
     },
     {
-      "id": "kp-06",
+      "id": "tpl-soft-pink",
       "name": "轻透雅粉",
       "reference_sha256": "d1bb61c6cc9706ec244594e5d21a6f90c2acd5e1908787d433f72897f3366167",
       "batch": "B1",
@@ -63,7 +63,7 @@
       ]
     },
     {
-      "id": "kp-07",
+      "id": "tpl-white-gold",
       "name": "基础白金",
       "reference_sha256": "8bbed31848789644e3a6e2753f47c0f6aa1d9b46dcc5cdba03bd57b6818c5831",
       "batch": "B1",
@@ -73,7 +73,7 @@
       ]
     },
     {
-      "id": "kp-08",
+      "id": "tpl-vivid-green",
       "name": "吸睛绿",
       "reference_sha256": "4808adb16b802c40343c8cf9a7144044b8fab0829e091e5fccca8e205b39fbf6",
       "batch": "B4",
@@ -83,7 +83,7 @@
       ]
     },
     {
-      "id": "kp-09",
+      "id": "tpl-bilingual-yellow",
       "name": "百搭黄·双语",
       "reference_sha256": "2cccd79c0e5570a5ba07d4a2d89bcb171a55fba95b9e0b9034fd8efd8cf15e04",
       "batch": "B3",
@@ -93,7 +93,7 @@
       ]
     },
     {
-      "id": "kp-10",
+      "id": "tpl-luxury-gold",
       "name": "顶奢",
       "reference_sha256": "fa7bcee6c70c1ecb4f77895dc0dd195afcaed4af16ee72d2b943dd8bb80ad519",
       "batch": "B3",
@@ -103,7 +103,7 @@
       ]
     },
     {
-      "id": "kp-11",
+      "id": "tpl-bright-yellow",
       "name": "明快黄",
       "reference_sha256": "078d6821c022a7eee21a1ba966dba6b80dcb355d89322bb50fbccb205b6a680f",
       "batch": "B3",
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "id": "kp-12",
+      "id": "tpl-deep-navy",
       "name": "沉稳墨蓝",
       "reference_sha256": "02eee16f8a31a4804d989f3d904f326d3daf05c17493fa096ca5fa6ce78bd05f",
       "batch": "B3",
@@ -123,7 +123,7 @@
       ]
     },
     {
-      "id": "kp-13",
+      "id": "tpl-business-tech",
       "name": "商务科技",
       "reference_sha256": "a4594f903c52b62ce3cd1836a1b7085763ca123aca52fc7d00c8723d5e9c4548",
       "batch": "B4",
@@ -133,7 +133,7 @@
       ]
     },
     {
-      "id": "kp-14",
+      "id": "tpl-science-highlight",
       "name": "醒目科普",
       "reference_sha256": "c072f8fe0c1a23d1d8dd5083b5a8fc7715d8f775a0ce3491e5b836f102b8be7d",
       "batch": "B4",
@@ -143,7 +143,7 @@
       ]
     },
     {
-      "id": "kp-15",
+      "id": "tpl-news-blue",
       "name": "新闻蓝",
       "reference_sha256": "232885a9b8caf3a01d353ef6075e8130a5c69931381ab47ae14cf1080ffffbcb",
       "batch": "B3",
@@ -153,7 +153,7 @@
       ]
     },
     {
-      "id": "kp-16",
+      "id": "tpl-orange-line",
       "name": "暖线映橙",
       "reference_sha256": "8a17a920c749e7be492faf91f9f522b442ca3f2fc8b84f79f619f4a9ba977c99",
       "batch": "B5",
@@ -163,7 +163,7 @@
       ]
     },
     {
-      "id": "kp-17",
+      "id": "tpl-crisp-red",
       "name": "利落红",
       "reference_sha256": "5ddda30d915f05e8bc618879d1edda33dd7d454c8da159e5d8dfe3d92d83cc71",
       "batch": "B3",
@@ -173,7 +173,7 @@
       ]
     },
     {
-      "id": "kp-18",
+      "id": "tpl-minimal-white",
       "name": "简约白",
       "reference_sha256": "f404ace0fca1fb09d6486ffc2563ba0d9ef2131a7e24185ec7172ed84623fb4e",
       "batch": "B2",
@@ -183,7 +183,7 @@
       ]
     },
     {
-      "id": "kp-19",
+      "id": "tpl-neon-green",
       "name": "荧光绿",
       "reference_sha256": "a42e6b5f191e03d62eba58a438f77d8934d884aa10370acced5376376cc95134",
       "batch": "B4",
@@ -193,7 +193,7 @@
       ]
     },
     {
-      "id": "kp-20",
+      "id": "tpl-ultra-purple",
       "name": "Ultra·紫",
       "reference_sha256": "0b2da303e6d6c73af457b93e649b2f14cee7c523bd5660e2a24e8fecc59a4a35",
       "batch": "B4",
@@ -203,7 +203,7 @@
       ]
     },
     {
-      "id": "kp-21",
+      "id": "tpl-vivid-blue",
       "name": "靓眼蓝",
       "reference_sha256": "1cc5ceddaa088a55a27fe02855e00758e018b89c9083d414c01024e3b5df4bf0",
       "batch": "B3",
@@ -213,7 +213,7 @@
       ]
     },
     {
-      "id": "kp-22",
+      "id": "tpl-colorful-pop",
       "name": "明快彩彩",
       "reference_sha256": "a8ba9cf63f55a0e047b369ec395118e52a1dc5007880083d716f0600675c48bb",
       "batch": "B5",
@@ -223,7 +223,7 @@
       ]
     },
     {
-      "id": "kp-23",
+      "id": "tpl-oriental-ink",
       "name": "淡雅新中式",
       "reference_sha256": "2f75570bab1d6ec2d9cb6d1e0eaaa94051e2396980c646e2becf315d9fd9a238",
       "batch": "B2",
@@ -233,7 +233,7 @@
       ]
     },
     {
-      "id": "kp-24",
+      "id": "tpl-antique-mint",
       "name": "古雅水绿",
       "reference_sha256": "f3d10e3aab600a8c382ce4017ba2cd9ba537004bfb5bb63d057bd3152a684c4c",
       "batch": "B5",
@@ -243,7 +243,7 @@
       ]
     },
     {
-      "id": "kp-25",
+      "id": "tpl-red-torn-paper",
       "name": "撕纸红",
       "reference_sha256": "aa208a201b6acd0730543285d4a35c9448e77b490bb7d69924937d23091c32b5",
       "batch": "B5",
@@ -253,7 +253,7 @@
       ]
     },
     {
-      "id": "kp-26",
+      "id": "tpl-warm-orange",
       "name": "暖系橙黄",
       "reference_sha256": "4a461444371073e9d43e30b89cfc56c423f68b04816dac2e8feb4bccb09a0ec7",
       "batch": "B4",
@@ -263,7 +263,7 @@
       ]
     },
     {
-      "id": "kp-27",
+      "id": "tpl-classic-deep-brown",
       "name": "古典深棕",
       "reference_sha256": "af06d9013cc0eb75565f11180f34aae2c97c6a6cfd24807b83f8baf0f67196c6",
       "batch": "B5",
@@ -273,7 +273,7 @@
       ]
     },
     {
-      "id": "kp-28",
+      "id": "tpl-crayon-cute",
       "name": "彩蜡萌趣",
       "reference_sha256": "0a8c26275d2c5e476dd3f7bcc714e20c8788709ec474d0f3e91adca28ffcb13f",
       "batch": "B6",
@@ -283,7 +283,7 @@
       ]
     },
     {
-      "id": "kp-29",
+      "id": "tpl-black-white",
       "name": "基础黑白",
       "reference_sha256": "a94523bd961746257dfb9aaa5336d4fd24db39d6762cb7fb68fae208f786743b",
       "batch": "B4",
@@ -293,7 +293,7 @@
       ]
     },
     {
-      "id": "kp-30",
+      "id": "tpl-elegant-pink",
       "name": "秀丽粉",
       "reference_sha256": "410b416c8de3e76f7b96b84c874861ef55f984ef2dbf6bd87cc505191dd682ea",
       "batch": "B4",
@@ -303,7 +303,7 @@
       ]
     },
     {
-      "id": "kp-31",
+      "id": "tpl-playful-pink-yellow",
       "name": "QQ萌趣",
       "reference_sha256": "0d05a9a28331d5c9623a641529f5ecee8bf18a3bf9b44c9c6ce511f527420f4c",
       "batch": "B6",
@@ -313,7 +313,7 @@
       ]
     },
     {
-      "id": "kp-32",
+      "id": "tpl-red-yellow-editorial",
       "name": "高智红黄",
       "reference_sha256": "2670388b9eb6b4a2ad418af8000b556d8a5de3d7eb7943f7cac946b274e0cc5f",
       "batch": "B2",
@@ -323,7 +323,7 @@
       ]
     },
     {
-      "id": "kp-33",
+      "id": "tpl-ginger-red",
       "name": "素雅姜红",
       "reference_sha256": "e9135d5ae1b1763eb76bbd8ca56291bd0b24034bf73be30f0829b237b9dd9e41",
       "batch": "B5",
@@ -333,7 +333,7 @@
       ]
     },
     {
-      "id": "kp-34",
+      "id": "tpl-promo-burst",
       "name": "爆款促销",
       "reference_sha256": "26bbef3f05ffb861ace31e198e2cf360660e731bf3b37e2de735a6bf0a3e38b6",
       "batch": "B4",
@@ -343,7 +343,7 @@
       ]
     },
     {
-      "id": "kp-35",
+      "id": "tpl-energy-cartoon",
       "name": "元气卡通",
       "reference_sha256": "ecc0f09e731ddc85e1bb7147b87aed7f7757fc9e179e26db270515643973bcc6",
       "batch": "B6",
@@ -353,7 +353,7 @@
       ]
     },
     {
-      "id": "kp-36",
+      "id": "tpl-professional-brown-gold",
       "name": "专业金棕",
       "reference_sha256": "3002a49fe3574638f56073c3ee0ffb18d582b8f7b0af1aae8adf8a80b9a9c07c",
       "batch": "B4",
@@ -363,7 +363,7 @@
       ]
     },
     {
-      "id": "kp-37",
+      "id": "tpl-butter-latte",
       "name": "黄油拿铁",
       "reference_sha256": "9f81f43d1cd9db7b92a28b04ccb1e95cce7300dbb37098de524b5eca9c562843",
       "batch": "B2",
@@ -373,7 +373,7 @@
       ]
     },
     {
-      "id": "kp-38",
+      "id": "tpl-black-yellow-frame",
       "name": "黑黄框框（支持繁中）",
       "reference_sha256": "5a0b6d713ed6f22fc31de7daf4662b020ce04cc4b675cc7f87792d9117facd89",
       "batch": "B5",
@@ -383,7 +383,7 @@
       ]
     },
     {
-      "id": "kp-39",
+      "id": "tpl-floral-travel",
       "name": "一路繁花2",
       "reference_sha256": "5f5553bac39cb8097e2f71316dbf437627f85b0dde6cba3c56c8c7996bc919b5",
       "batch": "B6",
@@ -393,7 +393,7 @@
       ]
     },
     {
-      "id": "kp-40",
+      "id": "tpl-verdant-green",
       "name": "绿意漾漾",
       "reference_sha256": "d1151da3f393ef0048c54335e8967a7ae11c2c3789a7427d9b830ffd1d81b217",
       "batch": "B5",
@@ -403,7 +403,7 @@
       ]
     },
     {
-      "id": "kp-41",
+      "id": "tpl-minimal-ins",
       "name": "极简Ins风",
       "reference_sha256": "e8fa303157225404ee32344165452d1e84a35480a82629ba4047bc71741c832e",
       "batch": "B5",
@@ -413,7 +413,7 @@
       ]
     },
     {
-      "id": "kp-42",
+      "id": "tpl-fashion-magenta",
       "name": "时髦玫红",
       "reference_sha256": "49e56def3c9c60710c2328933b0c36b62efb85b56f394a8f67fe71ccdb65e565",
       "batch": "B6",
@@ -423,7 +423,7 @@
       ]
     },
     {
-      "id": "kp-43",
+      "id": "tpl-hot-pink",
       "name": "活泼亮粉",
       "reference_sha256": "5bbb7477e8886352dc88be8fd65770e07ae44590e9036458f04b345e638c39eb",
       "batch": "B4",
@@ -433,7 +433,7 @@
       ]
     },
     {
-      "id": "kp-44",
+      "id": "tpl-vintage-classic",
       "name": "古典怀旧",
       "reference_sha256": "311de482ff6552a114691e47fff5f9a61120ab0753a8f5e0689e5374f44962d3",
       "batch": "B5",
@@ -443,7 +443,7 @@
       ]
     },
     {
-      "id": "kp-45",
+      "id": "tpl-playful-detective",
       "name": "萌探2024",
       "reference_sha256": "32a1d269bff6a93abb9c564897027c73854f868296e96eb34799c8ccfd4277ec",
       "batch": "B6",
@@ -453,7 +453,7 @@
       ]
     },
     {
-      "id": "kp-46",
+      "id": "tpl-festive-red",
       "name": "元气红",
       "reference_sha256": "32220e329041a3c007fce955de10d1eebae7daef96bff1f9e68e2f20f7d45af4",
       "batch": "B6",
@@ -463,7 +463,7 @@
       ]
     },
     {
-      "id": "kp-47",
+      "id": "tpl-taiwan-variety",
       "name": "台式综艺",
       "reference_sha256": "35cf412566ab8bddb4a4d91c0e416ccd3ed6aa99a83cf5c165f5fa7ce301cc39",
       "batch": "B2",
@@ -473,7 +473,7 @@
       ]
     },
     {
-      "id": "kp-48",
+      "id": "tpl-blue-purple-grid",
       "name": "蓝紫方格",
       "reference_sha256": "cae04878e432a13eec8980309e916f97c1b96e1e04a8203136271b65d87d14d2",
       "batch": "B1",
@@ -483,7 +483,7 @@
       ]
     },
     {
-      "id": "kp-49",
+      "id": "tpl-red-comic-variety",
       "name": "喜人奇妙夜",
       "reference_sha256": "1eb33b303f3ec53e7a91f563f7bd79ced2930457b2ac02908796ac75496d3d04",
       "batch": "B6",
@@ -493,7 +493,7 @@
       ]
     },
     {
-      "id": "kp-50",
+      "id": "tpl-soft-romance",
       "name": "恋爱兄妹",
       "reference_sha256": "ac1314d36b525a1aaae28c8e41ab9797f7fc6b01e4e705b7dbc41873535a030e",
       "batch": "B6",
@@ -503,7 +503,7 @@
       ]
     },
     {
-      "id": "kp-51",
+      "id": "tpl-translucent-yellow",
       "name": "半透简黄",
       "reference_sha256": "037fbbd8f7d36038b250f287758bf6a1384ded4c6b94a9f83a95bc870ccf170e",
       "batch": "B5",
@@ -513,7 +513,7 @@
       ]
     },
     {
-      "id": "kp-52",
+      "id": "tpl-minimal-torn-edge",
       "name": "极简撕边",
       "reference_sha256": "1ea15a52df26b8f42542856542692e819b372df9d154eb86fccfcf4cb7cd7ed4",
       "batch": "B5",
@@ -523,7 +523,7 @@
       ]
     },
     {
-      "id": "kp-53",
+      "id": "tpl-monochrome-emoji",
       "name": "简约emoji",
       "reference_sha256": "b648bde020a4947fa48b8e43dbf7f985e7b278930bf3526423965f62274838f4",
       "batch": "B6",
@@ -533,7 +533,7 @@
       ]
     },
     {
-      "id": "kp-54",
+      "id": "tpl-color-contrast-pop",
       "name": "潮流撞色",
       "reference_sha256": "f8d95711bdde7efb36836888eacebaffc32a5824981cf05f17335c33d71d9ff5",
       "batch": "B6",

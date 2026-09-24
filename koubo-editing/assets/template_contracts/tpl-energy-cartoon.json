@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "target_id": "tpl-energy-cartoon",
+  "variant_id": "tpl-energy-cartoon",
+  "display_name": "元气卡通·分层校准版",
+  "reference": {
+    "name": "元气卡通",
+    "sha256": "ecc0f09e731ddc85e1bb7147b87aed7f7757fc9e179e26db270515643973bcc6"
+  },
+  "identity_features": [
+    "标题逐字使用黄粉蓝绿四色、粗黑外边与轻微角度差，形成原创漫画弧线",
+    "正文白色厚黑边，关键词按语义切粉/蓝/绿；arc状态逐字轻微高低错位",
+    "通用心形、星形、上箭头、爆点词签按语义选用；不默认复制点赞收藏分享"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/ZCOOLKuaiLe-Regular.ttf",
+      "index": 0,
+      "weight": null
+    },
+    "body": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "keyword": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "sticker": {
+      "file": "assets/fonts/ZCOOLKuaiLe-Regular.ttf",
+      "index": 0,
+      "weight": null
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 2,
+    "recipe": "正文白色厚黑边，关键词按语义切粉/蓝/绿；arc状态逐字轻微高低错位"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "通用心形、星形、上箭头、爆点词签按语义选用；不默认复制点赞收藏分享"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "semantic camera before typography",
+    "caption": "independent phrase clocks; bounded pop/soft/arc appearance without inferred word times",
+    "title": "fade with stable per-glyph geometry",
+    "tag": "template-specific semantic geometry",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.07,
+        "close": 1.14
+      },
+      "max_zoom": 1.14,
+      "transitions": {
+        "punch": {
+          "seconds": 0.42
+        },
+        "glide": {
+          "seconds": 1.15
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "mixed_size_type",
+    "vignette"
+  ],
+  "render": {
+    "family": "元气卡通",
+    "display_name": "元气卡通·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSansSC-VF.ttf",
+    "font_weight": 900,
+    "scene_system": {
+      "version": 1,
+      "kind": "energycartoon",
+      "title_size": 42,
+      "subtitle_size": 40,
+      "body_size": 42,
+      "display_size": 50,
+      "compact_size": 31,
+      "tag_size": 28,
+      "keyword_size": 50,
+      "title_y": 0.105,
+      "caption_y": 0.82,
+      "tag_y": 0.72,
+      "tag_x": 0.8,
+      "title_duration": 3600,
+      "allowed_canvas": [
+        "vignette"
+      ]
+    },
+    "base_size": 42,
+    "keyword_size": 50,
+    "accent": "#F25EAC",
+    "text": "#FFFFFF",
+    "stroke": "#211F23",
+    "enter": "pop",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.07,
+        "close": 1.14
+      },
+      "max_zoom": 1.14,
+      "transitions": {
+        "punch": {
+          "seconds": 0.42
+        },
+        "glide": {
+          "seconds": 1.15
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "现有授权替代字体与原创几何，不是官方1:1。",
+    "仅声明3:4和9:16；新素材必须重新检查字形、脸/手势保护区和边界。",
+    "原人物聚光、喇叭/点赞等具体贴纸和逐字弧形曲线未完全复原。",
+    "ZCOOL快乐体与Noto Sans为授权替代；当前弧线是稳定字位近似，不是官方动画曲线。"
+  ]
+}

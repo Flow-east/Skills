@@ -2,7 +2,7 @@ import copy,hashlib,json,sys,tempfile,unittest
 from pathlib import Path
 from PIL import Image
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from test_template_scenes import plan,painter
+from test_template_scenes import plan,painter,variant_for_kind
 from template_scenes import audit_layout,layout,texts
 from template_scenes_b4 import KINDS,line,title,hand,bulb,tech_rail,pointer_sprite,identity_sprite
 from template_contracts import validate
@@ -19,7 +19,7 @@ def fixture(k):
 
 class B4Tests(unittest.TestCase):
     def test_four_contract_assets(self):
-        for k in KINDS:validate(get(f'ref_{k}_v1')['_contract'],verify_assets=True)
+        for k in KINDS:validate(get(variant_for_kind(k))['_contract'],verify_assets=True)
     def test_four_distinct_typography_geometries(self):
         ims=[title(painter(fixture(k))) for k in KINDS]
         self.assertEqual(len({hashlib.sha256(i.tobytes()).hexdigest() for i in ims}),4);self.assertEqual(len({i.size for i in ims}),4)

@@ -1,18 +1,18 @@
-# B 批模板执行规则（kp-10～kp-18）
+# B 批模板执行规则（tpl-luxury-gold～tpl-minimal-white）
 
 B 批是九套独立模板的可运行校准版，仍标记为预览，不能把机器 QA 当成用户审美通过。历史校准使用本地批处理脚本；公开包应按 `plan-format.md` 编写计划，随后由 `render_template.py` 编译；每套必须保留契约字体角色和 output-clock `camera_motion`。
 
 | ID | 名称 | renderer kind | 关键结构 | 词标规则 |
 |---|---|---|---|---|
-| kp-10 | 顶奢 | luxury | 暖金细线、深酒红层、白衬线普通态、珊瑚关键词、金色展示态 | 不强制词标；强调靠关键词与错位留屏 |
-| kp-11 | 明快黄 | brightyellow | 高对比明黄标题、底部小号中文、独立英文时钟 | 不强制词标；英文不混入中文 ASR |
-| kp-12 | 沉稳墨蓝 | navy | 墨蓝底层、奶油正文、左右错位三层短语 | 仅在原话有明确重复/动作概念时使用右侧短词标 |
-| kp-13 | 商务科技 | tech | 持续斜切蓝轨道，字幕在轨道内独立切换 | 身份卡需有 source/reviewer/reason/review_status；不把词标当第二字幕 |
-| kp-14 | 醒目科普 | science | 纸片展示态与正文并行 | 指示手必须引用当前短语中的原话动作词；身份卡不是默认装饰 |
-| kp-15 | 新闻蓝 | news | 蓝字逐字米白小底片，展示态右对齐 | 词条引用原话短词，不声称新闻来源或外部事实 |
-| kp-16 | 暖线映橙 | orangeline | 橙色斜线、衬线小字、normal/impact/display 状态 | 橙线侧标与正文独立，必须有 phrase_id/时钟/reason |
-| kp-17 | 利落红 | crispred | 粉白正文、酒红衬线关键词、左右错位 | 使用右侧细红下划线短词标；状态保持契约允许的 normal |
-| kp-18 | 简约白 | white | 前句紧黑底、后句右下裸白、克制留白 | 不添加任意词标，保持短语时钟与轻镜头 |
+| tpl-luxury-gold | 顶奢 | luxury | 暖金细线、深酒红层、白衬线普通态、珊瑚关键词、金色展示态 | 不强制词标；强调靠关键词与错位留屏 |
+| tpl-bright-yellow | 明快黄 | brightyellow | 高对比明黄标题、底部小号中文、独立英文时钟 | 不强制词标；英文不混入中文 ASR |
+| tpl-deep-navy | 沉稳墨蓝 | navy | 墨蓝底层、奶油正文、左右错位三层短语 | 仅在原话有明确重复/动作概念时使用右侧短词标 |
+| tpl-business-tech | 商务科技 | tech | 持续斜切蓝轨道，字幕在轨道内独立切换 | 身份卡需有 source/reviewer/reason/review_status；不把词标当第二字幕 |
+| tpl-science-highlight | 醒目科普 | science | 纸片展示态与正文并行 | 指示手必须引用当前短语中的原话动作词；身份卡不是默认装饰 |
+| tpl-news-blue | 新闻蓝 | news | 蓝字逐字米白小底片，展示态右对齐 | 词条引用原话短词，不声称新闻来源或外部事实 |
+| tpl-orange-line | 暖线映橙 | orangeline | 橙色斜线、衬线小字、normal/impact/display 状态 | 橙线侧标与正文独立，必须有 phrase_id/时钟/reason |
+| tpl-crisp-red | 利落红 | crispred | 粉白正文、酒红衬线关键词、左右错位 | 使用右侧细红下划线短词标；状态保持契约允许的 normal |
+| tpl-minimal-white | 简约白 | white | 前句紧黑底、后句右下裸白、克制留白 | 不添加任意词标，保持短语时钟与轻镜头 |
 
 ## 通用约束
 

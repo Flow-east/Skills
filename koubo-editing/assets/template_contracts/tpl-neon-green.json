@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "target_id": "tpl-neon-green",
+  "variant_id": "tpl-neon-green",
+  "display_name": "荧光绿·分层校准版",
+  "reference": {
+    "name": "荧光绿",
+    "sha256": "a42e6b5f191e03d62eba58a438f77d8934d884aa10370acced5376376cc95134"
+  },
+  "identity_features": [
+    "白色斜方括号标题、荧光宋体副标题及细下划线",
+    "白色轻正文与荧光绿粗重点词，最多三短语错位留屏",
+    "荧光字面词标与可选圆窗；无矩形绿色字幕横条"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/SmileySans-Oblique.ttf",
+      "index": 0,
+      "weight": null
+    },
+    "body": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 400
+    },
+    "keyword": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "sticker": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 650
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 3,
+    "recipe": "白色轻正文与荧光绿粗重点词，最多三短语错位留屏"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "荧光字面词标与可选圆窗；无矩形绿色字幕横条"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "semantic camera_motion before canvas",
+    "caption": "fade",
+    "title": "fade",
+    "tag": "template-specific",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.07,
+        "close": 1.14
+      },
+      "max_zoom": 1.14,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "mixed_size_type",
+    "circle"
+  ],
+  "render": {
+    "family": "荧光绿",
+    "display_name": "荧光绿·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSansSC-VF.ttf",
+    "font_weight": 400,
+    "scene_system": {
+      "version": 1,
+      "kind": "neon",
+      "title_size": 57,
+      "subtitle_size": 30,
+      "body_size": 37,
+      "keyword_size": 57,
+      "translation_size": 20,
+      "tag_size": 29,
+      "display_size": 60,
+      "compact_size": 36,
+      "title_y": 0.1,
+      "caption_y": 0.82,
+      "tag_y": 0.68,
+      "tag_x": 0.79,
+      "title_duration": 3600,
+      "allowed_canvas": [
+        "circle"
+      ],
+      "callout_y": 0.685,
+      "callout_step": 0.06
+    },
+    "base_size": 37,
+    "keyword_size": 57,
+    "accent": "#D5FF00",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.07,
+        "close": 1.14
+      },
+      "max_zoom": 1.14,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "替代字体有本地授权；不声称官方1:1。",
+    "仅声明3:4和9:16；每条素材重新检查构图、人物动作与文字可读性。",
+    "原参考圆窗能力可用，但真实人物样片不为装饰牺牲手势；圆窗需要独立构图理由。",
+    "逐字插入和原版节奏曲线未复原；使用分短语软入场。"
+  ]
+}

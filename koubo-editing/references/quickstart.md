@@ -35,7 +35,7 @@ python3 scripts/render_template.py final_plan.json --out-dir final_render
 一键预览可指定已验证变体，例如：
 
 ```bash
-python3 scripts/run_auto_pipeline.py VIDEO --out-dir OUT --template-variant orange_hook
+python3 scripts/run_auto_pipeline.py VIDEO --out-dir OUT --template-variant tpl-orange-line
 ```
 
-当前目录由 `assets/template_catalog.json` 管理。变体必须有参考样本和抽帧回归记录；不能把只换颜色的 profile 伪装成新模板。
+当前目录由 `assets/template_catalog.json` 管理。54 套可用风格用语义 ID（`tpl-…`）选择；可从 `scripts/template_library.py eligible` 查询。旧编号不做兼容映射，旧计划须重选实际对应的风格后再渲染。

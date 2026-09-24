@@ -1,4 +1,4 @@
-# Spoken-video editing · v0.1.0
+# Spoken-video editing · v0.2.0
 
 **English** | [简体中文](README.zh-CN.md)
 
@@ -8,7 +8,7 @@ A skill for editing Chinese talking-head videos from content review to an audio-
 
 - Local speech transcription with word-level timestamps; semantic removal of repetition, slips, and pauses without clipping sentence endings.
 - Opening and content structure, camera rhythm, caption hierarchy, keyword stickers, sound effects, transitions, and privacy masking.
-- 54 packaged visual style variants and 74 optional sound effects. Illustrative stickers can use any available, authorized image-generation tool; no specific provider is required.
+- 54 usable, iteratively refined visual templates and 74 optional sound effects, with descriptive resource IDs. These templates are usable now and continue to improve; individual aesthetic acceptance is recorded separately. Existing plans using numeric IDs must select the corresponding descriptive resource ID; there is no compatibility alias. Illustrative stickers can use any available, authorized image-generation tool; no specific provider is required.
 - Audio-backed MP4, reusable edit plan, SRT subtitles, creative brief, and QA report.
 
 ## Install

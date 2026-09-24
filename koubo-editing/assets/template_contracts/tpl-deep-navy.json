@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "target_id": "tpl-deep-navy",
+  "variant_id": "tpl-deep-navy",
+  "display_name": "沉稳墨蓝·分层校准版",
+  "reference": {
+    "name": "沉稳墨蓝",
+    "sha256": "02eee16f8a31a4804d989f3d904f326d3daf05c17493fa096ca5fa6ce78bd05f"
+  },
+  "identity_features": [
+    "墨蓝粗黑体主标题、奶油色衬线副标题配窄墨蓝条",
+    "奶油小字与白色大衬线重点，可编排三层短语",
+    "错位层级与克制软入场，不套双语布局"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "body": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 450
+    },
+    "keyword": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 600
+    },
+    "sticker": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 650
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 3,
+    "recipe": "奶油小字与白色大衬线重点，可编排三层短语"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "错位层级与克制软入场，不套双语布局"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "semantic camera_motion before canvas",
+    "caption": "soft",
+    "title": "fade",
+    "tag": "template-specific",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.05,
+        "close": 1.1
+      },
+      "max_zoom": 1.1,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "mixed_size_type",
+    "vignette"
+  ],
+  "render": {
+    "family": "沉稳墨蓝",
+    "display_name": "沉稳墨蓝·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSerifSC-VF.ttf",
+    "font_weight": 450,
+    "scene_system": {
+      "version": 1,
+      "kind": "navy",
+      "title_size": 60,
+      "subtitle_size": 38,
+      "body_size": 35,
+      "keyword_size": 59,
+      "translation_size": 21,
+      "tag_size": 27,
+      "display_size": 62,
+      "title_y": 0.1,
+      "caption_y": 0.805,
+      "tag_y": 0.68,
+      "tag_x": 0.79,
+      "title_duration": 2.6,
+      "allowed_canvas": [
+        "vignette"
+      ]
+    },
+    "base_size": 35,
+    "keyword_size": 59,
+    "accent": "#182F52",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.05,
+        "close": 1.1
+      },
+      "max_zoom": 1.1,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "本地许可替代字体与原创时序，非开拍官方工程。",
+    "只声明3:4和9:16；每条素材需单独检查受保护构图。",
+    "参考右侧竖向姓名/履历卡尚未实现；示例无经用户确认的身份资料，不硬填。",
+    "三层时钟可用；逐词自动进入与真实官方曲线尚未恢复。"
+  ]
+}

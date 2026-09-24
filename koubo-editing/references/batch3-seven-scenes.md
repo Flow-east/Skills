@@ -4,13 +4,13 @@
 
 |目标 / variant|独立设计|短语数 / 可选状态|
 |---|---|---|
-|kp-09 百搭黄·双语 / `ref_biyellow_v1`|白主黄副重黑标题；大黄中文字幕、小白英文|1；需要独立译文；可摘词标签|
-|kp-10 顶奢 / `ref_luxury_v1`|金衬线主标题；白色连接词与珊瑚重点词；错位双行|1–2；`mode:display`金色大字；无独立标签|
-|kp-11 明快黄 / `ref_brightyellow_v1`|常驻装饰黄标题、黑白多描边；小中文和英文更低位|1；需要独立译文；不另堆标签|
-|kp-12 沉稳墨蓝 / `ref_navy_v1`|墨蓝黑体标题与奶油色窄底副题；大小宋体错位|1–3；`display`大字；墨蓝小词条|
-|kp-15 新闻蓝 / `ref_news_v1`|蓝红斜切标题条；逐字浅底片蓝字|1；`display`右对齐整块大字；新闻式词条|
-|kp-17 利落红 / `ref_crispred_v1`|细白宋体标题、薄透底红副题；酒红关键词|1–2；独立细红下划线词标|
-|kp-21 靓眼蓝 / `ref_vividblue_v1`|青白斜体标题、青色斜杠；青白错位大字|1–2；`label`棕底小字；独立棕底词标|
+|tpl-bilingual-yellow 百搭黄·双语 / `tpl-bilingual-yellow`|白主黄副重黑标题；大黄中文字幕、小白英文|1；需要独立译文；可摘词标签|
+|tpl-luxury-gold 顶奢 / `tpl-luxury-gold`|金衬线主标题；白色连接词与珊瑚重点词；错位双行|1–2；`mode:display`金色大字；无独立标签|
+|tpl-bright-yellow 明快黄 / `tpl-bright-yellow`|常驻装饰黄标题、黑白多描边；小中文和英文更低位|1；需要独立译文；不另堆标签|
+|tpl-deep-navy 沉稳墨蓝 / `tpl-deep-navy`|墨蓝黑体标题与奶油色窄底副题；大小宋体错位|1–3；`display`大字；墨蓝小词条|
+|tpl-news-blue 新闻蓝 / `tpl-news-blue`|蓝红斜切标题条；逐字浅底片蓝字|1；`display`右对齐整块大字；新闻式词条|
+|tpl-crisp-red 利落红 / `tpl-crisp-red`|细白宋体标题、薄透底红副题；酒红关键词|1–2；独立细红下划线词标|
+|tpl-vivid-blue 靓眼蓝 / `tpl-vivid-blue`|青白斜体标题、青色斜杠；青白错位大字|1–2；`label`棕底小字；独立棕底词标|
 
 ## 输入与规则
 
@@ -29,4 +29,4 @@
 
 百搭黄人物身份卡、墨蓝竖向身份卡、镜像翻转转场、靓眼蓝旋转圆角框、利落红箭头数字贴纸仍未实现。新闻蓝有原创静态球形图标，不是官方动态素材；逐字底片目前整句淡入。明快黄字面渐变尚未做。不要拿普通标签、inset或swipe充当这些效果。
 
-脚本：template_scenes_b3b.py；逐套契约：assets/template_contracts/kp-*.json。抽帧/编码检查不等于正常速度听审，技术样片通过不等于用户审美验收。
+脚本：template_scenes_b3b.py；逐套契约：assets/template_contracts/tpl-*.json。抽帧/编码检查不等于正常速度听审，技术样片通过不等于用户审美验收。

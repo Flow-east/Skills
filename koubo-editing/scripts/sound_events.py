@@ -6,9 +6,9 @@ import numpy as np
 ROOT=Path(__file__).resolve().parent.parent
 LIB=ROOT/'assets/sfx'
 STYLES={
-    'ref_gold_v1':'premium','ref_browngold_v1':'premium',
-    'ref_neon_v1':'bright','ref_hotpink_v1':'bright',
-    'ref_mono_v1':'minimal','ref_cleanwhite_v1':'minimal',
+    'tpl-white-gold':'premium','tpl-professional-brown-gold':'premium',
+    'tpl-neon-green':'bright','tpl-hot-pink':'bright',
+    'tpl-black-white':'minimal','tpl-minimal-yellow-white':'minimal',
 }
 
 def finite(v): return type(v) in (int,float) and math.isfinite(v)

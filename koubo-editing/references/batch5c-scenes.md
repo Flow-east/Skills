@@ -4,10 +4,10 @@
 
 |目标|variant|状态/字体/版式|
 |---|---|---|
-|kp-41 极简Ins风|ref_ins_v1|Noto Sans重标题与单字斜棕贴；正常正文棕底阶梯边、蓝色小偏移；奶油蓝边词签；仅normal单句|
-|kp-44 古典怀旧|ref_nostalgia_v1|Noto Serif浅金标题、细正文半透棕卡；brush用MaShanZheng重点短句；仅单句|
-|kp-51 半透简黄|ref_transyellow_v1|MaShanZheng双行黄标题、Noto Sans深灰半透小字幕normal、橙白斜体大字display；最多双句错位|
-|kp-52 极简撕边|ref_tornedge_v1|Noto Serif书名号标题、normal黄白混合字号双句、compact灰透原创撕边底条；最多双句|
+|tpl-minimal-ins 极简Ins风|tpl-minimal-ins|Noto Sans重标题与单字斜棕贴；正常正文棕底阶梯边、蓝色小偏移；奶油蓝边词签；仅normal单句|
+|tpl-vintage-classic 古典怀旧|tpl-vintage-classic|Noto Serif浅金标题、细正文半透棕卡；brush用MaShanZheng重点短句；仅单句|
+|tpl-translucent-yellow 半透简黄|tpl-translucent-yellow|MaShanZheng双行黄标题、Noto Sans深灰半透小字幕normal、橙白斜体大字display；最多双句错位|
+|tpl-minimal-torn-edge 极简撕边|tpl-minimal-torn-edge|Noto Serif书名号标题、normal黄白混合字号双句、compact灰透原创撕边底条；最多双句|
 
 `scene_captions`为输出时钟，各phrase有唯一非空id。runs仅body/keyword，原话逐字保持；normal、brush、display、compact仅对应上表模板，不跨模板乱用。未知颜色/指示线/逐字reveal字段拒绝，不静默伪造词时钟。Ins标题长度过长应分行，不能无限缩小。
 

@@ -4,10 +4,10 @@
 
 |目标|variant|独立状态与版式|
 |---|---|---|
-|kp-05 简洁黄白|ref_cleanwhite_v1|Smiley Sans斜体两行标题；normal半透白窄条，display白/浅黄大字；单句；无符号词签|
-|kp-28 彩蜡萌趣|ref_waxcute_v1|ZCOOL快乐体粉黄白三层描边；normal/display，最多双句错位；云团词签和原创星形|
-|kp-31 QQ萌趣|ref_qqcute_v1|Noto Sans黄粉双行粗标题；normal圆润厚边、hand手写短句；最多双句；原创双叹号|
-|kp-35 元气卡通|ref_energycartoon_v1|多色逐字漫画标题；normal白黑厚字、arc轻弧形重点句；最多双句；心/星/箭头/爆点原创几何|
+|tpl-minimal-yellow-white 简洁黄白|tpl-minimal-yellow-white|Smiley Sans斜体两行标题；normal半透白窄条，display白/浅黄大字；单句；无符号词签|
+|tpl-crayon-cute 彩蜡萌趣|tpl-crayon-cute|ZCOOL快乐体粉黄白三层描边；normal/display，最多双句错位；云团词签和原创星形|
+|tpl-playful-pink-yellow QQ萌趣|tpl-playful-pink-yellow|Noto Sans黄粉双行粗标题；normal圆润厚边、hand手写短句；最多双句；原创双叹号|
+|tpl-energy-cartoon 元气卡通|tpl-energy-cartoon|多色逐字漫画标题；normal白黑厚字、arc轻弧形重点句；最多双句；心/星/箭头/爆点原创几何|
 
 `scene_captions`按输出时间，每个phrase必须有唯一id。runs仅body/keyword，原话逐字保持。模板只接受表中状态，不接受任意颜色、pointer、underline或伪造逐字reveal时间。长句需要语义分句，不能缩成小字塞入。
 

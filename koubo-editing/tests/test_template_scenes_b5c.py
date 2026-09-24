@@ -2,7 +2,7 @@ import copy,hashlib,sys,unittest,tempfile
 from pathlib import Path
 from PIL import Image
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from test_template_scenes import plan,painter
+from test_template_scenes import plan,painter,variant_for_kind
 from template_scenes import layout,audit_layout,video_layer
 from template_scenes_b5c import KINDS,MODES,title,line,panel,label
 from template_contracts import validate
@@ -15,7 +15,7 @@ def circle():return dict(kind='circle',start=0,end=4,center=[.5,.4],radius=.25,f
 
 class B5cTests(unittest.TestCase):
     def test_contracts(self):
-        for k in KINDS:validate(get(f'ref_{k}_v1')['_contract'],verify_assets=True)
+        for k in KINDS:validate(get(variant_for_kind(k))['_contract'],verify_assets=True)
     def test_eight_aspects(self):
         for k in KINDS:
             for h in (960,1280):

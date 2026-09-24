@@ -1,0 +1,207 @@
+{
+  "version": 1,
+  "target_id": "tpl-bilingual-ivory-luxe",
+  "variant_id": "tpl-bilingual-ivory-luxe",
+  "display_name": "轻奢白·双语·分层校准版",
+  "reference": {
+    "name": "轻奢白·双语",
+    "sha256": "f7525511630eea1bc7d8fc741ddfe581f3d9e81271396a901997cc2b9c5b6aeb"
+  },
+  "identity_features": [
+    "银白毛笔主标题和黄色手写副标题",
+    "小号黄/白手写字幕与衬线英文错位分层",
+    "独立顶部毛笔强调与有边界闪点"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/MaShanZheng-Regular.ttf",
+      "index": 0,
+      "weight": null
+    },
+    "body": {
+      "file": "assets/fonts/LXGWWenKai-Medium.ttf",
+      "index": 0,
+      "weight": null
+    },
+    "keyword": {
+      "file": "assets/fonts/LXGWWenKai-Medium.ttf",
+      "index": 0,
+      "weight": null
+    },
+    "sticker": {
+      "file": "assets/fonts/MaShanZheng-Regular.ttf",
+      "index": 0,
+      "weight": null
+    },
+    "translation": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 450
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 2,
+    "recipe": "小号黄/白手写字幕与衬线英文错位分层"
+  },
+  "annotation": {
+    "tags_enabled": false,
+    "reason_required": true,
+    "recipe": "独立顶部毛笔强调与有边界闪点"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false,
+    "translation_clock": "independent_output"
+  },
+  "motion": {
+    "video_camera": "semantic camera_motion before canvas",
+    "caption": "soft",
+    "title": "fade",
+    "tag": "template-specific",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.04,
+        "close": 1.08
+      },
+      "max_zoom": 1.08,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    },
+    "translation": "independent fade",
+    "highlight": "bounded pop and original static star glints"
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "bilingual_clocks",
+    "mixed_size_type",
+    "brush_highlights",
+    "scale_entry"
+  ],
+  "render": {
+    "family": "轻奢白·双语",
+    "display_name": "轻奢白·双语·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/LXGWWenKai-Medium.ttf",
+    "font_weight": null,
+    "scene_system": {
+      "version": 1,
+      "kind": "biluxe",
+      "title_size": 60,
+      "subtitle_size": 39,
+      "body_size": 40,
+      "keyword_size": 45,
+      "translation_size": 22,
+      "tag_size": 36,
+      "display_size": 80,
+      "title_y": 0.105,
+      "caption_y": 0.79,
+      "tag_y": 0.68,
+      "tag_x": 0.79,
+      "title_duration": 2.6,
+      "allowed_canvas": []
+    },
+    "base_size": 40,
+    "keyword_size": 45,
+    "accent": "#F4EE99",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.04,
+        "close": 1.08
+      },
+      "max_zoom": 1.08,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "Licensed substitute fonts and original timing curves; not official engineering.",
+    "Only 3:4 and 9:16 are declared; every source needs protected-region review.",
+    "English is separately authored/reviewed; layout checks do not verify translation semantics.",
+    "Brush font lacks the reference exact silver texture/flying-white strokes.",
+    "Star glints are original static sprite details animated with the highlight, not a reconstructed moving particle field."
+  ],
+  "revision_2026_09_23": {
+    "change": "refine-batch-a-template-fidelity",
+    "batch": "A",
+    "status": "implemented_in_use_iterating",
+    "composition": "毛笔标题独占上部；黄白手写中文与衬线英文分层；闪点仅作标题强调。",
+    "caption_states": [
+      "handwritten_normal",
+      "brush_highlight"
+    ],
+    "semantic_anchor": "top_highlight_only",
+    "known_gaps": [
+      "licensed substitute typefaces are not official Kaipai fonts",
+      "sound-effect library remains an independent deferred workstream",
+      "user aesthetic acceptance is not inferred from QA"
+    ]
+  }
+}

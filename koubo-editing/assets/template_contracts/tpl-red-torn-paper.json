@@ -1,0 +1,181 @@
+{
+  "version": 1,
+  "target_id": "tpl-red-torn-paper",
+  "variant_id": "tpl-red-torn-paper",
+  "display_name": "撕纸红·分层校准版",
+  "reference": {
+    "name": "撕纸红",
+    "sha256": "aa208a201b6acd0730543285d4a35c9448e77b490bb7d69924937d23091c32b5"
+  },
+  "identity_features": [
+    "白衬线标题+红字白签副标题，普通字幕为小字半透窄底",
+    "重点切到逐字独立不规则纸片与黑色书法字；红色大字另作警示状态",
+    "说明图为圆角完整包含卡片，须有语义锚点、来源许可、哈希和隐私核验"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 600
+    },
+    "body": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 500
+    },
+    "keyword": {
+      "file": "assets/fonts/MaShanZheng-Regular.ttf",
+      "index": 0,
+      "weight": null
+    },
+    "sticker": {
+      "file": "assets/fonts/MaShanZheng-Regular.ttf",
+      "index": 0,
+      "weight": null
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 2,
+    "recipe": "重点切到逐字独立不规则纸片与黑色书法字；红色大字另作警示状态"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "说明图为圆角完整包含卡片，须有语义锚点、来源许可、哈希和隐私核验"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "semantic camera_motion before typography",
+    "caption": "independent phrase clocks; template-specific label/pop/fade",
+    "title": "fade",
+    "tag": "template-specific",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.06,
+        "close": 1.12
+      },
+      "max_zoom": 1.12,
+      "transitions": {
+        "punch": {
+          "seconds": 0.46
+        },
+        "glide": {
+          "seconds": 1.05
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "mixed_size_type",
+    "paper_strip"
+  ],
+  "render": {
+    "family": "撕纸红",
+    "display_name": "撕纸红·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSerifSC-VF.ttf",
+    "font_weight": 500,
+    "scene_system": {
+      "version": 1,
+      "kind": "tornred",
+      "title_size": 39,
+      "subtitle_size": 42,
+      "body_size": 31,
+      "keyword_size": 43,
+      "display_size": 49,
+      "tag_size": 28,
+      "title_y": 0.1,
+      "caption_y": 0.835,
+      "tag_y": 0.68,
+      "tag_x": 0.8,
+      "title_duration": 3600,
+      "allowed_canvas": [],
+      "callout_y": 0.65
+    },
+    "base_size": 31,
+    "keyword_size": 43,
+    "accent": "#9E2131",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.06,
+        "close": 1.12
+      },
+      "max_zoom": 1.12,
+      "transitions": {
+        "punch": {
+          "seconds": 0.46
+        },
+        "glide": {
+          "seconds": 1.05
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "替代字体有本地许可；不声称官方1:1。",
+    "仅声明3:4和9:16；新素材重新检查构图、字形、人物手势与安全布局。",
+    "撕纸为原创稳定几何，未提取原模板纸纹或照片；原逐字揭纸动效和背景虚化未复原。",
+    "说明图卡已实现；本轮实拍无合适授权业务照片，不把房产/合同参考照片嫁接进管理话题。合成组件单独验证图片卡。",
+    "参考高位纸条若与人脸冲突须重新排版；不可直接挡脸、裁人或缩小主体来省事。"
+  ]
+}

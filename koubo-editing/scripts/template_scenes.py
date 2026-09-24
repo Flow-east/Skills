@@ -668,7 +668,7 @@ def write_srt(p,path):
     rows=[];previous=None
     for g in p['scene_captions']:
         phrases=[dict(e) for e in g['phrases']]
-        if p.get('scene_takeover') and p.get('template_variant')=='ref_redyellow_v1' and len(phrases)==2:
+        if p.get('scene_takeover') and p.get('template_variant')=='tpl-red-yellow-editorial' and len(phrases)==2:
             phrases[0]['end']=min(phrases[0]['end'],phrases[1]['start']+.16)
         points=sorted({v for e in phrases for v in (e['start'],e['end'])})
         for a,b in zip(points,points[1:]):

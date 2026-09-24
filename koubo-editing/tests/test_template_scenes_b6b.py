@@ -2,7 +2,7 @@ import copy,hashlib,sys,tempfile,unittest
 from pathlib import Path
 from PIL import Image
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from test_template_scenes import plan,painter
+from test_template_scenes import plan,painter,variant_for_kind
 from template_scenes import layout,audit_layout
 from template_scenes_b6b import KINDS,MODES,title,line,label,panel,arc_line
 from template_contracts import validate
@@ -18,7 +18,7 @@ def tag(symbol=None):
 
 class B6bTests(unittest.TestCase):
  def test_contracts(self):
-  for k in KINDS:validate(get(f'ref_{k}_v1')['_contract'],verify_assets=True)
+  for k in KINDS:validate(get(variant_for_kind(k))['_contract'],verify_assets=True)
  def test_eight_aspects(self):
   for k in KINDS:
    for h in (960,1280):

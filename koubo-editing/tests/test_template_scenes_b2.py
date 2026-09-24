@@ -63,7 +63,7 @@ class Batch2Tests(unittest.TestCase):
         from template_scenes_b2 import title
         p=plan('ink');p['scene_title_surface']='paper';a=painter(p);im=title(a)
         self.assertEqual(im.getpixel((0,0))[:3],(246,243,229));self.assertTrue(audit_layout(a)['passed'])
-        p['template_variant']='ref_white_v1'
+        p['template_variant']='tpl-minimal-white'
         with self.assertRaises(ValueError):painter(p)
     def test_numerals_english_traditional_coverage(self):
         a=painter(plan('white'));r=inspect_font(a.font_path(),'效率提升30%，3.5小時 AI/SOP',weight=a.font_weight());self.assertTrue(r['passed'])

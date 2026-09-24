@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "target_id": "tpl-hot-pink",
+  "variant_id": "tpl-hot-pink",
+  "display_name": "活泼亮粉·分层校准版",
+  "reference": {
+    "name": "活泼亮粉",
+    "sha256": "5bbb7477e8886352dc88be8fd65770e07ae44590e9036458f04b345e638c39eb"
+  },
+  "identity_features": [
+    "亮粉粗字黑边标题与断角外框，白正文配粉重点",
+    "普通短句、粉色放大展示、逐字角度变化的弧形短句",
+    "原创爱心词标与安全边缘漫画放射线，独立事件时钟"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "body": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 750
+    },
+    "keyword": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "sticker": {
+      "file": "assets/fonts/ZCOOLKuaiLe-Regular.ttf",
+      "index": 0,
+      "weight": null
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 1,
+    "recipe": "普通短句、粉色放大展示、逐字角度变化的弧形短句"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "原创爱心词标与安全边缘漫画放射线，独立事件时钟"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "semantic camera_motion before canvas",
+    "caption": "pop",
+    "title": "fade",
+    "tag": "template-specific",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.08,
+        "close": 1.16
+      },
+      "max_zoom": 1.16,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "mixed_size_type"
+  ],
+  "render": {
+    "family": "活泼亮粉",
+    "display_name": "活泼亮粉·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSansSC-VF.ttf",
+    "font_weight": 750,
+    "scene_system": {
+      "version": 1,
+      "kind": "hotpink",
+      "title_size": 64,
+      "subtitle_size": 53,
+      "body_size": 43,
+      "keyword_size": 46,
+      "translation_size": 19,
+      "tag_size": 38,
+      "display_size": 50,
+      "compact_size": 36,
+      "title_y": 0.1,
+      "caption_y": 0.83,
+      "tag_y": 0.68,
+      "tag_x": 0.79,
+      "title_duration": 3600,
+      "allowed_canvas": [],
+      "callout_y": 0.69,
+      "callout_step": 0.052
+    },
+    "base_size": 43,
+    "keyword_size": 46,
+    "accent": "#F14AA5",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.08,
+        "close": 1.16
+      },
+      "max_zoom": 1.16,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "替代字体有本地授权；不声称官方1:1。",
+    "仅声明3:4和9:16；每条素材重新检查构图、人物动作与文字可读性。",
+    "参考标题为更圆胖重字形，当前Noto黑体与站酷快乐体是授权替代，不声称原字形。",
+    "人物黄色勾边/分割跟踪、全画面贴边流动粒子与原版转场未实现。",
+    "放射线为显式有界边缘面板以保护人物与标题，非全画面自动避人特效。"
+  ]
+}

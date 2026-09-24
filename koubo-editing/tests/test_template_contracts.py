@@ -6,8 +6,8 @@ from template_catalog import get
 from test_template_scenes import plan,painter
 
 class ContractTests(unittest.TestCase):
-    def setUp(self):self.c=json.loads((ROOT/'assets/template_contracts/kp-06.json').read_text())
-    def test_valid_assets(self):self.assertEqual(validate(self.c,verify_assets=True)['target_id'],'kp-06')
+    def setUp(self):self.c=json.loads((ROOT/'assets/template_contracts/tpl-soft-pink.json').read_text())
+    def test_valid_assets(self):self.assertEqual(validate(self.c,verify_assets=True)['target_id'],'tpl-soft-pink')
     def test_each_rule_required(self):
         for key in ('typography','layout','annotation','timing','motion','composition'):
             c=copy.deepcopy(self.c);del c[key]
@@ -27,7 +27,7 @@ class ContractTests(unittest.TestCase):
         self.c['reference']['name']='基础白金'
         with self.assertRaises(ValueError):validate(self.c)
     def test_contract_is_authoritative(self):
-        v=get('ref_pink_v1');self.assertEqual(v['body_font_weight'],650);self.assertEqual(v['_contract']['layout']['max_phrases'],2)
+        v=get('tpl-soft-pink');self.assertEqual(v['body_font_weight'],650);self.assertEqual(v['_contract']['layout']['max_phrases'],2)
     def test_unknown_ratio_blocked(self):
         p=plan();p['width']=960;p['height']=720
         with self.assertRaisesRegex(ValueError,'Aspect'):painter(p)
@@ -38,7 +38,7 @@ class ContractTests(unittest.TestCase):
         p=plan('white');p['camera_motion']={'time_space':'output','max_zoom':1.3,'keyframes':[{'time':0,'zoom':1},{'time':4,'zoom':1.3}]}
         with self.assertRaisesRegex(ValueError,'recipe'):painter(p)
     def test_status_metadata_not_frozen_in_render_recipe(self):
-        v=get('ref_white_v1');self.assertEqual(v['design_status'],'implemented_pending_visual_acceptance')
+        v=get('tpl-minimal-white');self.assertEqual(v['design_status'],'implemented_in_use_iterating')
     def test_preview_explicitly_allowed(self):
         p=plan();p['template_delivery']='preview';self.assertTrue(painter(p).variant['_contract'])
 

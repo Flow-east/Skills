@@ -1,0 +1,198 @@
+{
+  "version": 1,
+  "target_id": "tpl-golden-sparkle",
+  "variant_id": "tpl-golden-sparkle",
+  "display_name": "黄色闪亮·分层校准版",
+  "reference": {
+    "name": "黄色闪亮",
+    "sha256": "7e1f498d7d3534da98a6c591cd61b7c5db9ef21bd9ba6753fc8927c77d2efeaf"
+  },
+  "identity_features": [
+    "黄到奶油字面渐变、棕金立体阴影、下划纸带大标题",
+    "白正文与黄重点词同基线，原创指示手准确指向所选短词",
+    "可按语义添加灯泡词标、倾斜竖排词标；非通用黑边黄字"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "body": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 850
+    },
+    "keyword": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "sticker": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 1,
+    "recipe": "白正文与黄重点词同基线，原创指示手准确指向所选短词"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "可按语义添加灯泡词标、倾斜竖排词标；非通用黑边黄字"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "semantic camera_motion before canvas",
+    "caption": "pop",
+    "title": "fade",
+    "tag": "template-specific",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.06,
+        "close": 1.12
+      },
+      "max_zoom": 1.12,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "mixed_size_type"
+  ],
+  "render": {
+    "family": "黄色闪亮",
+    "display_name": "黄色闪亮·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSansSC-VF.ttf",
+    "font_weight": 850,
+    "scene_system": {
+      "version": 1,
+      "kind": "shine",
+      "title_size": 63,
+      "subtitle_size": 54,
+      "body_size": 42,
+      "keyword_size": 53,
+      "translation_size": 22,
+      "tag_size": 32,
+      "display_size": 60,
+      "compact_size": 36,
+      "title_y": 0.1,
+      "caption_y": 0.805,
+      "tag_y": 0.68,
+      "tag_x": 0.79,
+      "title_duration": 3600,
+      "allowed_canvas": [],
+      "callout_y": 0.685,
+      "callout_step": 0.06
+    },
+    "base_size": 42,
+    "keyword_size": 53,
+    "accent": "#FFE344",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.06,
+        "close": 1.12
+      },
+      "max_zoom": 1.12,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "替代字体有本地授权；不声称官方1:1。",
+    "仅声明3:4和9:16；每条素材重新检查构图、人物动作与文字可读性。",
+    "原参考的闪光粒子和持续扫光尚未还原，当前字面为静态渐变。",
+    "手指与灯泡是原创扁平线稿，不是参考的立体素材；逐词逐字进入机制未恢复。"
+  ],
+  "revision_2026_09_23": {
+    "change": "refine-batch-a-template-fidelity",
+    "batch": "A",
+    "status": "implemented_in_use_iterating",
+    "composition": "黄纸带标题与棕金字面；指示手/灯泡/竖词标按语义槽进入。",
+    "caption_states": [
+      "paper_strip",
+      "pointer_phrase"
+    ],
+    "semantic_anchor": "bulb_or_vertical",
+    "known_gaps": [
+      "licensed substitute typefaces are not official Kaipai fonts",
+      "sound-effect library remains an independent deferred workstream",
+      "user aesthetic acceptance is not inferred from QA"
+    ]
+  }
+}

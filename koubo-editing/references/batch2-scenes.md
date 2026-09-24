@@ -4,11 +4,11 @@
 
 | ID / 目标 | 整套绑定与编排 |
 |---|---|
-| `ref_white_v1` / kp-18 简约白 | 粗主标题+细副标题左对齐；每组1–2个小短语，第一个紧黑半透底，第二个右下裸白；独立时钟；不加任意词标/画布效果 |
-| `ref_redyellow_v1` / kp-32 高智红黄 | 金色衬线lead、白粗normal、红衬线display；每组最多2短语；黄色下划线侧注独立保持；可黑底inset |
-| `ref_variety_v1` / kp-47 台式综艺 | 粗黑正文/重点字与粉绿黑白多边；normal倾斜、display放大、small恢复小字幕；最多2短语；缩放入场，不是每句都大 |
-| `ref_ink_v1` / kp-23 淡雅新中式 | 马善政毛笔替代标题、霞鹜文楷正文；黑笔刷标题小红印记、细白normal或窄纸条paper；每组1短语，不加任意词标 |
-| `ref_latte_v1` / kp-37 黄油拿铁 | 粗方字宽字距、暗偏移边；白/黄/薄荷/粉状态；最多2短语错位；奶油circle→inset→full由语义编排 |
+| `tpl-minimal-white` / tpl-minimal-white 简约白 | 粗主标题+细副标题左对齐；每组1–2个小短语，第一个紧黑半透底，第二个右下裸白；独立时钟；不加任意词标/画布效果 |
+| `tpl-red-yellow-editorial` / tpl-red-yellow-editorial 高智红黄 | 金色衬线lead、白粗normal、红衬线display；每组最多2短语；黄色下划线侧注独立保持；可黑底inset |
+| `tpl-taiwan-variety` / tpl-taiwan-variety 台式综艺 | 粗黑正文/重点字与粉绿黑白多边；normal倾斜、display放大、small恢复小字幕；最多2短语；缩放入场，不是每句都大 |
+| `tpl-oriental-ink` / tpl-oriental-ink 淡雅新中式 | 马善政毛笔替代标题、霞鹜文楷正文；黑笔刷标题小红印记、细白normal或窄纸条paper；每组1短语，不加任意词标 |
+| `tpl-butter-latte` / tpl-butter-latte 黄油拿铁 | 粗方字宽字距、暗偏移边；白/黄/薄荷/粉状态；最多2短语错位；奶油circle→inset→full由语义编排 |
 
 标题对比度也要检查实际编码帧：黑色笔刷标题不能放到深色区域或补边黑条。`ink` 可显式设 `scene_title_surface: paper`，在标题原有范围加浅纸底，属于构图适配，不声称原样本总有底板。没有该字段保持裸字；其它模板不能套用该字段。
 

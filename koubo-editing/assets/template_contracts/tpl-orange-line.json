@@ -1,0 +1,178 @@
+{
+  "version": 1,
+  "target_id": "tpl-orange-line",
+  "variant_id": "tpl-orange-line",
+  "display_name": "暖线映橙·分层校准版",
+  "reference": {
+    "name": "暖线映橙",
+    "sha256": "8a17a920c749e7be492faf91f9f522b442ca3f2fc8b84f79f619f4a9ba977c99"
+  },
+  "identity_features": [
+    "橙色斜下衬与黑白斜体标题，非整块底牌",
+    "小衬线字幕/大字展示/橙色强调，独立前后句错位留屏",
+    "橙下衬侧标；强调镜头独立使用有界平滑配方"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "body": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 600
+    },
+    "keyword": {
+      "file": "assets/fonts/NotoSerifSC-VF.ttf",
+      "index": 0,
+      "weight": 700
+    },
+    "sticker": {
+      "file": "assets/fonts/SmileySans-Oblique.ttf",
+      "index": 0,
+      "weight": null
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 2,
+    "recipe": "小衬线字幕/大字展示/橙色强调，独立前后句错位留屏"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "橙下衬侧标；强调镜头独立使用有界平滑配方"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "semantic camera_motion before typography",
+    "caption": "independent phrase clocks; template-specific label/pop/fade",
+    "title": "fade",
+    "tag": "template-specific",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.07,
+        "close": 1.14
+      },
+      "max_zoom": 1.14,
+      "transitions": {
+        "punch": {
+          "seconds": 0.46
+        },
+        "glide": {
+          "seconds": 1.05
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "mixed_size_type"
+  ],
+  "render": {
+    "family": "暖线映橙",
+    "display_name": "暖线映橙·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSerifSC-VF.ttf",
+    "font_weight": 600,
+    "scene_system": {
+      "version": 1,
+      "kind": "orangeline",
+      "title_size": 45,
+      "subtitle_size": 43,
+      "body_size": 35,
+      "keyword_size": 44,
+      "display_size": 53,
+      "tag_size": 29,
+      "title_y": 0.1,
+      "caption_y": 0.835,
+      "tag_y": 0.68,
+      "tag_x": 0.8,
+      "title_duration": 3600,
+      "allowed_canvas": [],
+      "callout_y": 0.65
+    },
+    "base_size": 35,
+    "keyword_size": 44,
+    "accent": "#FF983F",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.07,
+        "close": 1.14
+      },
+      "max_zoom": 1.14,
+      "transitions": {
+        "punch": {
+          "seconds": 0.46
+        },
+        "glide": {
+          "seconds": 1.05
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "替代字体有本地许可；不声称官方1:1。",
+    "仅声明3:4和9:16；新素材重新检查构图、字形、人物手势与安全布局。",
+    "原参考逐字显字、字形与橙色纹理未1:1复原；当前为短语时钟、斜下衬和大小字状态。"
+  ]
+}

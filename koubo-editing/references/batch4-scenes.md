@@ -4,10 +4,10 @@
 
 |目标 / variant|整套设计|
 |---|---|
-|kp-04 黄色闪亮 / ref_shine_v1|金黄奶油渐变、棕金挤出边、大标题下纸带；白黄混排，短词指示手、可选灯泡/斜竖排词标|
-|kp-08 吸睛绿 / ref_green_v1|白粗字深底标题、绿底黑副标题；compact小双语与display绿白宋体大字；双箭头概念清单|
-|kp-13 商务科技 / ref_tech_v1|银白金属斜体标题，多层斜切科技轨道持续显示；独立蓝白重点字；来源核验的竖向身份卡|
-|kp-14 醒目科普 / ref_science_v1|红蓝双行斜标题，白短句与paper黄红纸条态；短词指示手；可选蓝青小身份卡|
+|tpl-golden-sparkle 黄色闪亮 / tpl-golden-sparkle|金黄奶油渐变、棕金挤出边、大标题下纸带；白黄混排，短词指示手、可选灯泡/斜竖排词标|
+|tpl-vivid-green 吸睛绿 / tpl-vivid-green|白粗字深底标题、绿底黑副标题；compact小双语与display绿白宋体大字；双箭头概念清单|
+|tpl-business-tech 商务科技 / tpl-business-tech|银白金属斜体标题，多层斜切科技轨道持续显示；独立蓝白重点字；来源核验的竖向身份卡|
+|tpl-science-highlight 醒目科普 / tpl-science-highlight|红蓝双行斜标题，白短句与paper黄红纸条态；短词指示手；可选蓝青小身份卡|
 
 ## 主字幕与状态
 

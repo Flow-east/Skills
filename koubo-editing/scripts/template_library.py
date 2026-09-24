@@ -14,7 +14,7 @@ STATES = {
     'design': ('pending', 'draft', 'calibrated'),
     'implementation': ('pending', 'in_progress', 'calibration', 'implemented'),
     'technical': ('not_run', 'sample_passed', 'failed', 'passed'),
-    'visual': ('pending', 'needs_revision', 'accepted'),
+    'visual': ('pending', 'in_use', 'needs_revision', 'accepted'),
     'release': ('not_installed', 'installed_calibration', 'installed_verified'),
 }
 # Full acceptance and installed verification are separate from historical samples.
@@ -82,6 +82,12 @@ def completed(row):
             and not row['blockers'])
 
 
+def usable(row):
+    return (row['implementation'] in ('calibration','implemented') and
+            row['technical'] in ('sample_passed','passed') and
+            row['visual'] in ('in_use','accepted') and not row['blockers'])
+
+
 def summary(registry):
     validate(registry)
     rows=registry['targets']
@@ -89,6 +95,7 @@ def summary(registry):
             'implemented_including_calibrations':sum(r['implementation'] in ('calibration','implemented') for r in rows),
             'full_technical_passed':sum(r['technical']=='passed' for r in rows),
             'visual_accepted':sum(r['visual']=='accepted' for r in rows),
+            'usable':sum(usable(r) for r in rows),
             'installed_calibrations':sum(r['release']=='installed_calibration' for r in rows),
             'completed':sum(completed(r) for r in rows),
             'batches':dict(sorted(Counter(r['batch'] for r in rows).items()))}
@@ -96,9 +103,9 @@ def summary(registry):
 
 def eligible(registry, *, preview=False):
     validate(registry)
-    return [r for r in registry['targets'] if completed(r) or
-            (preview and r['implementation'] in ('calibration','implemented') and
-             r['technical'] in ('sample_passed','passed') and not r['blockers'])]
+    return [r for r in registry['targets'] if usable(r) or (preview and
+            r['implementation'] in ('calibration','implemented') and
+            r['technical'] in ('sample_passed','passed') and not r['blockers'])]
 
 
 def set_state(registry, target_id, field, state, evidence=None, evidence_root=None):
@@ -137,12 +144,12 @@ def render_gallery(registry, output, media=None):
             file=Path(m[key]).resolve()
             if file.is_file():
                 links.append(f'<details><summary>{label}</summary><video controls preload="none" src="{esc(file.as_uri(),quote=True)}"></video></details>')
-        status='已完成' if completed(r) else '校准版·待验收' if r['implementation'] in ('calibration','implemented') else '待实现'
+        status='已正式验收' if completed(r) else '可用·持续优化' if usable(r) else '待实现或待修订'
         cards.append(f'<article data-search="{esc(r["name"]+" "+r["batch"]+" "+status,quote=True)}"><h2>{esc(r["name"])}</h2><p>{r["id"]} · {r["batch"]} · {status}</p><p>技术：{esc(r["technical"])} / 视觉：{esc(r["visual"])}</p><p>{esc("；".join(r["blockers"]))}</p>{"".join(links)}</article>')
     output=Path(output);output.parent.mkdir(parents=True,exist_ok=True)
     output.write_text('''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>54套模板实施目录</title>
 <style>body{margin:0;background:#10151c;color:#eaf0f7;font:16px system-ui}header{padding:32px;position:sticky;top:0;background:#10151cf5;z-index:1}h1{margin:0 0 12px}input{padding:12px;width:min(80vw,600px);font:inherit}main{padding:0 32px 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}article{padding:20px;background:#1c2633;border-radius:14px}h2{font-size:20px}p{line-height:1.6;color:#b4c4d6}video{width:100%;max-height:480px}summary{cursor:pointer;padding:10px 0}article[hidden]{display:none}</style>
-<header><h1>54套独立模板 · 实施目录</h1>'''+f'<p>目标54套｜已有实现（含校准）{stats["implemented_including_calibrations"]}｜正式完成{stats["completed"]}。参考、实现、验收分别统计。</p>'+'''<input id="search" aria-label="筛选模板" placeholder="搜索名称、批次或状态"></header><main>'''+''.join(cards)+'''</main><script>document.querySelector('#search').addEventListener('input',e=>{for(const c of document.querySelectorAll('article'))c.hidden=!c.dataset.search.includes(e.target.value.trim())});</script></html>''',encoding='utf8')
+<header><h1>54套独立模板 · 实施目录</h1>'''+f'<p>目标54套｜已有实现（含校准）{stats["implemented_including_calibrations"]}｜可用于剪辑{stats["usable"]}｜正式验收{stats["completed"]}。参考、实现、验收分别统计。</p>'+'''<input id="search" aria-label="筛选模板" placeholder="搜索名称、批次或状态"></header><main>'''+''.join(cards)+'''</main><script>document.querySelector('#search').addEventListener('input',e=>{for(const c of document.querySelectorAll('article'))c.hidden=!c.dataset.search.includes(e.target.value.trim())});</script></html>''',encoding='utf8')
 
 
 def main():

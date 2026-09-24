@@ -10,12 +10,12 @@
 
 | 批次 | 模板 | 名称范围 | 工作方式 |
 |---|---|---|---|
-| A | kp-01–kp-09 | 高级红·双语 至 百搭黄·双语 | 先逐套对照，集中修改后复核 |
-| B | kp-10–kp-18 | 顶奢 至 简约白 | 同上 |
-| C | kp-19–kp-27 | 荧光绿 至 古典深棕 | 同上 |
-| D | kp-28–kp-36 | 彩蜡萌趣 至 专业金棕 | 同上 |
-| E | kp-37–kp-45 | 黄油拿铁 至 萌探2024 | 同上 |
-| F | kp-46–kp-54 | 元气红 至 潮流撞色 | 同上 |
+| A | tpl-bilingual-wine-red–tpl-bilingual-yellow | 高级红·双语 至 百搭黄·双语 | 先逐套对照，集中修改后复核 |
+| B | tpl-luxury-gold–tpl-minimal-white | 顶奢 至 简约白 | 同上 |
+| C | tpl-neon-green–tpl-classic-deep-brown | 荧光绿 至 古典深棕 | 同上 |
+| D | tpl-crayon-cute–tpl-professional-brown-gold | 彩蜡萌趣 至 专业金棕 | 同上 |
+| E | tpl-butter-latte–tpl-playful-detective | 黄油拿铁 至 萌探2024 | 同上 |
+| F | tpl-festive-red–tpl-color-contrast-pop | 元气红 至 潮流撞色 | 同上 |
 
 实际名称必须以 `assets/template_targets.json` 为准；上表的名称仅作分组导航，不能替代目标 ID。
 
@@ -93,7 +93,7 @@
 
 - 字体文件放在 `assets/fonts/`；
 - 来源、许可证、SHA-256、可变字体轴和 TTC index 放在 `assets/fonts/manifest.json`；
-- 每套模板的 title/body/keyword/sticker/translation 角色、字体文件和轴值写在 `assets/template_contracts/kp-XX.json`；
+- 每套模板的 title/body/keyword/sticker/translation 角色、字体文件和轴值写在 `assets/template_contracts/tpl-<style>.json`；
 - `font_guard.py` 检查实际渲染字形、缺字、替换符、变量轴和 TTC index；
 - 交付或安装前记录技能目录与字体/脚本哈希；
 - 渲染计划不得静默改用系统字体。若 `compiled_plan.json` 出现系统字体路径，必须先确认是否只是元数据遗留；如果实际渲染绕过契约字体，应阻断该套验收；

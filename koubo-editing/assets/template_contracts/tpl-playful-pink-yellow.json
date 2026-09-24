@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "target_id": "tpl-playful-pink-yellow",
+  "variant_id": "tpl-playful-pink-yellow",
+  "display_name": "QQ萌趣·分层校准版",
+  "reference": {
+    "name": "QQ萌趣",
+    "sha256": "0d05a9a28331d5c9623a641529f5ecee8bf18a3bf9b44c9c6ce511f527420f4c"
+  },
+  "identity_features": [
+    "黄粉双行圆润粗标题、白色厚外轮廓与半透浅色顶栏",
+    "正文粉/黄交替大字并带奶油白厚边；hand状态切换为粉色手写短句和方点装饰",
+    "语义感叹词签可用原创双叹号或婴儿车抽象几何禁用；商品实物镜头不由模板伪造"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "body": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 850
+    },
+    "keyword": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "sticker": {
+      "file": "assets/fonts/ZCOOLKuaiLe-Regular.ttf",
+      "index": 0,
+      "weight": null
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 2,
+    "recipe": "正文粉/黄交替大字并带奶油白厚边；hand状态切换为粉色手写短句和方点装饰"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "语义感叹词签可用原创双叹号或婴儿车抽象几何禁用；商品实物镜头不由模板伪造"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "semantic camera before typography",
+    "caption": "independent phrase clocks; bounded pop/soft/arc appearance without inferred word times",
+    "title": "fade with stable per-glyph geometry",
+    "tag": "template-specific semantic geometry",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.07,
+        "close": 1.14
+      },
+      "max_zoom": 1.14,
+      "transitions": {
+        "punch": {
+          "seconds": 0.52
+        },
+        "glide": {
+          "seconds": 1.15
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "mixed_size_type"
+  ],
+  "render": {
+    "family": "QQ萌趣",
+    "display_name": "QQ萌趣·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSansSC-VF.ttf",
+    "font_weight": 850,
+    "scene_system": {
+      "version": 1,
+      "kind": "qqcute",
+      "title_size": 40,
+      "subtitle_size": 41,
+      "body_size": 43,
+      "display_size": 48,
+      "compact_size": 31,
+      "tag_size": 28,
+      "keyword_size": 48,
+      "title_y": 0.1,
+      "caption_y": 0.82,
+      "tag_y": 0.72,
+      "tag_x": 0.8,
+      "title_duration": 3600,
+      "allowed_canvas": []
+    },
+    "base_size": 43,
+    "keyword_size": 48,
+    "accent": "#F2BF32",
+    "text": "#FFFFFF",
+    "stroke": "#211F23",
+    "enter": "pop",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.07,
+        "close": 1.14
+      },
+      "max_zoom": 1.14,
+      "transitions": {
+        "punch": {
+          "seconds": 0.52
+        },
+        "glide": {
+          "seconds": 1.15
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "现有授权替代字体与原创几何，不是官方1:1。",
+    "仅声明3:4和9:16；新素材必须重新检查字形、脸/手势保护区和边界。",
+    "原参考服装实物切镜、婴儿车贴纸与人物圆窗未复原；模板不生成商品事实。",
+    "现有Noto Sans粗字为授权替代，原圆胖字形、逐字弹入及闪线仍有差距。"
+  ]
+}

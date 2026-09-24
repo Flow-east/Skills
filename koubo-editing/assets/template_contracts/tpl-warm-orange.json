@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "target_id": "tpl-warm-orange",
+  "variant_id": "tpl-warm-orange",
+  "display_name": "暖系橙黄·分层校准版",
+  "reference": {
+    "name": "暖系橙黄",
+    "sha256": "4a461444371073e9d43e30b89cfc56c423f68b04816dac2e8feb4bccb09a0ec7"
+  },
+  "identity_features": [
+    "站酷快乐体橙色圆趣标题，奶油与深红多重描边",
+    "白色正文暖黄重点，每短语独立紧贴橙底，最多三层错位留屏",
+    "橙黄短词强调，整句和底条一同弹入，无通用大卡片"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/ZCOOLKuaiLe-Regular.ttf",
+      "index": 0,
+      "weight": null
+    },
+    "body": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 850
+    },
+    "keyword": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "sticker": {
+      "file": "assets/fonts/ZCOOLKuaiLe-Regular.ttf",
+      "index": 0,
+      "weight": null
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 3,
+    "recipe": "白色正文暖黄重点，每短语独立紧贴橙底，最多三层错位留屏"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "橙黄短词强调，整句和底条一同弹入，无通用大卡片"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "semantic camera_motion before canvas",
+    "caption": "fade",
+    "title": "fade",
+    "tag": "template-specific",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.05,
+        "close": 1.1
+      },
+      "max_zoom": 1.1,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "mixed_size_type"
+  ],
+  "render": {
+    "family": "暖系橙黄",
+    "display_name": "暖系橙黄·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSansSC-VF.ttf",
+    "font_weight": 850,
+    "scene_system": {
+      "version": 1,
+      "kind": "warm",
+      "title_size": 61,
+      "subtitle_size": 55,
+      "body_size": 40,
+      "keyword_size": 44,
+      "translation_size": 20,
+      "tag_size": 35,
+      "display_size": 60,
+      "compact_size": 36,
+      "title_y": 0.11,
+      "caption_y": 0.82,
+      "tag_y": 0.68,
+      "tag_x": 0.79,
+      "title_duration": 3600,
+      "allowed_canvas": [],
+      "callout_y": 0.685,
+      "callout_step": 0.06
+    },
+    "base_size": 40,
+    "keyword_size": 44,
+    "accent": "#FFE35B",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.05,
+        "close": 1.1
+      },
+      "max_zoom": 1.1,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "替代字体有本地授权；不声称官方1:1。",
+    "仅声明3:4和9:16；每条素材重新检查构图、人物动作与文字可读性。",
+    "参考640×852，本实现明确适配3:4和9:16，并非像素级复原。",
+    "原版点赞/定位素材、开场黑幕揭示及发光尾标尚未复原，不使用无关地点贴纸。"
+  ]
+}

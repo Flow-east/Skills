@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "target_id": "tpl-playful-detective",
+  "variant_id": "tpl-playful-detective",
+  "display_name": "萌探2024·分层校准版",
+  "reference": {
+    "name": "萌探2024",
+    "sha256": "32a1d269bff6a93abb9c564897027c73854f868296e96eb34799c8ccfd4277ec"
+  },
+  "identity_features": [
+    "顶部白橙斜体粗标题采用两行压缩排版，形成明确的教程型黄金开头",
+    "正文进入黑色半透细轨道，白色窄字幕居中；重点可切换橙白大字但不持续占屏",
+    "原创灯泡、金币或水果符号只按原口播概念选用；不得把参考宿舍、大学生或省钱事实套入其他视频"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/SmileySans-Oblique.ttf",
+      "index": 0,
+      "weight": null
+    },
+    "body": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 800
+    },
+    "keyword": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "sticker": {
+      "file": "assets/fonts/ZCOOLQingKeHuangYou-Regular.ttf",
+      "index": 0,
+      "weight": null
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 2,
+    "recipe": "正文进入黑色半透细轨道，白色窄字幕居中；重点可切换橙白大字但不持续占屏"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "原创灯泡、金币或水果符号只按原口播概念选用；不得把参考宿舍、大学生或省钱事实套入其他视频"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false
+  },
+  "motion": {
+    "video_camera": "semantic camera before typography",
+    "caption": "independent phrase clocks; template-specific bounded appearance without inferred word times",
+    "title": "stable authored title geometry with bounded fade/pop",
+    "tag": "template-specific semantic original geometry",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.07,
+        "close": 1.14
+      },
+      "max_zoom": 1.14,
+      "transitions": {
+        "punch": {
+          "seconds": 0.45
+        },
+        "glide": {
+          "seconds": 1.15
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "mixed_size_type"
+  ],
+  "render": {
+    "family": "萌探2024",
+    "display_name": "萌探2024·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSansSC-VF.ttf",
+    "font_weight": 800,
+    "scene_system": {
+      "version": 1,
+      "kind": "lightbulb",
+      "title_size": 43,
+      "subtitle_size": 39,
+      "body_size": 35,
+      "display_size": 47,
+      "compact_size": 29,
+      "tag_size": 25,
+      "title_y": 0.095,
+      "caption_y": 0.83,
+      "tag_y": 0.7,
+      "tag_x": 0.8,
+      "keyword_size": 47,
+      "title_duration": 3600,
+      "allowed_canvas": []
+    },
+    "base_size": 35,
+    "keyword_size": 47,
+    "accent": "#F0A52E",
+    "text": "#FFFFFF",
+    "stroke": "#35211E",
+    "enter": "pop",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.07,
+        "close": 1.14
+      },
+      "max_zoom": 1.14,
+      "transitions": {
+        "punch": {
+          "seconds": 0.45
+        },
+        "glide": {
+          "seconds": 1.15
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "现有授权替代字体与原创几何，不是官方1:1。",
+    "仅声明3:4和9:16；新素材必须重新检查字形、脸/手势保护区和边界。",
+    "参考的灯泡发光、金币/西瓜具体图标和细轨道UI动效未逐帧复原。",
+    "Smiley Sans和Noto Sans为授权替代；原极窄斜粗字与顶部切入节奏仍有差距。"
+  ]
+}

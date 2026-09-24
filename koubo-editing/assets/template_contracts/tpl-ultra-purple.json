@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "target_id": "tpl-ultra-purple",
+  "variant_id": "tpl-ultra-purple",
+  "display_name": "Ultra·紫·分层校准版",
+  "reference": {
+    "name": "Ultra·紫",
+    "sha256": "0b2da303e6d6c73af457b93e649b2f14cee7c523bd5660e2a24e8fecc59a4a35"
+  },
+  "identity_features": [
+    "紫色粗斜标题、白色小副标题，正文粗细对比",
+    "横排双短语或逐字直立的独立竖列，另有显式双语态",
+    "紫色侧边竖词标，独立英文时钟，不自动补造身份"
+  ],
+  "typography": {
+    "title": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "body": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 400
+    },
+    "keyword": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 900
+    },
+    "sticker": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 850
+    },
+    "translation": {
+      "file": "assets/fonts/NotoSansSC-VF.ttf",
+      "index": 0,
+      "weight": 500
+    }
+  },
+  "layout": {
+    "supported_aspects": [
+      [
+        3,
+        4
+      ],
+      [
+        9,
+        16
+      ]
+    ],
+    "max_phrases": 2,
+    "recipe": "横排双短语或逐字直立的独立竖列，另有显式双语态"
+  },
+  "annotation": {
+    "tags_enabled": true,
+    "reason_required": true,
+    "recipe": "紫色侧边竖词标，独立英文时钟，不自动补造身份"
+  },
+  "timing": {
+    "time_space": "output",
+    "independent_phrase_lifetimes": true,
+    "first_phrase_reentry": false,
+    "translation_clock": "independent_output"
+  },
+  "motion": {
+    "video_camera": "semantic camera_motion before canvas",
+    "caption": "fade",
+    "title": "fade",
+    "tag": "template-specific",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.08,
+        "close": 1.16
+      },
+      "max_zoom": 1.16,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "composition": {
+    "order": [
+      "video",
+      "canvas",
+      "title",
+      "captions",
+      "tags"
+    ]
+  },
+  "capabilities": [
+    "phrase_clocks",
+    "layered_type",
+    "protected_regions",
+    "camera_motion",
+    "mixed_size_type",
+    "bilingual_clocks"
+  ],
+  "render": {
+    "family": "Ultra·紫",
+    "display_name": "Ultra·紫·分层校准版",
+    "reference_mode": "sample_led_approximation",
+    "design_status": "implemented_pending_validation",
+    "font_status": "licensed_substitutes_not_official_fonts",
+    "font": "assets/fonts/NotoSansSC-VF.ttf",
+    "font_weight": 400,
+    "scene_system": {
+      "version": 1,
+      "kind": "purple",
+      "title_size": 61,
+      "subtitle_size": 32,
+      "body_size": 41,
+      "keyword_size": 51,
+      "translation_size": 19,
+      "tag_size": 29,
+      "display_size": 60,
+      "compact_size": 36,
+      "title_y": 0.1,
+      "caption_y": 0.835,
+      "tag_y": 0.68,
+      "tag_x": 0.79,
+      "title_duration": 3600,
+      "allowed_canvas": [],
+      "callout_y": 0.685,
+      "callout_step": 0.06
+    },
+    "base_size": 41,
+    "keyword_size": 51,
+    "accent": "#B78AD6",
+    "text": "#FFFFFF",
+    "stroke": "#181818",
+    "enter": "fade",
+    "camera_recipe": {
+      "version": 2,
+      "levels": {
+        "normal": 1,
+        "medium": 1.08,
+        "close": 1.16
+      },
+      "max_zoom": 1.16,
+      "transitions": {
+        "punch": {
+          "seconds": 0.48
+        },
+        "glide": {
+          "seconds": 1.1
+        },
+        "reframe": {
+          "seconds": 0.75
+        },
+        "cut": {
+          "seconds": 0
+        }
+      },
+      "anchor": [
+        0.5,
+        0.42
+      ],
+      "origin": "Original bounded calibration recipe, not measured official curve",
+      "hold": "until_next_authored_decision"
+    }
+  },
+  "limitations": [
+    "替代字体有本地授权；不声称官方1:1。",
+    "仅声明3:4和9:16；每条素材重新检查构图、人物动作与文字可读性。",
+    "斜体由授权Noto字形做有界几何变换，不是官方Ultra字形。",
+    "人物身份竖牌尚未实现；长竖列需逐素材安全布局，不强制覆盖人物。"
+  ]
+}

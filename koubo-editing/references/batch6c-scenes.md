@@ -2,16 +2,16 @@
 
 四套均为参考驱动的原创校准实现，不是开拍官方模板。先做内容、镜头、贴纸、音效、转场和隐私判断，再选择模板；参考视频中的具体事实、真人滤镜或资产不自动继承。
 
-## kp-49 喜人奇妙夜 / ref_comicred_v1
+## tpl-red-comic-variety 喜人奇妙夜 / tpl-red-comic-variety
 红色横幅配白色粗字幕，漫画爆炸框与黑边白字负责反应感。WOW、眼睛、云雷、彩纸只在原话确有惊讶、观察、沮丧或庆祝语义时出现，并避免遮挡脸部。
 
-## kp-50 恋爱兄妹 / ref_romance_v1
+## tpl-soft-romance 恋爱兄妹 / tpl-soft-romance
 奶油粉、粉白手写/衬线字和黄色关键词组成柔和恋爱综艺气质。问号、闪光、细下划线只表达疑问、提示或分享；不得把参考中的恋爱建议、对象关系、暗角滤镜当作其他口播的事实或构图规则。
 
-## kp-53 简约emoji / ref_emojiwhite_v1
+## tpl-monochrome-emoji 简约emoji / tpl-monochrome-emoji
 顶部黑白厚边双行标题，正文白字黑边或黑色胶囊，展示句可拆成大号黑白词。emoji使用原创眼睛、汗滴、相机、干货胶囊等抽象几何，必须写明 `symbol_reason`，不复制参考图标。
 
-## kp-54 潮流撞色 / ref_contrastpop_v1
+## tpl-color-contrast-pop 潮流撞色 / tpl-color-contrast-pop
 橙色标题、黑色厚边和青蓝关键词形成潮流教程感。黑色短标签可强调原话中的缩写或步骤；不得把参考里的MCN、SOP等行业事实带入无关视频。参考时长短，未见状态不做推断。
 
 ## 通用约束

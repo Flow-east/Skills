@@ -58,7 +58,7 @@ if __name__=='__main__':unittest.main()
 
 class PortableFontMetadataTests(unittest.TestCase):
     def test_template_contract_replaces_machine_font_metadata(self):
-        p = plan(); p['template_variant'] = 'ref_bired_v1'
+        p = plan(); p['template_variant'] = 'tpl-bilingual-wine-red'
         q = compile_plan(p)
         self.assertTrue(q['font'].endswith('/assets/fonts/NotoSerifSC-VF.ttf'))
         self.assertEqual(q['font_source'], 'skill_bundle_contract')
@@ -68,7 +68,7 @@ class PortableFontMetadataTests(unittest.TestCase):
 
 class PortableFontAuditTests(unittest.TestCase):
     def test_role_metadata_is_verified(self):
-        p = plan(); p['template_variant'] = 'ref_bired_v1'
+        p = plan(); p['template_variant'] = 'tpl-bilingual-wine-red'
         q = compile_plan(p)
         q['clips'][0]['words']=[dict(text='测试字幕',start=.1,end=2.5)]
         q.update(scene_time_space='output', scene_title_lines=['测试标题'], scene_captions=[dict(start=0.1,end=2.5,phrases=[dict(start=0.1,end=2.5,text='测试字幕',id='p',runs=[dict(text='测试',role='body'),dict(text='字幕',role='keyword')])])], template_delivery='preview', scene_translations=[dict(phrase_id='p',source_text='测试字幕',start=.1,end=2.5,text='test caption',language='en',review_status='reviewed',reviewer='test')])

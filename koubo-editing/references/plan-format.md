@@ -125,11 +125,11 @@
 
 ## 样片分层模板
 
-当 template_variant 为 ref_pink_v1 / ref_gold_v1 / ref_grid_v1 时，改用 [sample-led-scenes.md](sample-led-scenes.md) 的 scene_captions / scene_tags / scene_canvas，显式 scene_time_space=output；仍保留 clips.words 原片时间。新旧事件不能混用，SRT按真实短语可见状态输出。
+当 template_variant 为 tpl-soft-pink / tpl-white-gold / tpl-blue-purple-grid 时，改用 [sample-led-scenes.md](sample-led-scenes.md) 的 scene_captions / scene_tags / scene_canvas，显式 scene_time_space=output；仍保留 clips.words 原片时间。新旧事件不能混用，SRT按真实短语可见状态输出。
 
 ## 第三批双语分层模板
 
-`ref_bired_v1` / `ref_biluxe_v1` / `ref_biblue_v1` 按 [batch3-bilingual-scenes.md](batch3-bilingual-scenes.md) 编写唯一中文phrase ID及顶层 `scene_translations`，英文独立计时与导出，不使用旧phrase.english/english_map。译文校对状态明确，缺译/原文变更/时钟越界会阻断；这是渲染支持，不是自动翻译质量验证。
+`tpl-bilingual-wine-red` / `tpl-bilingual-ivory-luxe` / `tpl-bilingual-classic-blue` 按 [batch3-bilingual-scenes.md](batch3-bilingual-scenes.md) 编写唯一中文phrase ID及顶层 `scene_translations`，英文独立计时与导出，不使用旧phrase.english/english_map。译文校对状态明确，缺译/原文变更/时钟越界会阻断；这是渲染支持，不是自动翻译质量验证。
 
 ### 第三批后七套
 
@@ -141,11 +141,11 @@
 
 ## B4b中四套扩展
 
-见 [第四批中四套](batch4b-scenes.md)：`ref_neon_v1`、`ref_purple_v1`、`ref_warm_v1`、`ref_mono_v1`。逐套契约校准实现不等于审美验收；Purple翻译只用于显式bilingual，vertical需独立安全锚点。Neon/Warm最多三短语，Mono无聚光能力，不静默替代。
+见 [第四批中四套](batch4b-scenes.md)：`tpl-neon-green`、`tpl-ultra-purple`、`tpl-warm-orange`、`tpl-black-white`。逐套契约校准实现不等于审美验收；Purple翻译只用于显式bilingual，vertical需独立安全锚点。Neon/Warm最多三短语，Mono无聚光能力，不静默替代。
 
 ## B4c后四套扩展
 
-见 [第四批后四套](batch4c-scenes.md)：`ref_elegantpink_v1`、`ref_promo_v1`、`ref_browngold_v1`、`ref_hotpink_v1`。秀丽粉双语单句或四条玫红短句；爆款促销默认无强制标题；金棕身份须真实核验；亮粉弧形字和漫画装饰仍受保护区约束。音效专项已恢复为显式事件原型，旧计划仍不自动加音效，未实现的抠像/人物描边不静默替代。
+见 [第四批后四套](batch4c-scenes.md)：`tpl-elegant-pink`、`tpl-promo-burst`、`tpl-professional-brown-gold`、`tpl-hot-pink`。秀丽粉双语单句或四条玫红短句；爆款促销默认无强制标题；金棕身份须真实核验；亮粉弧形字和漫画装饰仍受保护区约束。音效专项已恢复为显式事件原型，旧计划仍不自动加音效，未实现的抠像/人物描边不静默替代。
 
 
 ## B5a：暖线映橙、明快彩彩、古雅水绿、撕纸红
@@ -159,16 +159,16 @@
 
 ## B5c后四套校准版
 
-kp-41/44/51/52分别使用ref_ins_v1、ref_nostalgia_v1、ref_transyellow_v1、ref_tornedge_v1。独立状态、引用词签、可选圆窗及限制见[后四套规则](batch5c-scenes.md)。不得把校准实现计为正式全门槛验收；音效专项已恢复为显式事件原型，旧计划仍不自动加音效。
+tpl-minimal-ins / tpl-vintage-classic / tpl-translucent-yellow / tpl-minimal-torn-edge。独立状态、引用词签、可选圆窗及限制见[后四套规则](batch5c-scenes.md)。不得把校准实现计为正式全门槛验收；音效专项已恢复为显式事件原型，旧计划仍不自动加音效。
 
 ## B6a前四套校准版
 
-kp-05/28/31/35分别使用ref_cleanwhite_v1、ref_waxcute_v1、ref_qqcute_v1、ref_energycartoon_v1。状态、原创语义符号、显式锚点与限制见[第六批前四套规则](batch6a-scenes.md)。不得把参考商品贴纸作为通用素材，也不得将校准版计为正式全门槛验收；音效专项已恢复为显式事件原型，旧计划仍不自动加音效。
+tpl-minimal-yellow-white / tpl-crayon-cute / tpl-playful-pink-yellow / tpl-energy-cartoon。状态、原创语义符号、显式锚点与限制见[第六批前四套规则](batch6a-scenes.md)。不得把参考商品贴纸作为通用素材，也不得将校准版计为正式全门槛验收；音效专项已恢复为显式事件原型，旧计划仍不自动加音效。
 
 ## B6b中四套校准版
 
-kp-39/42/45/46分别使用ref_floraltravel_v1、ref_magenta_v1、ref_lightbulb_v1、ref_redfestive_v1。状态、原创语义符号、参考事实隔离与限制见[第六批中四套规则](batch6b-scenes.md)。旅行/宿舍/价格/门店等参考事实不得跨视频复用；音效专项已恢复为显式事件原型，旧计划仍不自动加音效，校准版不计正式全门槛验收。
+tpl-floral-travel / tpl-fashion-magenta / tpl-playful-detective / tpl-festive-red。状态、原创语义符号、参考事实隔离与限制见[第六批中四套规则](batch6b-scenes.md)。旅行/宿舍/价格/门店等参考事实不得跨视频复用；音效专项已恢复为显式事件原型，旧计划仍不自动加音效，校准版不计正式全门槛验收。
 
 ## B6c后四套校准版
 
-kp-49/50/53/54分别使用ref_comicred_v1、ref_romance_v1、ref_emojiwhite_v1、ref_contrastpop_v1。状态、原创语义符号、参考事实隔离与限制见[第六批后四套规则](batch6c-scenes.md)。恋爱建议、MCN/SOP、人物滤镜和具体emoji资产不得跨视频复用；音效专项已恢复为显式事件原型，旧计划仍不自动加音效，校准版不计正式全门槛验收。
+tpl-red-comic-variety / tpl-soft-romance / tpl-monochrome-emoji / tpl-color-contrast-pop。状态、原创语义符号、参考事实隔离与限制见[第六批后四套规则](batch6c-scenes.md)。恋爱建议、MCN/SOP、人物滤镜和具体emoji资产不得跨视频复用；音效专项已恢复为显式事件原型，旧计划仍不自动加音效，校准版不计正式全门槛验收。
