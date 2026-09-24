@@ -7,11 +7,11 @@ python3 <SKILL_DIR>/scripts/template_library.py summary
 python3 <SKILL_DIR>/scripts/template_library.py eligible
 ```
 
-54 套已实现的模板默认可选、可用于剪辑，并在实际使用中持续优化；`in_use` 不等于用户已逐套审美验收。`eligible` 默认返回技术样片通过且没有关键阻塞的可用模板；`--preview` 仅用于检查尚未列为常规可用的校准项。一个目标保留多个历史版本也只算一套。
+用 `eligible` 查看可选模板；按字幕布局、字体、词标、镜头规则和画幅选择整套风格。
 
 ## 状态更新
 
-设计、实现、技术、视觉、安装各自独立。`visual: in_use` 表示实际可用并持续优化，`limitations` 保留已知的参考差异，`blockers` 只记录阻断当前使用的问题。短样片通过是 `sample_passed`，不是全套QA通过。用户一般积极反馈保存在feedback，只有明确针对当前目标与版本的确认才记录 `accepted`。
+设计、实现、技术、视觉、安装状态分别记录。`limitations` 记录已知设计差异；`blockers` 记录会阻断当前使用的问题。
 
 `template_library.set_state()` 对技术通过、审美确认和安装验证要求证据文件存在、SHA256一致、目标ID/修订号一致。证据JSON至少含 `target_id, revision, passed`；用户确认还须有 `decision: accepted` 和真实 `user_quote`。证据引用含 `path, sha256, revision, reviewer, scope`。不能为通过门槛编造确认。
 
@@ -24,7 +24,7 @@ python3 <SKILL_DIR>/scripts/template_library.py eligible
 - `template_contracts.validate(..., verify_assets=True)` 核对字体文件哈希和许可；`font_guard` 再按实际轴值检查显示文字。
 - 不能向契约声明尚未实现的人物抠像/文字后置能力；缺核心能力应阻断，不套别的效果。
 - 只接受已声明比例；模板迁移到新比例必须补布局/人像测试后再扩大支持列表。
-- `template_delivery: accepted` 仅用于有正式验收证据的版本；当前可用版本使用 `preview`（这是交付门槛名称，不表示模板不可用）。旧计划不新增该字段仍可按历史行为渲染，但不代表正式验收。
+- 渲染计划使用 `template_delivery: preview`；只有通过验收门槛时才使用 `accepted`。
 - 渲染器负责执行，不会推断语义。Codex按参考设计、词流与画面主动编排场景，不向用户索要每个字幕坐标。
 
 ## 验收包目录约定
@@ -80,7 +80,3 @@ tpl-floral-travel / tpl-fashion-magenta / tpl-playful-detective / tpl-festive-re
 ## B6c后四套可用模板
 
 tpl-red-comic-variety / tpl-soft-romance / tpl-monochrome-emoji / tpl-color-contrast-pop。状态、原创语义符号、参考事实隔离与限制见[第六批后四套规则](batch6c-scenes.md)。恋爱建议、MCN/SOP、人物滤镜和具体emoji资产不得跨视频复用；音效专项已恢复为显式事件原型，旧计划仍不自动加音效，可用不等于正式全门槛验收。
-
-## ID 更新
-
-模板目标和变体统一使用 `tpl-<style>`，音效使用 `sfx-<sound>`；旧编号不提供兼容映射。以前的剪辑计划若使用旧编号，应查看该计划选择的实际风格或声音，在当前目录中重新选择语义 ID 后再渲染。

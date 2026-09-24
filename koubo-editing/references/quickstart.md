@@ -38,4 +38,4 @@ python3 scripts/render_template.py final_plan.json --out-dir final_render
 python3 scripts/run_auto_pipeline.py VIDEO --out-dir OUT --template-variant tpl-orange-line
 ```
 
-当前目录由 `assets/template_catalog.json` 管理。54 套可用风格用语义 ID（`tpl-…`）选择；可从 `scripts/template_library.py eligible` 查询。旧编号不做兼容映射，旧计划须重选实际对应的风格后再渲染。
+当前目录由 `assets/template_catalog.json` 管理。可用 `scripts/template_library.py eligible` 查看模板 ID，并通过 `--template-variant` 选择。
